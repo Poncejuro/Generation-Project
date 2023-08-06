@@ -1,0 +1,27 @@
+.auth-form-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color:white;
+}
+  
+.input-login{
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border:none;
+    border-radius: 10px;
+}
+  
+.input-button{
+    border: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.advise{
+  color: white;
+}
+  

@@ -1,14 +1,12 @@
-//import React, {useState} from 'react';
-import './App.css';
-import { Formulario } from './Formulario';
+import './styles/app.css';
+import { AppRouter } from './Components/AppRouter';
 
 function App() {
   return(
     <div className='App'>
-      <Formulario/>
-    </div> 
-  )
-}
-
+      <AppRouter/>
+    </div>
+)}
 export default App
 
+ 

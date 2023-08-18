@@ -5,14 +5,14 @@ p:not(:last-child) {
   
 
 .card {
-    display: flex;
+    
     flex-direction: column;
     justify-content: space-between;
-  
     
-    height: auto;
+    min-width: 170px;
+    height:fit-content;
     padding: 2em;
-    margin: auto;
+    margin: 1em;
   
     border: 1px solid rgba(255, 255, 255, .25);
     border-radius: 20px;
@@ -21,4 +21,11 @@ p:not(:last-child) {
   
     backdrop-filter: blur(15px);
 }
-  
+
+.text-down{
+    margin: 1em;
+}
+
+
+
+

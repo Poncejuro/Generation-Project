@@ -1,26 +1,31 @@
 .navbar{
-    background-color: rgb(48, 43, 43);
+    background-color: rgb(116, 98, 98);
     padding: 1em;
 }
 
 .name{
     /*background-color: rgb(127, 255, 170);*/
     color: white;
+    padding: 0 2em;
 }
 
 .search-group{
     /*background-color: rgb(127, 255, 170);*/
-    display: flex;
-    align-items: center;
-    padding: 0 0 0 4em;
+    display:flex;
+    padding: 0.2em;
 }
 
 .navbar-nav{
     /*background-color: rgb(127, 255, 170);*/
+    font-size: x-large;
 }
 
 .nav-link{
     color:white;
+}
+
+.custom-toggler, .navbar-toggler{
+    color: rgb(252, 252, 252);
 }
 
 

@@ -21,7 +21,7 @@ export const About = () => {
                             title={aux.title}
                             text={aux.text}
                             cardSizeW={500}
-                            cardSizeH={350}
+                            
                             key={aux.id}
                     />
                     ))}

@@ -23,7 +23,7 @@ export const NavBar = () => {
               <div className='search-group'>
                 <input className="search" type="search" placeholder='Buscar'/>
                 <button className="btn btn-light" type="button" >
-                <i classNameName="fa fa-search" aria-hidden="true"></i>
+                <i className="fa fa-search" aria-hidden="true"></i>
                 </button>
               </div>
 

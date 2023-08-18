@@ -22,6 +22,7 @@ export const About = () => {
                             text={aux.text}
                             cardSizeW={500}
                             cardSizeH={350}
+                            key={aux.id}
                     />
                     ))}
                 </div>
@@ -33,6 +34,7 @@ export const About = () => {
                         text={'Desarrollador'}
                         logo={img1}
                         imgSize={100}
+                        key={aux}
                     />
                     ))}
                 </div>

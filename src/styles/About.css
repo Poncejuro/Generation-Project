@@ -1,0 +1,21 @@
+.body{
+    padding: 5em;
+    background-image: url("../Img/lamar.jpg");
+}
+
+.texts{
+    display: flex;
+    flex-flow: wrap;
+}
+
+.people{
+    display: flex;
+    flex-flow: wrap;
+    padding: 7em;
+}
+
+
+
+ 
+    
+ 

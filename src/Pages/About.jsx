@@ -1,6 +1,7 @@
 import {NavBar} from "../Components/Navbar";
 import { Cards } from '../Components/Cards';
 import { intentions, team } from "../utils/constants";
+import {Input} from '../Components/Input'
 
 import img1 from '../Img/2sd.jpg';
 import '../styles/About.css';
@@ -21,7 +22,6 @@ export const About = () => {
                             title={aux.title}
                             text={aux.text}
                             cardSizeW={500}
-                            
                             key={aux.id}
                     />
                     ))}
@@ -39,6 +39,12 @@ export const About = () => {
                     ))}
                 </div>
             </section> 
+            <Input
+                colorBorder={'blue'}
+                colorBackground={'#00ffff'}
+                margin={'2em'}
+                width={'50em'}
+            />
 
         </>
     )

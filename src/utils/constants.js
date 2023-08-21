@@ -1,4 +1,4 @@
-export const intentions= [
+export const intentions = [
     {id: 1,    
     title: 'Misión',
     text: `Conectar gente dentro de la industria de la música, crear comunidad y potenciar oportunidades de trabajo. 
@@ -25,5 +25,5 @@ export const intentions= [
     puedan florecer, alcanzar nuevas audiencias y dejar una huella duradera en la industria del arte y el                 entretenimiento.`},
 ]
 
-export const team= ['Esteban Castro', 'Norma Enriquez', 'Mauricio Peniche', 
+export const team = ['Esteban Castro', 'Norma Enriquez', 'Mauricio Peniche', 
                     'Luis Ponce', 'Yael Quiroz','Jessica Rdgz', 'Leonardo Vqz']

@@ -1,61 +1,45 @@
-import React from 'react';
-import '../styles/Navbar.css';
+import Navbar from 'react-bootstrap/Navbar';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Nav from 'react-bootstrap/Nav';
 
 export const NavBar = () => {
 
     return (
-      <>
-        <nav className="navbar navbar-expand-lg">
-
-          <div className="container-fluid">
-
-            <div className='name'>
-              <h1>Facetify</h1>
-            </div>
-
-            <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            
-
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                
-                <li className="nav-item">
-
-                  <div className='search-group'>
-                    <div className="box-search">
-                      <input type="search" id="form1" className="form-control" placeholder='Search'/>
-                    </div>
-                    <button type="button" className="btn btn-primary">
-                      <i className="fas fa-search"></i>
-                    </button>
-                  </div>
-                  
-                </li>
-
-                <li className="nav-item">
-                  <a className="nav-link"  href="#">Eventos</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Personas</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Contacto</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Perfil</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Cuenta</a>
-                </li>
-                
-              </ul>
-            </div>
-
-          </div>
-        </nav>
-      </>
+      <Navbar className="bg-body-tertiary justify-content-between">
+        
+        <Container>
+        <Navbar.Brand href="#home">Facetify</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Form inline>
+          <Row>
+            <Col xs="auto">
+              <Form.Control
+                type="text"
+                placeholder="Search"
+                className=" mr-sm-2"
+              />
+            </Col>
+            <Col xs="auto">
+              <Button type="submit">Submit</Button>
+            </Col>
+          </Row>
+        </Form>
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Eventos</Nav.Link>
+            <Nav.Link href="#link">Personas</Nav.Link>
+            <Nav.Link href="#home">Contacto</Nav.Link>
+            <Nav.Link href="#link">Perfil</Nav.Link>
+            <Nav.Link href="#link">Cuenta</Nav.Link>    
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+        
+    </Navbar>
       );
 }
 

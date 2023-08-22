@@ -20,6 +20,7 @@ export const About = () => {
                             title={aux.title}
                             text={aux.text}
                             cardSizeW={500}
+                            cardSizeH={400}
                             key={aux.id}
                     />
                     ))}
@@ -28,11 +29,11 @@ export const About = () => {
                 <div className="people">
                 {team.map(aux => (
                         <Cards
-                        title4={aux}
-                        text={'Desarrollador'}
-                        logo={img1}
+                        title4={aux.name}
+                        text={aux.rol}
+                        logo={aux.img}
                         imgSize={100}
-                        key={aux}
+                        key={aux.id}
                     />
                     ))}
                 </div>

@@ -11,7 +11,6 @@ export const Cards = ({title,text,logo,imgSize,alt,cardSizeW,cardSizeH,title4}) 
                 <h1>{title}</h1>
                 <p>{title4}</p>
                 <p className='tex-down'>{text}</p>
-                
             </div> 
         </>
       );

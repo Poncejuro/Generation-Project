@@ -9,7 +9,7 @@ p:not(:last-child) {
     flex-direction: column;
     justify-content: space-between;
     
-    min-width: 170px;
+    min-width: 180px;
     height:fit-content;
     padding: 2em;
     margin: 1em;

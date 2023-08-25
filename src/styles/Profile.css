@@ -1,0 +1,57 @@
+.principal {
+  overflow: hidden;
+}
+
+.grid-L {
+  background-color: aqua;
+  height: 94vh;
+}
+
+.grid-R {
+  background-color: wheat;
+  height: 94vh;
+  overflow-y: auto;
+}
+
+.photo {
+  background-color: gray;
+  margin: 20px;
+}
+.cuenta {
+  background-color: gray;
+}
+
+.buttons {
+  background-color: gray;
+  margin: 20px;
+}
+
+.publications {
+  background-color: gray;
+}
+
+.feed {
+  background-color: gray;
+  margin: 20px;
+}
+.card {
+  background-color: gray;
+}
+/* agregados por Leo */
+.list-group-item {
+  background-color: gray;
+}
+textarea #floatingTextArea2 {
+  background-color: gray;
+}
+
+.form-floating > .form-control,
+.form-floating > .form-control-plaintext {
+  background-color: gray;
+}
+#main-container {
+  overflow: hidden;
+}
+#feed-col {
+  overflow-y: auto;
+}

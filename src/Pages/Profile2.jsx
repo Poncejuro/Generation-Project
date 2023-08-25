@@ -11,18 +11,48 @@ import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 import Stack from "react-bootstrap/Stack";
+import React, { useState } from 'react';
 
 import { NavBar } from "../Components/Navbar";
 import { Cards } from "../Components/Cards";
 import { FeedCards } from "../Components/FeedCards";
-import { publications } from "../utils/publications";
 import img1 from "../Img/2sd.jpg";
 
 export const Profile2 = () => {
+
+  const [form, setForm] = useState({})
+  const [miArray, setMiArray] = useState([]);
+
+
+  const setField =(field) =>{
+    setForm({
+      ...form,
+      [field.target.name]: field.target.value
+    })
+    //console.log('funciona')
+    console.log(form)//testing
+    //console.log(typeof(form))//testing
+    
+  }
+
+  const saveFeed =() =>{
+    console.log('funciona asd' + form.text)//testing
+    localStorage.setItem('feedData', JSON.stringify(form));
+  }
+
+
+  const updateData = () =>{
+    const jsonData = localStorage.getItem('feedData')
+    const objectData = JSON.parse(jsonData)
+    console.log(objectData)  //testing
+    setMiArray([...miArray, objectData]);
+  }
+
+
   return (
     <>
       <NavBar />
-      <Container controlId="main-container" fluid>
+      <Container fluid>
         <Row>
           <Col xs={12} sm={12} md={3}>
             <Card className="p-1" border="0" text="light">
@@ -67,7 +97,7 @@ export const Profile2 = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={12} sm={12} md={9} controlId="feed-col">
+          <Col xs={12} sm={12} md={9} >
             <Card className="p-1 text-center" border="0">
               <Card.Body className="p-1" border="0">
                 <ButtonGroup aria-label="Basic example">
@@ -89,20 +119,21 @@ export const Profile2 = () => {
             <Form className="p-0 text-light">
               <Form.Group>
                 <FloatingLabel
-                  controlId="floatingTextarea2"
+                  
                   label="Algo en mente..."
                 >
                   <Form.Control
                     as="textarea"
                     placeholder="Leave a comment here"
                     style={{ height: "12rem" }}
+                    name = 'text' onChange={setField}
                   ></Form.Control>
                   <Row className="p-1 mt-0">
                     <Stack direction="horizontal" gap={4}>
                       <Button className="ms-auto" variant="success" type="file">
                         Foto/Video
                       </Button>
-                      <Button variant="success" href="#">
+                      <Button variant="success" href="#" onClick={saveFeed}>
                         Publicar
                       </Button>
                     </Stack>
@@ -118,6 +149,9 @@ export const Profile2 = () => {
                 <option>Etc</option> */}
               <Row className="p-1 mt-0 ">
                 <ButtonGroup aria-label="Basic example">
+                <Button className="me-5" variant="success" href="#" onClick={updateData}>
+                    Actualizar
+                  </Button>
                   <Button className="me-5" variant="success" href="#">
                     Reciente
                   </Button>
@@ -131,21 +165,20 @@ export const Profile2 = () => {
               <div className="feed-box">
                 <Row>
                   <Col className="grid-L-In" xs={12} sm={12} md={12} lg={3}>
-                    {publications.map((aux) => (
+                    {miArray.map((aux) => (
                       <Cards
                         logo={img1}
                         imgSize={100}
                         key={aux.id}
                         cardSizeH={300}
-                        text={"ejemplo de de datos"}
+                        
                       />
                     ))}
                   </Col>
                   <Col className="grid-R-In" xs={12} sm={12} md={12} lg={9}>
-                    {publications.map((aux) => (
+                    {miArray.map((aux) => (
                       <FeedCards
-                        key={aux.id}
-                        title={aux.title}
+                        key={1}
                         text={aux.text}
                         cardSizeH={300}
                       />

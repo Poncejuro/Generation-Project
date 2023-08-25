@@ -1,11 +1,13 @@
 .body{
-    padding: 5em;
+    padding: 2em;
     background-image: url("../Img/lamar.jpg");
+    width: 205.5vh;
 }
 
 .texts{
     display: flex;
     flex-flow: wrap;
+    
 }
 
 .people{

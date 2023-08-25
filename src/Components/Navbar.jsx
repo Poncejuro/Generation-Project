@@ -6,8 +6,8 @@ import Nav from 'react-bootstrap/Nav';
 
 export const NavBar = () => {
 
-    return (
-      <Navbar expand="lg"  bg='dark' variant={'dark'}> 
+  return (
+    <Navbar expand="lg" bg='dark' variant={'dark'}>
       <Container fluid>
         <Navbar.Brand href="#">Facetify</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -21,25 +21,25 @@ export const NavBar = () => {
             />
             <Button variant="outline-success">Search</Button>
           </Form>
-          
+
           <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
+            className="me-auto my-2 my-lg-0 text-right d-flex w-100"
+            style={{ maxHeight: "100px", fontSize: "24px"}}
             navbarScroll
+
           >
             <Nav.Link href="#action1">Eventos</Nav.Link>
             <Nav.Link href="#action2">Personas</Nav.Link>
             <Nav.Link href="#action1">Contacto</Nav.Link>
             <Nav.Link href="#action2">Perfil</Nav.Link>
             <Nav.Link href="#action1">Cuenta</Nav.Link>
-       
-            
-            
+
+
+
           </Nav>
-          
+
         </Navbar.Collapse>
       </Container>
     </Navbar>
-      );
+  );
 }
-

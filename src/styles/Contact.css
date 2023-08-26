@@ -1,4 +1,48 @@
-.div-principal{
-    background-color:aquamarine
-    
+
+.principal{
+    background-image: url('../Img/france-musique-chitarra-musica.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;    
+}
+
+form{
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 700px;
+    gap: 1rem;
+    padding: 3rem;
+    border: 0px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+
+input, 
+textarea{
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    text-align: center;
+    color:black;
+}
+
+:focus{
+    outline: 2px solid chocolate;
+}
+
+#btn{
+    background-color: rgba(0, 128, 0, 0.479);
+}
+
+:focus{
+    outline: 2px solid b;
+
+}
+h2{
+    text-align: center;
 }

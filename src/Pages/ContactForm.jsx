@@ -34,12 +34,13 @@ export const ContactForm = () => {
 
   return (
     <>
+    <NavBar/>
    <div className="principal">
   <div className="custom-form-container">
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-md-6">
-          <form ref={form} onSubmit={sendEmail} className="form">
+          <form ref={form} onSubmit={sendEmail} className="form-contact">
               <h2>Contactanos</h2>
               <div className="mb-3">
                 <label className="form-label">Nombre</label>

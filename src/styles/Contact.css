@@ -7,7 +7,7 @@
     height: 100vh;    
 }
 
-form{
+.form-contact{
     margin-top: 140px;
     display: flex;
     flex-direction: column;
@@ -22,8 +22,7 @@ form{
 }
 
 
-input, 
-textarea{
+input{
     padding: 10px 20px;
     margin-bottom: 25px;
     border-radius: 10px;

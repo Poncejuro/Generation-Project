@@ -6,10 +6,9 @@ p:not(:last-child) {
 
 .card {
     
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
     
-    min-width: 170px;
+    min-width: 180px;
     height:fit-content;
     padding: 2em;
     margin: 1em;

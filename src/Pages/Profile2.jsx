@@ -11,7 +11,7 @@ import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 import Stack from "react-bootstrap/Stack";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 import { NavBar } from "../Components/Navbar";
 import { Cards } from "../Components/Cards";
@@ -19,35 +19,30 @@ import { FeedCards } from "../Components/FeedCards";
 import img1 from "../Img/2sd.jpg";
 
 export const Profile2 = () => {
-
-  const [form, setForm] = useState({})
+  const [form, setForm] = useState({});
   const [miArray, setMiArray] = useState([]);
 
-
-  const setField =(field) =>{
+  const setField = (field) => {
     setForm({
       ...form,
-      [field.target.name]: field.target.value
-    })
+      [field.target.name]: field.target.value,
+    });
     //console.log('funciona')
-    console.log(form)//testing
+    console.log(form); //testing
     //console.log(typeof(form))//testing
-    
-  }
+  };
 
-  const saveFeed =() =>{
-    console.log('funciona asd' + form.text)//testing
-    localStorage.setItem('feedData', JSON.stringify(form));
-  }
+  const saveFeed = () => {
+    console.log("funciona asd" + form.text); //testing
+    localStorage.setItem("feedData", JSON.stringify(form));
+  };
 
-
-  const updateData = () =>{
-    const jsonData = localStorage.getItem('feedData')
-    const objectData = JSON.parse(jsonData)
-    console.log(objectData)  //testing
+  const updateData = () => {
+    const jsonData = localStorage.getItem("feedData");
+    const objectData = JSON.parse(jsonData);
+    console.log(objectData); //testing
     setMiArray([...miArray, objectData]);
-  }
-
+  };
 
   return (
     <>
@@ -97,7 +92,7 @@ export const Profile2 = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={12} sm={12} md={9} >
+          <Col xs={12} sm={12} md={9}>
             <Card className="p-1 text-center" border="0">
               <Card.Body className="p-1" border="0">
                 <ButtonGroup aria-label="Basic example">
@@ -118,18 +113,37 @@ export const Profile2 = () => {
             </Card>
             <Form className="p-0 text-light">
               <Form.Group>
-                <FloatingLabel
-                  
-                  label="Algo en mente..."
-                >
+                <FloatingLabel label="Titulo">
+                  <Form.Control
+                    as="textarea"
+                    placeholder="Leave a comment here"
+                    style={{ height: "2rem" }}
+                    name="text"
+                    onChange={setField}
+                  />
+                </FloatingLabel>
+                <FloatingLabel label="Algo en mente...">
                   <Form.Control
                     as="textarea"
                     placeholder="Leave a comment here"
                     style={{ height: "12rem" }}
-                    name = 'text' onChange={setField}
-                  ></Form.Control>
+                    name="text"
+                    onChange={setField}
+                  />
+                  <FloatingLabel label="Pie de foto">
+                    <Form.Control
+                      as="textarea"
+                      placeholder="Leave a comment here"
+                      style={{ height: "2rem" }}
+                      name="text"
+                      onChange={setField}
+                    />
+                  </FloatingLabel>
                   <Row className="p-1 mt-0">
                     <Stack direction="horizontal" gap={4}>
+                      <Form.Group controlId="formFile" className="mb-3 ">
+                        <Form.Control type="file"/>
+                      </Form.Group>
                       <Button className="ms-auto" variant="success" type="file">
                         Foto/Video
                       </Button>
@@ -142,14 +156,19 @@ export const Profile2 = () => {
               </Form.Group>
             </Form>
 
-            <section className="feed">
+            <section>
               {/* <Form.Select size="lg"> */}
               {/* <option>Mas reciertes</option>
                 <option>Mas antiguos</option>
                 <option>Etc</option> */}
               <Row className="p-1 mt-0 ">
                 <ButtonGroup aria-label="Basic example">
-                <Button className="me-5" variant="success" href="#" onClick={updateData}>
+                  <Button
+                    className="me-5"
+                    variant="success"
+                    href="#"
+                    onClick={updateData}
+                  >
                     Actualizar
                   </Button>
                   <Button className="me-5" variant="success" href="#">
@@ -163,28 +182,15 @@ export const Profile2 = () => {
               {/* </Form.Select> */}
 
               <div className="feed-box">
-                <Row>
-                  <Col className="grid-L-In" xs={12} sm={12} md={12} lg={3}>
-                    {miArray.map((aux) => (
-                      <Cards
-                        logo={img1}
-                        imgSize={100}
-                        key={aux.id}
-                        cardSizeH={300}
-                        
-                      />
-                    ))}
-                  </Col>
-                  <Col className="grid-R-In" xs={12} sm={12} md={12} lg={9}>
-                    {miArray.map((aux) => (
-                      <FeedCards
-                        key={1}
-                        text={aux.text}
-                        cardSizeH={300}
-                      />
-                    ))}
-                  </Col>
-                </Row>
+                {miArray.map((aux) => (
+                  <FeedCards
+                    logo={img1}
+                    imgSize={150}
+                    key={1}
+                    cardSizeH={200}
+                    text={aux.text}
+                  />
+                ))}
               </div>
             </section>
           </Col>

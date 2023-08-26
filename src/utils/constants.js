@@ -23,11 +23,7 @@ export const intentions = [
   {
     id: 3,
     title: "Valores",
-    text: `Nuestra visión es proporcionar un espacio en línea donde los talentos creativos puedan conectarse, 
-    colaborar y crecer en su carrera artística. Aspiramos a ser el punto de encuentro por excelencia para la 
-    comunidad artística, brindando las herramientas y recursos necesarios para que los artistas desarrollen su 
-    potencial al máximo. Priorizaremos crear una comunidad inclusiva, inspiradora y segura donde los artistas 
-    puedan florecer, alcanzar nuevas audiencias y dejar una huella duradera en la industria del arte y el                 entretenimiento.`,
+    text: `Los valores que compartimos en Facetify son la confianza, respeto, altruismo, igualdad y solidaridad ya que creemos que estas conexiones entre una y más personas deben generar un espacio equitativo e inclusivo de trabajo que potencie el contenido y valor de los involucrados.`,
   },
 ];
 

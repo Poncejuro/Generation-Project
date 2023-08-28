@@ -84,7 +84,7 @@ export const ContactForm = () => {
                       required
                     />
                   </div>
-                  <button id="btn" type="submit" className="btn btn-primary">
+                  <button id="btn" type="submit" className="btn btn-primary" >
                     Enviar
                   </button>
                 </form>

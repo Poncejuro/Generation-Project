@@ -1,27 +1,48 @@
-.auth-form-container {
+.principal-losgin{
+    background-image: url("../../Img/Login.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  
+  .form-contact {
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
+    width: 500px;
+    height: auto;
+    gap: 1rem;
+    padding: 3rem;
+    border: 0px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+  }
+  
+  .control-aux {
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
     text-align: center;
-    color:white;
-}
-  
-.input-login{
-    margin: 0.5rem 0;
-    padding: 1rem;
-    border:none;
-    border-radius: 10px;
-}
-  
-.input-button{
-    border: none;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    cursor: pointer;
     color: black;
-}
-
-.advise{
-  color: white;
-}
+  }
   
+  :focus {
+    outline: 2px solid chocolate;
+    outline: 2px solid b;
+  }
+  
+  #btn {
+    background-color: rgba(0, 128, 0, 0.479);
+  }
+  
+  .title-box {
+    text-align: center;
+  }
+
+  .link-box{
+    text-align: center;
+    color:black;
+    text-decoration: none;
+  }

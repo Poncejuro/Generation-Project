@@ -14,18 +14,19 @@ export const NavBar = () => {
         <Navbar.Collapse id="navbarScroll">
           
             <Form.Control type="search..." placeholder="Búsqueda" style={{width:'20%'}} />
-            <Button variant="outline-success" style={{backgroundColor:"white"}}>Search</Button>
+            <Button variant="outline-success" style={{backgroundColor:"rgba(0, 128, 0, 0.479)"}}>Search</Button>
           
           <Nav
             className="me-auto my-2 my-lg-0 text-right d-flex justify-content-end w-100"
             style={{ maxHeight: "100px", fontSize: "24px" }}
             navbarScroll
           >
-            <Nav.Link href="/AboutUs">Nosotros</Nav.Link>
+            
+            <Nav.Link href="#action1">Eventos</Nav.Link>
             <Nav.Link href="#action2">Personas</Nav.Link>
-            <Nav.Link href="/Contact">Contacto</Nav.Link>
             <Nav.Link href="/Profile">Perfil</Nav.Link>
-            <Nav.Link href="#action1">Cuenta</Nav.Link>
+            <Nav.Link href="/AboutUs">Nosotros</Nav.Link>
+            <Nav.Link href="/Contact">Contacto</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

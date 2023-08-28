@@ -1,57 +1,26 @@
-.principal {
+.body-Profile{
+  background-image: url("../../Img/console.jpg");
+  
+}
+
+.flox-box{
   overflow: hidden;
 }
 
-.grid-L {
-  background-color: aqua;
-  height: 94vh;
+.Principal-Container{
+  background-color: rgb(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
 }
 
-.grid-R {
-  background-color: wheat;
-  height: 94vh;
-  overflow-y: auto;
+.img-box-profile{
+  margin-top: 5vh;
 }
 
-.photo {
-  background-color: gray;
-  margin: 20px;
-}
-.cuenta {
-  background-color: gray;
-}
-
-.buttons {
-  background-color: gray;
-  margin: 20px;
-}
-
-.publications {
-  background-color: gray;
-}
-
-.feed {
-  background-color: gray;
-  margin: 20px;
-}
-.card {
-  background-color: gray;
-}
-/* agregados por Leo */
-.list-group-item {
-  background-color: gray;
-}
-textarea #floatingTextArea2 {
-  background-color: gray;
-}
-
-.form-floating > .form-control,
-.form-floating > .form-control-plaintext {
-  background-color: gray;
-}
-#main-container {
-  overflow: hidden;
-}
-#feed-col {
-  overflow-y: auto;
+.bio-box-profile-save{
+  margin: 5vh, 4vh,;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 4vh;
+  margin-right: 4vh;
+  border-radius: 10px;
 }

@@ -4,21 +4,18 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Image from "react-bootstrap/Image";
-import Anchor from "react-bootstrap/Anchor";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
-import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 import Stack from "react-bootstrap/Stack";
 import React, { useState } from "react";
 
-import { NavBar } from "../Components/Navbar";
-import { Cards } from "../Components/Cards";
-import { FeedCards } from "../Components/FeedCards";
-import img1 from "../Img/2sd.jpg";
+import { NavBar } from "../../Components/Navbar";
+import { FeedCards } from "../../Components/FeedCards/FeedCards";
+import img1 from "../../Img/2sd.jpg";
 
-export const Profile2 = () => {
+export const Profile = () => {
   const [form, setForm] = useState({});
   const [miArray, setMiArray] = useState([]);
 

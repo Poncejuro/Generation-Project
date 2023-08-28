@@ -1,0 +1,26 @@
+.body-About{
+    background-image: url("../../Img/lamar.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height:92.8vh;
+}
+
+
+
+.texts{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.people{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+
+
+ 
+    
+ 

@@ -42,13 +42,13 @@ export const team = [
   },
   {
     id: 3,
-    name: "Mauricio Peniche",
+    name: "Luis Ponce",
     rol: `Desarrollador`,
     img: "https://th.bing.com/th/id/R.06f07b5e5263dad4c16a542b05b9f810?rik=ITZ91IeCj5iICg&pid=ImgRaw&r=0",
   },
   {
     id: 4,
-    name: "Luis Ponce",
+    name: "Mauricio Peniche",
     rol: `Desarrollador`,
     img: "https://th.bing.com/th/id/OIP.Hnw6AArNyfT50gqLGVM9zAHaHa?pid=ImgDet&rs=1",
   },

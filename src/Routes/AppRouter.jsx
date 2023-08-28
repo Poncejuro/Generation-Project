@@ -1,12 +1,9 @@
 import { Route, Routes } from "react-router-dom";
-import { Login } from "../Pages/Login";
-import { Register } from "../Pages/Register";
-import { HomePage } from "../Pages/HomePage";
+import { HomePage } from "../Pages/HomePage/HomePage";
 import { PrivateRoute } from "./PrivateRoute";
-import { About } from "../Pages/About";
-import { ContactForm } from "../Pages/ContactForm";
-import { Profile } from "../Pages/Profile";
-import { Profile2 } from "../Pages/Profile2";
+import { About } from "../Pages/About/About";
+import { ContactForm } from "../Pages/ContactForm/ContactForm";
+import { Profile } from "../Pages/Profile/Profile";
 
 export const AppRouter = () => {
   return (
@@ -14,10 +11,8 @@ export const AppRouter = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="AboutUs" element={<About />} />
-        <Route path="Register" element={<Register />} />
         <Route path="Contact" element={<ContactForm />} />
-        {/* <Route path="Profile" element={<Profile />} /> */}
-        <Route path="Profile2" element={<Profile2 />} />
+        <Route path="Profile" element={<Profile />} />
 
         <Route
           path="HomePage"

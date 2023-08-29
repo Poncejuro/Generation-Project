@@ -12,8 +12,10 @@ export const Friends = () => {
           <FriendCards
             key={aux.id}
             name={aux.name}
+            img={aux.img}
             rol={aux.rol}
-            bio={aux.bio} />
+            bio={aux.bio}
+            alt={"aqui debe haber una foto"} />
         ))}</div>
 
       </section>

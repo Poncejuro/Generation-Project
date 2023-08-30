@@ -2,7 +2,8 @@
     background-image: url("../../Img/lamar.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    height:92.8vh;
+    height:100vh;
+    background-size: cover;
 }
 
 

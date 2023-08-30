@@ -3,27 +3,47 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   return (
-    <Navbar expand="lg" bg="dark" variant={"dark"} className="nav-box">
+    <Navbar expand="lg" bg="dark" variant={"dark"} >
       <Container fluid>
-        <Navbar.Brand href="#">Facetify</Navbar.Brand>
-
+        <Link
+          to="/HomePage"
+          className="link-box"
+          style={{
+            color: "white",
+            marginRight: "1rem",
+            fontSize: "35px",
+          }}
+        >
+          Facetify
+        </Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          
-            <Form.Control type="search..." placeholder="Búsqueda" style={{width:'20%'}} />
-            <Button variant="outline-success" style={{backgroundColor:"rgba(0, 128, 0, 0.479)"}}>Search</Button>
-          
+          <Form className="me-auto">
+            <div style={{display:'flex', alignItems:'center'}}>
+              <Form.Control
+                type="search..."
+                placeholder="Búsqueda"
+                style={{ width: "400px" }}
+              />
+              <Button variant="success" style={{ marginLeft: "5px" }}>
+                {" "}
+                Buscar{" "}
+              </Button>
+              </div>
+          </Form>
           <Nav
-            className="me-auto my-2 my-lg-0 text-right d-flex justify-content-end w-100"
-            style={{ maxHeight: "100px", fontSize: "24px" }}
+            className="d-flex "
+            style={{ maxHeight: '100px', fontSize: "25px"}}
             navbarScroll
-          >
             
+          > 
+            <Nav.Link href="/Testeo">Testeo</Nav.Link>
             <Nav.Link href="#action1">Eventos</Nav.Link>
-            <Nav.Link href="#action2">Personas</Nav.Link>
+            <Nav.Link href="/Friends">Personas</Nav.Link>
             <Nav.Link href="/Profile">Perfil</Nav.Link>
             <Nav.Link href="/AboutUs">Nosotros</Nav.Link>
             <Nav.Link href="/Contact">Contacto</Nav.Link>
@@ -31,5 +51,6 @@ export const NavBar = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+
   );
 };

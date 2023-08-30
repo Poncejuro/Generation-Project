@@ -1,26 +1,25 @@
-.body-Profile{
+.body-Profile {
   background-image: url("../../Img/console.jpg");
-  
 }
 
-.flox-box{
+.flox-box {
   overflow: hidden;
 }
 
-.Principal-Container{
+.Principal-Container {
   background-color: rgb(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
 }
 
-.img-box-profile{
+.img-box-profile {
   margin-top: 5vh;
 }
 
-.bio-box-profile-save{
-  margin: 5vh, 4vh,;
+/* .bio-box-profile-save { */
+  /* margin: 5vh, 4vh;
   margin-top: 5vh;
   margin-bottom: 5vh;
   margin-left: 4vh;
   margin-right: 4vh;
-  border-radius: 10px;
-}
+  border-radius: 10px; */
+/* } */

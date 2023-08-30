@@ -40,9 +40,10 @@ export const NavBar = () => {
             style={{ maxHeight: '100px', fontSize: "25px"}}
             navbarScroll
             
-          >
+          > 
+            <Nav.Link href="/Testeo">Testeo</Nav.Link>
             <Nav.Link href="#action1">Eventos</Nav.Link>
-            <Nav.Link href="#action2">Personas</Nav.Link>
+            <Nav.Link href="/Friends">Personas</Nav.Link>
             <Nav.Link href="/Profile">Perfil</Nav.Link>
             <Nav.Link href="/AboutUs">Nosotros</Nav.Link>
             <Nav.Link href="/Contact">Contacto</Nav.Link>

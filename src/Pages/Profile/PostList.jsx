@@ -46,46 +46,15 @@ const PostList = () => {
       img: "https://www.irishtimes.com/polopoly_fs/1.4078148!/image/image.jpg",
       description: "Ejemplo2",
     },
-    {
-      name: "Tayto3",
-      img: "https://www.irishtimes.com/polopoly_fs/1.4078148!/image/image.jpg",
-      description: "Ejemplo3",
-    },
-    {
-      name: "Tayto",
-      img: "https://www.irishtimes.com/polopoly_fs/1.4078148!/image/image.jpg",
-      description: "Cheese & Onion Chips",
-    },
-    {
-      name: "Tayto2",
-      img: "https://www.irishtimes.com/polopoly_fs/1.4078148!/image/image.jpg",
-      description: "Ejemplo2",
-    },
-    {
-      name: "Tayto3",
-      img: "https://www.irishtimes.com/polopoly_fs/1.4078148!/image/image.jpg",
-      description: "Ejemplo3",
-    },
-    {
-      name: "Tayto",
-      img: "https://www.irishtimes.com/polopoly_fs/1.4078148!/image/image.jpg",
-      description: "Cheese & Onion Chips",
-    },
-    {
-      name: "Tayto2",
-      img: "https://www.irishtimes.com/polopoly_fs/1.4078148!/image/image.jpg",
-      description: "Ejemplo2",
-    },
-    {
-      name: "Tayto3",
-      img: "https://www.irishtimes.com/polopoly_fs/1.4078148!/image/image.jpg",
-      description: "Ejemplo3",
-    },
   ];
 
   return (
+
+
     <div>
+
       <button onClick={deleteAllPosts}>Borrar todos los posts</button>
+
       <ul>
         {posts.map((post, index) => (
           <li key={index}>
@@ -98,11 +67,17 @@ const PostList = () => {
           </li>
         ))}
       </ul>
+
+
       {samplePosts.map((post, index) => (
-        <button key={index} onClick={() => addPost(post)}>
-          Agregar {post.name}
+        <button 
+        key={index} 
+        onClick={() => addPost(post)}
+        >
+        Agregar {post.name}
         </button>
       ))}
+
     </div>
   );
 };

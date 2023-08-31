@@ -4,7 +4,6 @@ import Col from "react-bootstrap/Col";
 import ListGroup from "react-bootstrap/ListGroup";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Form from "react-bootstrap/Form";
 // import Stack from "react-bootstrap/Stack";
 import React, { useState } from "react";
@@ -15,80 +14,66 @@ import img1 from "../../Img/2sd.jpg";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Grid from "@mui/material/Unstable_Grid2";
-import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
-import { styled } from "@mui/material/styles";
-import { palette } from "@mui/system";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import PostList from "./PostList";
 import "./Profile.css";
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
 
-export default function BasicStack() {
-  return (
-    <Box sx={{ width: "100%" }}>
-      <Stack spacing={2}>
-        <Item>Item 1</Item>
-        <Item>Item 2</Item>
-        <Item>Item 3</Item>
-      </Stack>
-    </Box>
-  );
-}
+
+
+
 
 export const Profile = () => {
-  const [form, setForm] = useState({});
-  const [miArray, setMiArray] = useState([]);
 
+
+  const [form, setForm] = useState({});
   const setField = (field) => {
     setForm({
       ...form,
       [field.target.name]: field.target.value,
     });
-    //console.log('funciona')
-    console.log(form); //testing
-    //console.log(typeof(form))//testing
   };
 
+
+  const [posts, setPosts] = useState([]);
   const saveFeed = () => {
-    console.log("funciona asd" + form.text); //testing
-    localStorage.setItem("feedData", JSON.stringify(form));
+    const updatedPosts = [...posts, form];
+    setPosts(updatedPosts);
+    localStorage.setItem("feedData", JSON.stringify(updatedPosts));
   };
 
+
+  const [feddData, setObjectData] = useState([]);
   const updateData = () => {
     const jsonData = localStorage.getItem("feedData");
     const objectData = JSON.parse(jsonData);
-    console.log(objectData); //testing
-    setMiArray([...miArray, objectData]);
+    setObjectData(objectData)
   };
 
-  const [userText, setUserText] = useState("");
-
-  const handleTextChange = (event) => {
-    setUserText(event.target.value);
+  const deleteAllPosts = () => {
+    localStorage.removeItem("feedData");
+    localStorage.setItem("feedData", JSON.stringify([]));
+    updateData()
   };
 
-  const editEvent = (event) => {
-    setUserText(event.target.value);
+
+
+  const deletePost = (index) => {
+    const updatedPosts = posts.filter((_, i) => i !== index);
+    setPosts(updatedPosts);
+    localStorage.setItem("feedData", JSON.stringify(updatedPosts));
   };
+
+
+
+
+
+
 
   let [profileButton, setProfileButton] = useState(false);
-  // let [saveButton, setSaveButton] = useState(false);
-  //getting the value of the button profile and activate the textareas
-  //using useState
+ 
   const handleProfileButton = (event) => {
-    // setProfileButton(true);
     setProfileButton(!profileButton);
+
   };
 
   return (
@@ -114,23 +99,19 @@ export const Profile = () => {
             >
               <ListGroup.Item
                 className="Principal-Container"
-                // sx={{ p: 1.5, m: 1.5 }}
               >
-                {/* <ListGroup.Item className="text-center text-light border-0"> */}
                 <Stack>
                   <TextField
                     id="nombreUsuario"
                     label="Escribe tu nombre"
                     variant="filled"
                     defaultValue=""
-                    // value={userText}
                     sx={{
                       p: 1.5,
                       m: 1.5,
                       input: { color: "black" },
                       background: "#FFF",
                       label: { color: "black" },
-                      // color: "text.primary",
                     }}
                   />
                   <TextField
@@ -138,14 +119,12 @@ export const Profile = () => {
                     label="Escribe tu rol"
                     variant="filled"
                     defaultValue=""
-                    // value={userText}
                     sx={{
                       p: 1.5,
                       m: 1.5,
                       input: { color: "black" },
                       background: "#FFF",
                       label: { color: "black" },
-                      // color: "text.primary",
                     }}
                   />
                   <TextField
@@ -155,35 +134,15 @@ export const Profile = () => {
                     defaultValue=""
                     multiline
                     rows={2}
-                    // value={userText}
                     sx={{
                       p: 1.5,
                       m: 1.5,
                       input: { color: "black" },
                       background: "#FFF",
                       label: { color: "black" },
-                      // color: "text.primary",
                     }}
                   />
-                  {/* <input
-                    className="p-2 m-3"
-                    value={userText}
-                    onChange={handleTextChange}
-                    placeholder="Escribe tu nombre"
-                  />
-                  <input
-                    className="p-2 m-3"
-                    value={userText}
-                    onChange={handleTextChange}
-                    placeholder="escribe tu rol"
-                  />
-                  <textarea
-                    className="p-2 m-3"
-                    value={userText}
-                    onChange={handleTextChange}
-                    placeholder="Agrega una pequeña biografía"
-                    rows={2}
-                  /> */}
+                  
                   <Form.Group controlId="formFile" className="mb-3 p-2 m-3">
                     <Form.Control type="file" />
                   </Form.Group>
@@ -233,7 +192,6 @@ export const Profile = () => {
           </Col>
 
           <Col xs={12} sm={12} md={9}>
-            {/* <section className="buttons-container text-center"> */}
             <Box
               sx={{
                 m: 3,
@@ -256,7 +214,6 @@ export const Profile = () => {
                 </Grid>
               </Grid>
             </Box>
-            {/* </section> */}
 
             <form>
               <Grid container spacing={2} sx={{ m: 1, p: 1 }}>
@@ -264,7 +221,7 @@ export const Profile = () => {
                   <Form.Control
                     as="input"
                     placeholder="Título de la publicación"
-                    name="text"
+                    name="Title"
                     onChange={setField}
                   />
                 </Grid>
@@ -272,7 +229,7 @@ export const Profile = () => {
                   <Form.Control
                     as="input"
                     placeholder="Pie de imagen"
-                    name="text"
+                    name="imgFooter"
                     onChange={setField}
                   />
                 </Grid>
@@ -298,22 +255,16 @@ export const Profile = () => {
                     }}
                   >
                     <Grid container spacing={3}>
-                      {/* <Stack direction="row" spacing={1}> */}
                       <Form.Group controlId="formFile" className="m-1">
                         <Form.Control type="file" />
                       </Form.Group>
-                      {/* <Button className="ms-auto" variant="success" type="file">
-                      Foto/Video
-                    </Button> */}
                       <Button
-                        // className="ms-auto"
                         variant="success"
                         href="#"
                         onClick={saveFeed}
                       >
                         Publicar
                       </Button>
-                      {/* </Stack> */}
                     </Grid>
                   </Box>
                 </Row>
@@ -344,24 +295,31 @@ export const Profile = () => {
                       Reciente
                     </Button>
                     <Button className="me-6" variant="success" href="#">
-                      Antiguo
+                      Antiguo 
+                    </Button>
+                    <Button className="me-6" variant="success" href="#" onClick={deleteAllPosts}>
+                      deleteAllPosts
                     </Button>
                   </Grid>
                 </Box>
               </Row>
               <div className="feed-box">
-                {miArray.map((aux) => (
+                {feddData.map((aux,index) => (
                   <FeedCards
+                    keyDiv={index}
+                    key={index}
                     logo={img1}
-                    imgSize={150}
-                    key={1}
-                    cardSizeH={200}
+                    imgFooter={aux.imgFooter}
+                    title={aux.title}
                     text={aux.text}
+                    detePost={() => deletePost(index)}
+
+                    imgSize={150}
+                    cardSizeH={200}
                   />
                 ))}
               </div>{" "}
-              {/* ultimo elemento agregado y componente PostList */}
-              <PostList />
+              {/* <PostList /> */}
             </section>
           </Col>
         </Row>

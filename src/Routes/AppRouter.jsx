@@ -7,7 +7,7 @@ import { Profile } from "../Pages/Profile/Profile";
 import { Login } from "../Pages/Login/Login";
 import { Register } from '../Pages/Login/Register'
 import { Friends } from "../Pages/Friends/Friends";
-import { Testeo } from "../Pages/Testeo";
+
 
 export const AppRouter = () => {
   return (
@@ -20,7 +20,7 @@ export const AppRouter = () => {
         <Route path="Contact" element={<ContactForm />} />
         <Route path="Profile" element={<Profile />} />
         <Route path="Friends" element={<Friends/>}/>
-        <Route path="Testeo" element={<Testeo/>}/>
+        
 
         <Route
           path="HomePage"

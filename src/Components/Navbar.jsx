@@ -5,6 +5,8 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
 
+
+
 export const NavBar = () => {
   return (
     <Navbar expand="lg" bg="dark" variant={"dark"} >
@@ -41,7 +43,6 @@ export const NavBar = () => {
             navbarScroll
             
           > 
-            <Nav.Link href="/Testeo">Testeo</Nav.Link>
             <Nav.Link href="#action1">Eventos</Nav.Link>
             <Nav.Link href="/Friends">Personas</Nav.Link>
             <Nav.Link href="/Profile">Perfil</Nav.Link>

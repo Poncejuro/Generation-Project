@@ -19,11 +19,11 @@ import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
 import { palette } from "@mui/system";
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import PostList from "./PostList";
 import "./Profile.css";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -349,7 +349,6 @@ export const Profile = () => {
                   </Grid>
                 </Box>
               </Row>
-
               <div className="feed-box">
                 {miArray.map((aux) => (
                   <FeedCards
@@ -360,7 +359,9 @@ export const Profile = () => {
                     text={aux.text}
                   />
                 ))}
-              </div>
+              </div>{" "}
+              {/* ultimo elemento agregado y componente PostList */}
+              <PostList />
             </section>
           </Col>
         </Row>

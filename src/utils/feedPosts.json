@@ -1,81 +1,71 @@
 [
   {
-    "id": 1,
-    "title": "Esteban",
+    "Title": "Esteban",
     "img": "https://i.pin.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
     "imgFooter": "Guitarrista",
-    "info": "Me gusta la musica" 
+    "text": "Me gusta la musica"
   },
 
   {
-    "id": 2,
-    "title": "Mauricio",
+    "Title": "Mauricio",
     "img": "https://i.pin.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
     "imgFooter": "Guitarrista",
-    "info": "Me gusta la musica" 
+    "text": "Me gusta la musica"
   },
 
   {
-    "id": 3,
-    "title": "Norma",
+    "Title": "Norma",
     "img": "https://i.pin.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
     "imgFooter": "Guitarrista",
-    "info": "Me gusta la musica" 
+    "text": "Me gusta la musica"
   },
 
   {
-    "id": 4,
-    "title": "Norma",
+    "Title": "Norma",
     "img": "https://i.pin.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
     "imgFooter": "Guitarrista",
-    "info": "Me gusta la musica" 
+    "text": "Me gusta la musica"
   },
 
   {
-    "id": 5,
-    "title": "Norma",
+    "Title": "Norma",
     "img": "https://i.pin.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
     "imgFooter": "Guitarrista",
-    "info": "Me gusta la musica" 
+    "text": "Me gusta la musica"
   },
 
   {
-    "id": 6,
-    "title": "Norma",
+    "Title": "Norma",
     "img": "https://i.pin.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
     "imgFooter": "Guitarrista",
-    "info": "Me gusta la musica" 
+    "text": "Me gusta la musica"
   },
 
   {
-    "id": 7,
-    "title": "Norma",
+    "Title": "Norma",
     "img": "https://i.pin.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
     "imgFooter": "Guitarrista",
-    "info": "Me gusta la musica" 
+    "text": "Me gusta la musica"
   },
 
   {
-    "id": 8,
-    "title": "Norma",
+    "Title": "Norma",
     "img": "https://i.pin.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
     "imgFooter": "Guitarrista",
-    "info": "Me gusta la musica" 
+    "text": "Me gusta la musica"
   },
 
   {
-    "id": 9,
-    "title": "Norma",
+    "Title": "Norma",
     "img": "https://i.pin.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
     "imgFooter": "Guitarrista",
-    "info": "Me gusta la musica" 
+    "text": "Me gusta la musica"
   },
 
   {
-    "id": 10,
-    "title": "Norma",
+    "Title": "Norma",
     "img": "https://i.pin.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
     "imgFooter": "Guitarrista",
-    "info": "Me gusta la musica" 
+    "text": "Me gusta la musica"
   }
 ]

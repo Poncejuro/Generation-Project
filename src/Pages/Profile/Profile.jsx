@@ -15,15 +15,11 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Grid from "@mui/material/Unstable_Grid2";
 import Stack from "@mui/material/Stack";
+import initialData from "../../utils/feedPosts.json";
 import "./Profile.css";
 
-
-
-
-
-
 export const Profile = () => {
-
+  const firstData = initialData;
 
   const [form, setForm] = useState({});
   const setField = (field) => {
@@ -33,47 +29,38 @@ export const Profile = () => {
     });
   };
 
-
   const [posts, setPosts] = useState([]);
   const saveFeed = () => {
-    const updatedPosts = [...posts, form];
+    const updatedPosts = [...posts, form, ...firstData];
     setPosts(updatedPosts);
     localStorage.setItem("feedData", JSON.stringify(updatedPosts));
   };
-
 
   const [feddData, setObjectData] = useState([]);
   const updateData = () => {
     const jsonData = localStorage.getItem("feedData");
     const objectData = JSON.parse(jsonData);
-    setObjectData(objectData)
+    console.log(objectData);
+    setObjectData(objectData);
   };
 
   const deleteAllPosts = () => {
     localStorage.removeItem("feedData");
     localStorage.setItem("feedData", JSON.stringify([]));
-    updateData()
+    updateData();
   };
-
-
 
   const deletePost = (index) => {
     const updatedPosts = posts.filter((_, i) => i !== index);
     setPosts(updatedPosts);
     localStorage.setItem("feedData", JSON.stringify(updatedPosts));
+    updateData();
   };
 
-
-
-
-
-
-
   let [profileButton, setProfileButton] = useState(false);
- 
+
   const handleProfileButton = (event) => {
     setProfileButton(!profileButton);
-
   };
 
   return (
@@ -97,9 +84,7 @@ export const Profile = () => {
               className="bio-box-profile-edit"
               style={{ display: profileButton ? "inline" : "none" }}
             >
-              <ListGroup.Item
-                className="Principal-Container"
-              >
+              <ListGroup.Item className="Principal-Container">
                 <Stack>
                   <TextField
                     id="nombreUsuario"
@@ -142,7 +127,7 @@ export const Profile = () => {
                       label: { color: "black" },
                     }}
                   />
-                  
+
                   <Form.Group controlId="formFile" className="mb-3 p-2 m-3">
                     <Form.Control type="file" />
                   </Form.Group>
@@ -258,11 +243,7 @@ export const Profile = () => {
                       <Form.Group controlId="formFile" className="m-1">
                         <Form.Control type="file" />
                       </Form.Group>
-                      <Button
-                        variant="success"
-                        href="#"
-                        onClick={saveFeed}
-                      >
+                      <Button variant="success" href="#" onClick={saveFeed}>
                         Publicar
                       </Button>
                     </Grid>
@@ -295,31 +276,34 @@ export const Profile = () => {
                       Reciente
                     </Button>
                     <Button className="me-6" variant="success" href="#">
-                      Antiguo 
+                      Antiguo
                     </Button>
-                    <Button className="me-6" variant="success" href="#" onClick={deleteAllPosts}>
+                    <Button
+                      className="me-6"
+                      variant="success"
+                      href="#"
+                      onClick={deleteAllPosts}
+                    >
                       deleteAllPosts
                     </Button>
                   </Grid>
                 </Box>
               </Row>
               <div className="feed-box">
-                {feddData.map((aux,index) => (
+                {feddData.map((aux, index) => (
                   <FeedCards
                     keyDiv={index}
                     key={index}
                     logo={img1}
                     imgFooter={aux.imgFooter}
-                    title={aux.title}
+                    title={aux.Title}
                     text={aux.text}
                     detePost={() => deletePost(index)}
-
                     imgSize={150}
                     cardSizeH={200}
                   />
                 ))}
-              </div>{" "}
-              {/* <PostList /> */}
+              </div>
             </section>
           </Col>
         </Row>

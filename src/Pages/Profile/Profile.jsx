@@ -239,7 +239,8 @@ export const Profile = () => {
                     name="Title"
                     onChange={setField}
                   />
-                  {titleError && <p className="text-danger">{titleError}</p>} {/*agrega el p cuando haya error*/}
+                  {titleError && <div class="alert alert-danger" role="alert">{titleError}</div>} 
+                  {/*agrega el p cuando haya error*/}
                 </Grid>
                 <Grid xs={12} md={6}>
                   <Form.Control

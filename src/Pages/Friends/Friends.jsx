@@ -3,7 +3,7 @@ import { NavBar } from "../../Components/Navbar";
 import { friendList } from "../../utils/friends";
 import '../../Components/FriendCards/FriendCards.css'
 import {useState} from "react";
-import Button from 'react-bootstrap/Button';
+
 
 export const Friends = () => {
 
@@ -16,23 +16,22 @@ export const Friends = () => {
     setMiArray([...miArray, objectData]);
 };
 
-  return (
-    <>
-      <NavBar />
-      <Button variant="primary" onClick={updateData}>Actualizar</Button>{' '}
-      <section className="friends-about d-flex">
-        <div className="friendsCard">{miArray.map((aux) => (
-          <FriendCards
-            key={1}
-            name={aux.usuario}
-            rol={aux.Rol}
-            bio={aux.Bibliografia}
-            alt={"aqui debe haber una foto"}
-            imgSize={("250px")} />
-        ))}</div>
-
-      </section>
-
-    </>
-  )
-}
+return (
+  <>
+    <NavBar />
+    <section className="friends-container">
+      <h2>Personas que quizás conozcas</h2>
+      <div className="friendsCard">{friendList.map((friend) => (
+        <FriendCards
+          key={1}
+          name={friend.name}
+          rol={friend.rol}
+          bio={friend.bio}
+          img={friend.img}
+          alt={"aqui debe haber una foto"}
+          imgSize={("250px")} />
+      ))}</div>
+    </section>
+  </>
+)
+};

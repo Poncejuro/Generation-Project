@@ -43,7 +43,7 @@ export const NavBar = () => {
             navbarScroll
             
           > 
-            <Nav.Link href="#action1">Eventos</Nav.Link>
+            <Nav.Link href="/Events">Eventos</Nav.Link>
             <Nav.Link href="/Friends">Personas</Nav.Link>
             <Nav.Link href="/Profile">Perfil</Nav.Link>
             <Nav.Link href="/AboutUs">Nosotros</Nav.Link>

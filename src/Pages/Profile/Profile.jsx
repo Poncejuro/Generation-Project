@@ -240,6 +240,8 @@ export const Profile = () => {
                     onChange={setField}
                   />
                   {titleError && <div class="alert alert-danger" role="alert">{titleError}</div>} 
+                   
+                  
                   {/*agrega el p cuando haya error*/}
                 </Grid>
                 <Grid xs={12} md={6}>
@@ -249,7 +251,7 @@ export const Profile = () => {
                     name="imgFooter"
                     onChange={setField}
                   />
-                  {imgFooterError && <p className="text-danger">{imgFooterError}</p>}
+                  {imgFooterError && <div class="alert alert-danger" role="alert">{imgFooterError}</div>}
                 </Grid>
                 <Grid xs={12} md={12}>
                   <Form.Control
@@ -259,7 +261,7 @@ export const Profile = () => {
                     rows={4}
                     onChange={setField}
                   />
-                  {textError && <p className="text-danger">{textError}</p>}
+                 {textError && <div class="alert alert-danger" role="alert">{textError}</div>} 
                 </Grid>
               </Grid>
               <Grid xs={12}>

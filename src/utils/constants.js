@@ -65,7 +65,9 @@ export const team = [
     id: 5,
     name: "Yael Quiroz",
     rol: `Desarrollador Full Stack`,
-    img: "https://i.pinimg.com/originals/f4/a2/16/f4a2162df9c77dc195bec88cc0f5662b.jpg",
+    img: "blob:https://web.whatsapp.com/d4034e47-1170-44ce-9441-6c50c380577f",
+    linkedin: `https://www.linkedin.com/in/jes%C3%BAs-yael-quiroz/`,
+    git:`https://github.com/jyaelqp`  
   },
   {
     id: 6,

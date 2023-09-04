@@ -27,30 +27,30 @@
   },
 
   {
-    "EventTitle": "Norma",
-    "img": "https://ined21.com/wp-content/uploads/2020/11/Eventos-musicales.jpg",
-    "date": "Guitarrista",
-    "text": "Descripción del evento, detalles, cantidad, etc.",
-    "time": "15:00:00",
-    "location": "Estado,Ciudad,Lugar"
+    "EventTitle": " Rock And Roll",
+    
+    "date": "12 Marzo del  2024",
+    "text": "Te invitamos a la inauguración de la banda de Roll Local, estaremos dando a conocer a la nueva banda local con mucho potencial.",
+    "time": "10:00pm",
+    "location": "Estado de México, Chimalhuacán"
   },
 
   {
-    "EventTitle": "Norma",
-    "img": "https://ined21.com/wp-content/uploads/2020/11/Eventos-musicales.jpg",
-    "date": "Guitarrista",
-    "text": "Descripción del evento, detalles, cantidad, etc.",
-    "time": "15:00:00",
-    "location": "Estado,Ciudad,Lugar"
+    "EventTitle": "Mariachis locos",
+    
+    "date": "26 de Septiembre del 2023",
+    "text": "Mariacis locos te invita a su presentación en las afueras de Garibaldi",
+    "time": "9:00pm",
+    "location": "Ciudad de México, GAM1"
   },
 
   {
-    "EventTitle": "Norma",
-    "img": "https://ined21.com/wp-content/uploads/2020/11/Eventos-musicales.jpg",
-    "date": "Guitarrista",
-    "text": "Descripción del evento, detalles, cantidad, etc.",
-    "time": "15:00:00",
-    "location": "Estado,Ciudad,Lugar"
+    "EventTitle": "Jaguares del Sur",
+    
+    "date": "18 de Diciembre del 2023",
+    "text": "Banda de canciones norteñas",
+    "time": "5:00pm",
+    "location": "Tamaulipas"
   },
 
   {
@@ -63,29 +63,29 @@
   },
 
   {
-    "EventTitle": "Norma",
+    "EventTitle": "SpiterBanda",
     "img": "https://ined21.com/wp-content/uploads/2020/11/Eventos-musicales.jpg",
-    "date": "Guitarrista",
-    "text": "Descripción del evento, detalles, cantidad, etc.",
-    "time": "15:00:00",
-    "location": "Estado,Ciudad,Lugar"
+    "date": "14 de Octubre del 2023",
+    "text": "Ven y conoce a SpiterBanda con canciones para la chaviza",
+    "time": "6:00pm",
+    "location": "Queretaro"
   },
 
   {
-    "EventTitle": "Norma",
+    "EventTitle": "Belicos de Veracruz",
     "img": "https://ined21.com/wp-content/uploads/2020/11/Eventos-musicales.jpg",
-    "date": "Guitarrista",
-    "text": "Descripción del evento, detalles, cantidad, etc.",
+    "date": "11 de Noviembre del 2023",
+    "text": "Si eres belico y eres de Veracruz, este es tú momento de brillar",
     "time": "15:00:00",
-    "location": "Estado,Ciudad,Lugar"
+    "location": "Veracruz"
   },
 
   {
-    "EventTitle": "Norma",
+    "EventTitle": "Opera Cepillin",
     "img": "https://ined21.com/wp-content/uploads/2020/11/Eventos-musicales.jpg",
-    "date": "Guitarrista",
-    "text": "Descripción del evento, detalles, cantidad, etc.",
+    "date": "19 de Septiembre del 2023",
+    "text": " Conce a Cepillin, gran cantante de opera.",
     "time": "15:00:00",
-    "location": "Estado,Ciudad,Lugar"
+    "location": "Guanajuato"
   }
 ]

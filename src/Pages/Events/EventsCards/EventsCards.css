@@ -1,26 +1,16 @@
-.sectionL {
-  /* background-color: aqua; */
-  padding: -20px;
+/* EventsCards.css */
+
+.card {
+  /* border-radius: 30px; */
+  padding: 29px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: calc(33.33% - 20px); /* 33.33% del ancho del contenedor, con 20px de espacio entre las tarjetas */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho */
 }
 
-.sectionR {
-  /* background-color: bisque; */
-  padding-left: 150px;
+.card img {
+  max-width: 150%;
+  height: auto;
 }
 
-.contenedor {
-  position: relative; /* Para que el contenido no se superponga al botón */
-  height: 100vh; /* Establece la altura del contenedor al 100% de la ventana */
-}
-
-.contenido {
-  /* Estilos para el contenido del componente */
-  margin-bottom: 50px; /* Espacio inferior para el botón */
-}
-
-.boton {
-  position: absolute; /* Posición absoluta para el botón */
-  bottom: 10px; /* Distancia desde la parte inferior */
-  left: 50%; /* Para centrar horizontalmente el botón */
-  transform: translateX(-50%); /* Centrar horizontalmente */
-}

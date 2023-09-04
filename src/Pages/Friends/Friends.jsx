@@ -2,19 +2,32 @@ import { FriendCards } from "../../Components/FriendCards/FriendCards";
 import { NavBar } from "../../Components/Navbar";
 import { friendList } from "../../utils/friends";
 import '../../Components/FriendCards/FriendCards.css'
-import {useState} from "react";
+import {useState, useEffect } from "react";
 
 
 export const Friends = () => {
 
-  const [miArray, setMiArray] = useState([]);
+ 
+          
+          function App() {
+            const [data, setData] = useState([]);
+            const [loading, setLoading] = useState(true);
+          
+            useEffect(() => {
+              // Realizar el fetch automático aquí
+              fetch('https://reqres.in/api/users?delay=3')
+                .then((response) => response.json())
+                .then((data) => {
+                  setData(data);
+                  setLoading(false);
+                })
+                .catch((error) => {
+                  console.error('Error al cargar los datos:', error);
+                  setLoading(false);
+                });
+            }, []);}
 
-  const updateData = () => {
-    const jsonData = localStorage.getItem("nakamasData");
-    const objectData = JSON.parse(jsonData);
-    console.log(objectData); //testing
-    setMiArray([...miArray, objectData]);
-};
+
 
 return (
   <>

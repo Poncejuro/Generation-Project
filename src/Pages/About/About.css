@@ -14,11 +14,13 @@
     justify-content: center;
 }
 
-.people{
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
+.carousel-box{
+   padding-top: 5vh;
 }
+
+
+
+
 
 
 

@@ -5,5 +5,22 @@
 
 .sectionR {
   /* background-color: bisque; */
-  padding-left: 80px;
+  padding-left: 150px;
+}
+
+.contenedor {
+  position: relative; /* Para que el contenido no se superponga al botón */
+  height: 100vh; /* Establece la altura del contenedor al 100% de la ventana */
+}
+
+.contenido {
+  /* Estilos para el contenido del componente */
+  margin-bottom: 50px; /* Espacio inferior para el botón */
+}
+
+.boton {
+  position: absolute; /* Posición absoluta para el botón */
+  bottom: 10px; /* Distancia desde la parte inferior */
+  left: 50%; /* Para centrar horizontalmente el botón */
+  transform: translateX(-50%); /* Centrar horizontalmente */
 }

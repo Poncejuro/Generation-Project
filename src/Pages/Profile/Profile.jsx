@@ -60,8 +60,9 @@ export const Profile = () => {
       const updatedPosts = [...posts, form, ...firstData];
       setPosts(updatedPosts);
       localStorage.setItem("feedData", JSON.stringify(updatedPosts));
+      updateData();
     }
-    updateData();
+    
   };
 
   const [feddData, setObjectData] = useState([]);
@@ -244,6 +245,11 @@ export const Profile = () => {
                       rows={4}
                       onChange={setField}
                     />
+                    {textError && (
+                      <div class="alert alert-danger" role="alert">
+                        {textError}
+                      </div>
+                    )}
                   </Grid>
                 </Grid>
               </div>

@@ -1,38 +1,29 @@
-[
+ [
   {
-    "EventTitle": "Esteban",
-    "img": "https://ined21.com/wp-content/uploads/2020/11/Eventos-musicales.jpg",
-    "date": "DD/MM/YYYY",
-    "text": "Descripción del evento, detalles, cantidad, etc.",
-    "time": "15:00:00",
-    "location": "Estado,Ciudad,Lugar"
+    "EventTitle": "Sinfonia Ramón",
+   
+    "date": "Miercoles 28 de Marzo del 2024",
+    "text": "Disfruta de la sinfonia en el centro de Mérida.",
+    "time": "Inica 4:00pm",
+    "location": "Mérida Centro."
   },
 
   {
-    "EventTitle": "Mauricio",
+    "EventTitle": "Pepe Pepe",
     "img": "https://ined21.com/wp-content/uploads/2020/11/Eventos-musicales.jpg",
-    "date": "Guitarrista",
-    "text": "Descripción del evento, detalles, cantidad, etc.",
-    "time": "15:00:00",
-    "location": "Estado,Ciudad,Lugar"
+    "date": "Domingo 10 de Octubre del 2023" ,
+    "text": "Los invito al bar: La bikina, donde escucharan los ultimos temas de Pepe Pepe",
+    "time": "Comienza a las 7:00pm",
+    "location": "Ciudad de México, Tepito"
   },
 
   {
-    "EventTitle": "Norma",
-    "img": "https://ined21.com/wp-content/uploads/2020/11/Eventos-musicales.jpg",
-    "date": "Guitarrista",
-    "text": "Descripción del evento, detalles, cantidad, etc.",
-    "time": "15:00:00",
-    "location": "Estado,Ciudad,Lugar"
-  },
-
-  {
-    "EventTitle": "Norma",
-    "img": "https://ined21.com/wp-content/uploads/2020/11/Eventos-musicales.jpg",
-    "date": "Guitarrista",
-    "text": "Descripción del evento, detalles, cantidad, etc.",
-    "time": "15:00:00",
-    "location": "Estado,Ciudad,Lugar"
+    "EventTitle": "Las chicas de morado",
+   
+    "date": "13 de Septiembre del 2023",
+    "text": "El grupo reconocido (Chicas de Morado) Festejaran su primer aniversario en la plaza de las Torres.",
+    "time": "2:00pm",
+    "location": "Guadalajara"
   },
 
   {
@@ -60,6 +51,15 @@
     "text": "Descripción del evento, detalles, cantidad, etc.",
     "time": "15:00:00",
     "location": "Estado,Ciudad,Lugar"
+  },
+
+  {
+    "EventTitle": "Banda Baston",
+    "img": "https://ined21.com/wp-content/uploads/2020/11/Eventos-musicales.jpg",
+    "date": "30/11/2023",
+    "text": "Evento local para disfrutar de la música.",
+    "time": "15:00:00",
+    "location": "Mérida Centro, enfrente de la carniceria la Honey"
   },
 
   {

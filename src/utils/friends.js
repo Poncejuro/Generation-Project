@@ -1,82 +1,62 @@
 export const friendList = [
-
   {
     id: 1,
-    name: "Esteban",
-    img: "https://i.pinimg.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
-    rol: `Guitarrista`,
-    bio: "Me gusta la musica" 
+    name: "Carlos",
+    rol: "Baterista",
+    bio: "Apasionado por la percusión y el ritmo."
   },
-
   {
     id: 2,
-    name: "Mauricio",
-    img: "https://i.pinimg.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
-    rol: `Guitarrista`,
-    bio: "Me gusta la musica" 
+    name: "Ana",
+    rol: "Guitarrista",
+    bio: "Explorando acordes y melodías en la guitarra."
   },
-
   {
     id: 3,
-    name: "Norma",
-    img: "https://i.pinimg.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
-    rol: `Guitarrista`,
-    bio: "Me gusta la musica" 
+    name: "Laura",
+    rol: "Bajista",
+    bio: "Amante del bajo eléctrico y los graves profundos."
   },
-
   {
     id: 4,
-    name: "Jessica",
-    img: "https://i.pinimg.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
-    rol: `Guitarrista`,
-    bio: "Me gusta la musica" 
+    name: "Javier",
+    rol: "Tecladista",
+    bio: "Creando sonidos únicos en el teclado."
   },
-
   {
     id: 5,
-    name: "Luis",
-    img: "https://i.pinimg.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
-    rol: `Guitarrista`,
-    bio: "Me gusta la musica" 
+    name: "Isabel",
+    rol: "Cantante",
+    bio: "Cantando con pasión y emoción."
   },
-
   {
     id: 6,
-    name: "Yael",
-    img: "https://i.pinimg.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
-    rol: `Guitarrista`,
-    bio: "Me gusta la musica" 
+    name: "Juan",
+    rol: "Pianista",
+    bio: "Elevando la música con las teclas del piano."
   },
-
   {
     id: 7,
-    name: "Leo",
-    img: "https://i.pinimg.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
-    rol: `Guitarrista`,
-    bio: "Me gusta la musica" 
+    name: "Elena",
+    rol: "Baterista",
+    bio: "Ritmos y percusión que te harán mover los pies."
   },
-
   {
     id: 8,
-    name: "Andres",
-    img: "https://i.pinimg.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
-    rol: `Guitarrista`,
-    bio: "Me gusta la musica" 
+    name: "Sergio",
+    rol: "Guitarrista",
+    bio: "Dominando las cuerdas con solos impresionantes."
   },
-
   {
     id: 9,
-    name: "Norma",
-    img: "https://i.pinimg.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
-    rol: `Guitarrista`,
-    bio: "Me gusta la musica" 
+    name: "María",
+    rol: "Bajista",
+    bio: "Grooves de bajo que te harán mover la cabeza."
   },
-
   {
     id: 10,
-    name: "Mau",
-    img: "https://i.pinimg.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
-    rol: `Guitarrista`,
-    bio: "Me gusta la musica" 
+    name: "Pedro",
+    rol: "Guitarrista",
+    bio: "Amor por las cuerdas y los acordes."
   },
 ];

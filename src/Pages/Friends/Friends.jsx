@@ -16,11 +16,19 @@ export const Friends = () => {
     setMiArray([...miArray, objectData]);
 };
 
+//Se agrego una api para generar imagenes aleatorias
+const updatedFriendList = [...friendList];
+
+for (let i = 0; i < updatedFriendList.length; i++) {
+  updatedFriendList[i].img = `https://picsum.photos/200?random=${i}`;
+}
+
+
 return (
   <>
     <NavBar />
     <section className="friends-container">
-      <h2>Personas que quizás conozcas</h2>
+      <h1>Personas que quizás conozcas</h1>
       <div className="friendsCard">{friendList.map((friend) => (
         <FriendCards
           key={1}

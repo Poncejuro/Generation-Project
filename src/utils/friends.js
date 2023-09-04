@@ -26,7 +26,7 @@ export const friendList = [
 
   {
     id: 4,
-    name: "Norma",
+    name: "Jessica",
     img: "https://i.pinimg.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
     rol: `Guitarrista`,
     bio: "Me gusta la musica" 
@@ -34,7 +34,7 @@ export const friendList = [
 
   {
     id: 5,
-    name: "Norma",
+    name: "Luis",
     img: "https://i.pinimg.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
     rol: `Guitarrista`,
     bio: "Me gusta la musica" 
@@ -42,7 +42,7 @@ export const friendList = [
 
   {
     id: 6,
-    name: "Norma",
+    name: "Yael",
     img: "https://i.pinimg.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
     rol: `Guitarrista`,
     bio: "Me gusta la musica" 
@@ -50,7 +50,7 @@ export const friendList = [
 
   {
     id: 7,
-    name: "Norma",
+    name: "Leo",
     img: "https://i.pinimg.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
     rol: `Guitarrista`,
     bio: "Me gusta la musica" 
@@ -58,7 +58,7 @@ export const friendList = [
 
   {
     id: 8,
-    name: "Norma",
+    name: "Andres",
     img: "https://i.pinimg.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
     rol: `Guitarrista`,
     bio: "Me gusta la musica" 
@@ -74,7 +74,7 @@ export const friendList = [
 
   {
     id: 10,
-    name: "Norma",
+    name: "Mau",
     img: "https://i.pinimg.com/736x/a4/3f/6e/a43f6ef76bbc2dad745da6f332f57232.jpg",
     rol: `Guitarrista`,
     bio: "Me gusta la musica" 

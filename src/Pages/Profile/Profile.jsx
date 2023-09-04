@@ -21,19 +21,49 @@ import "./Profile.css";
 export const Profile = () => {
   const firstData = initialData;
 
+  //setup de los errores
+  const [titleError, setTitleError] = useState("");
+  const [imgFooterError, setImgFooterError] = useState("");
+  const [textError, setTextError] = useState("");
+
   const [form, setForm] = useState({});
   const setField = (field) => {
     setForm({
       ...form,
       [field.target.name]: field.target.value,
     });
+
+    //validaciones de que no este vacio
+
+    if (field.target.name === "Title" && !field.target.value.trim()) {
+      setTitleError("Agregue texto antes de publicar");
+    } else {
+      setTitleError("");
+    }
+
+    if (field.target.name === "imgFooter" && !field.target.value.trim()) {
+      setImgFooterError("Agregue texto antes de publicar");
+    } else {
+      setImgFooterError("");
+    }
+
+    if (field.target.name === "text" && !field.target.value.trim()) {
+      setTextError("Agregue texto antes de publicar");
+    } else {
+      setTextError("");
+    }
+
   };
 
   const [posts, setPosts] = useState([]);
   const saveFeed = () => {
-    const updatedPosts = [...posts, form, ...firstData];
-    setPosts(updatedPosts);
-    localStorage.setItem("feedData", JSON.stringify(updatedPosts));
+
+    //if que valida que no haya errores
+    if (!titleError && !imgFooterError && !textError) {
+      const updatedPosts = [...posts, form, ...firstData];
+      setPosts(updatedPosts);
+      localStorage.setItem("feedData", JSON.stringify(updatedPosts));
+    }
   };
 
   const [feddData, setObjectData] = useState([]);
@@ -209,6 +239,10 @@ export const Profile = () => {
                     name="Title"
                     onChange={setField}
                   />
+                  {titleError && <div class="alert alert-danger" role="alert">{titleError}</div>} 
+                   
+                  
+                  {/*agrega el p cuando haya error*/}
                 </Grid>
                 <Grid xs={12} md={6}>
                   <Form.Control
@@ -217,6 +251,7 @@ export const Profile = () => {
                     name="imgFooter"
                     onChange={setField}
                   />
+                  {imgFooterError && <div class="alert alert-danger" role="alert">{imgFooterError}</div>}
                 </Grid>
                 <Grid xs={12} md={12}>
                   <Form.Control
@@ -226,6 +261,7 @@ export const Profile = () => {
                     rows={4}
                     onChange={setField}
                   />
+                 {textError && <div class="alert alert-danger" role="alert">{textError}</div>} 
                 </Grid>
               </Grid>
               <Grid xs={12}>

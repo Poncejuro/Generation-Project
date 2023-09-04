@@ -32,7 +32,7 @@ export const Profile = () => {
       [field.target.name]: field.target.value,
     });
 
-    //validaciones de que no este vacio
+    //crea las banderas de que estan vacios y los mensajes que aparecen en el dom
 
     if (field.target.name === "Title" && !field.target.value.trim()) {
       setTitleError("Agregue texto antes de publicar");
@@ -55,8 +55,13 @@ export const Profile = () => {
 
   const [posts, setPosts] = useState([]);
   const saveFeed = () => {
-    //if que valida que no haya errores
-    if (!titleError && !imgFooterError && !textError) {
+    //if que valida que no haya errores o vacios
+    if (form.Title &&
+      form.imgFooter &&
+      form.text &&
+      !titleError &&
+      !imgFooterError &&
+      !textError) {
       const updatedPosts = [...posts, form, ...firstData];
       setPosts(updatedPosts);
       localStorage.setItem("feedData", JSON.stringify(updatedPosts));

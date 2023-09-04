@@ -1,7 +1,7 @@
-import { FriendCards } from "../../Components/FriendCards/FriendCards";
-import { NavBar } from "../../Components/Navbar";
+import { FriendCards } from "./FriendCards/FriendCards";
+import { NavBar } from "../Navbar";
 import { friendList } from "../../utils/friends";
-import '../../Components/FriendCards/FriendCards.css'
+
 import {useState, useEffect } from "react";
 
 

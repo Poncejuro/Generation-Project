@@ -1,6 +1,6 @@
-import { NavBar } from "../../Components/Navbar";
-import { Cards } from "../../Components/Cards/Cards";
-import { OursCards } from "../../Components/OursCards/OursCards";
+import { NavBar } from "../Navbar";
+import { Cards } from "./Cards/Cards";
+import { OursCards } from "./OursCards/OursCards";
 import { intentions, team } from "../../utils/constants";
 import "./About.css";
 

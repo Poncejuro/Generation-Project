@@ -1,5 +1,5 @@
-import { NavBar } from "../../Components/Navbar";
-import { EventsCards } from "../../Components/EventsCards/EventsCards";
+import { NavBar } from "../Navbar";
+import { EventsCards } from "./EventsCards/EventsCards";
 import React from "react";
 import eventsData from "../../utils/events";
 import "./Events.css";

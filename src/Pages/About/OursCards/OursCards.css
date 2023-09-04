@@ -1,0 +1,28 @@
+.card-Our {
+  display: flex;
+  flex-direction:row;
+
+  max-width: 500px;
+  width: auto;
+  height: auto;
+
+  padding: 2rem;
+  border-radius: 10px;
+
+  background-color: rgb(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.Ours-img{
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+}
+
+.symbols-card{
+  font-size: 30px;
+}
+
+.info-box-ours{
+  margin-left: 20px;
+}

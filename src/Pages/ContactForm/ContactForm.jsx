@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
-import { NavBar } from "../../Components/Navbar";
+import { NavBar } from "../Navbar";
 import "../ContactForm/Contact.css";
 
 export const ContactForm = () => {

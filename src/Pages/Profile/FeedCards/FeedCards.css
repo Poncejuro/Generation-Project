@@ -1,0 +1,17 @@
+.feedCard {
+  text-align: center;
+
+  margin-bottom: 4vh;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 2rem;
+
+  border-radius: 10px;
+
+  background-color: rgb(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+
+  break-inside: avoid;
+  
+}
+

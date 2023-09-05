@@ -20,29 +20,29 @@ export const EventsCards = ({
   return (
     <>
     
-      <div
-        className="card text-center"
-        style={{ width: cardSizeW, height: "auto" }}
-        key={keyDiv}
-      >
-        <Row>
-          <Col className="sectionL" xs={12} sm={12} md={3}>
-            <img src={logo} style={{ width: '200px', height: 'px', margin: 'auto', display:'block' }} alt={alt} />
-          </Col>
+    <div className="card text-center" style={{ width: cardSizeW, height: "auto" }} key={keyDiv}>
+  <Row>
+    <Col className="sectionL" xs={12} sm={12} md={15}>
+      <img src={logo} style={{ width: '150px', height: '150px', margin: 'auto', display: 'block' }} alt={alt} />
+    </Col>
 
-          <Col className="sectionR" xs={12} sm={12} md={9}>
-            {console.log(title)}
-            <h3>{ETitle}</h3>
-            <p>{text}</p>
-            <p>{date}</p>
-            <p>{time}</p>
-            <p>{location}</p>
-          </Col>
-        </Row>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-outline-success" type="button">Reservar</button>
-  <button class="btn btn-outline-light" type="button">Ignorar evento</button>
+    <Col className="sectionR" xs={12} sm={12} md={15} style={{ textAlign: 'left' }}>
+  {console.log(title)}
+  <h3 style={{ fontSize: '16px' }}>{ETitle}</h3>
+  <p style={{ fontSize: '14px' }}>{text}</p>
+  <p style={{ fontSize: '12px' }}>{date}</p>
+  <p style={{ fontSize: '12px' }}>{time}</p>
+  <p style={{ fontSize: '12px' }}>{location}</p>
+</Col>
+
+  </Row>
+        <div class="contenedor-botones">
+  <button class="btn btn-success" type="button">Reservar</button>
+  <button class="btn btn-danger" type="button">Ignorar evento</button>
 </div>
+
+
+
       </div>
     </>
   );

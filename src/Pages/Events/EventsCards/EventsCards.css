@@ -14,3 +14,19 @@
   height: auto;
 }
 
+/* Estilos adicionales para el contenido de la tarjeta (texto) */
+.card-content {
+  text-align:end; /* Alinea el texto a la izquierda */
+}
+
+/* Resto de tu CSS */
+.contenedor-botones {
+  display: flex;
+  flex-direction: file;
+  align-items: flex-end;
+  height: 100%; /* Asegura que el contenedor ocupe todo el alto disponible */
+}
+
+.contenedor-botones button {
+  margin-top: 50px; /* Espacio entre los botones */
+}

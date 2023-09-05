@@ -1,4 +1,4 @@
-import { NavBar } from "../Navbar";
+import { NavBar } from "../Navbar"
 import { EventsCards } from "./EventsCards/EventsCards";
 import React from "react";
 import eventsData from "../../utils/events";
@@ -7,9 +7,10 @@ import "./Events.css";
 //import{ eventsList} from "../Events"
 
 
+
 export const Events = () => {
   const events = eventsData;
-  console.log(events);
+  //console.log(events);
 
  //Se agrego una api para generar imagenes aleatorias
 const updatedFriendList = [...events];
@@ -26,15 +27,13 @@ for (let i = 0; i < updatedFriendList.length; i++) {
         <div className="events-box">
           {events.map((event, index) => (
             <EventsCards
-              keyDiv={index}
-              key={1}
+              key={index}
               logo={event.img}
               ETitle={event.EventTitle}
               text={event.text}
               date={event.date}
               time={event.time}
               location={event.location}
-              // detePost={() => deletePost(index)}
               imgSize={("250")}
               cardSizeH={("200")}
               

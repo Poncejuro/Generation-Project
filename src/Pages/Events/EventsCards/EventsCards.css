@@ -1,26 +1,38 @@
-.sectionL {
-  /* background-color: aqua; */
-  padding: -20px;
+/* EventsCards.css */
+
+.card {
+  /* border-radius: 30px; */
+  padding: 29px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: calc(33.33% - 20px); /* 33.33% del ancho del contenedor, con 20px de espacio entre las tarjetas */
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px); /* Incluye el padding y el borde en el ancho */
 }
 
-.sectionR {
-  /* background-color: bisque; */
-  padding-left: 150px;
+.card img {
+  max-width: 200%;
+  height: auto;
 }
 
-.contenedor {
-  position: relative; /* Para que el contenido no se superponga al botón */
-  height: 100vh; /* Establece la altura del contenedor al 100% de la ventana */
+/* Estilos adicionales para el contenido de la tarjeta (texto) */
+.card-content {
+  text-align:end; /* Alinea el texto a la izquierda */
 }
 
-.contenido {
-  /* Estilos para el contenido del componente */
-  margin-bottom: 50px; /* Espacio inferior para el botón */
+/* Resto de tu CSS */
+.contenedor-botones {
+  display: flex;
+  flex-direction:row;
+  align-items: flex-end;
+  height: 100%; /* Asegura que el contenedor ocupe todo el alto disponible */
+  padding: 15px 30px;
 }
 
-.boton {
-  position: absolute; /* Posición absoluta para el botón */
-  bottom: 10px; /* Distancia desde la parte inferior */
-  left: 50%; /* Para centrar horizontalmente el botón */
-  transform: translateX(-50%); /* Centrar horizontalmente */
+.contenedor-botones {
+  margin-bottom: 10px; /* Agrega el espacio entre los botones y otros elementos si es necesario */
+  
+
 }
+

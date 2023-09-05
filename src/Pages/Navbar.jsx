@@ -12,7 +12,7 @@ export const NavBar = () => {
     <Navbar expand="lg" bg="dark" variant={"dark"} >
       <Container fluid>
         <Link
-          to="/HomePage"
+          to="/Events"
           className="link-box"
           style={{
             color: "white",

@@ -1,6 +1,31 @@
 .body-events {
-  background-image: url("../../Img/edc.jpg");
-  width: 100%;
-  height: 100%;
+  background-image: url("../../Img/events.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
+
+.events-box {
+  width: calc(100% + 20px); /* Cambiamos el ancho para ocupar el 100% del contenedor más 20px de margen total (10px a la izquierda y 10px a la derecha) */
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea si no caben en el ancho */
+  margin: 0 -10px; /* Añadimos un margen negativo para contrarrestar el margen que se aplica a cada tarjeta */
+}
+
+.EventsCards {
+  width: calc(33.33% - 20px); /* 33.33% del ancho del contenedor, con 20px de espacio entre las tarjetas (10px a la izquierda y 10px a la derecha) */
+  margin: 0 10px; /* Añadimos un margen a cada tarjeta */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 50px;
+}
+
+/* Estilos adicionales para ajustar el diseño según tus necesidades */

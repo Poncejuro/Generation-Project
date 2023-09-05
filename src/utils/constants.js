@@ -57,6 +57,7 @@ export const team = [
   {
     id: 4,
     name: "Mauricio Peniche",
+    text: `Apasionado por aprender y desarrollarme con mi equipo`,
     rol: `Desarrollador Full Stack`,
     img: "https://th.bing.com/th/id/OIP.Hnw6AArNyfT50gqLGVM9zAHaHa?pid=ImgDet&rs=1",
     linkedin:`https://www.linkedin.com/in/mauricio-peniche-romero-62aa79221/`

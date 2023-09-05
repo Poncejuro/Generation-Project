@@ -1,13 +1,23 @@
-import { NavBar } from "../../Components/Navbar";
-import { EventsCards } from "../../Components/EventsCards/EventsCards";
+import { NavBar } from "../Navbar";
+import { EventsCards } from "./EventsCards/EventsCards";
 import React from "react";
-import eventsData from "../../utils/events.json";
+import eventsData from "../../utils/events";
 import "./Events.css";
+//import { Event } from "@mui/icons-material";
+//import{ eventsList} from "../Events"
 
 
 export const Events = () => {
   const events = eventsData;
   console.log(events);
+
+ //Se agrego una api para generar imagenes aleatorias
+const updatedFriendList = [...events];
+
+for (let i = 0; i < updatedFriendList.length; i++) {
+  updatedFriendList[i].img = `https://picsum.photos/200?random=${i}`;
+}
+
 
   return (
     <>
@@ -17,7 +27,7 @@ export const Events = () => {
           {events.map((event, index) => (
             <EventsCards
               keyDiv={index}
-              key={index}
+              key={1}
               logo={event.img}
               ETitle={event.EventTitle}
               text={event.text}
@@ -25,8 +35,9 @@ export const Events = () => {
               time={event.time}
               location={event.location}
               // detePost={() => deletePost(index)}
-              imgSize={150}
-              cardSizeH={200}
+              imgSize={("250")}
+              cardSizeH={("200")}
+              
             />
           ))}
         </div>

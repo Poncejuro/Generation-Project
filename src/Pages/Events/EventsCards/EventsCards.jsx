@@ -1,6 +1,6 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
+//import Button from "react-bootstrap/Button";
 import "./EventsCards.css";
 
 export const EventsCards = ({
@@ -19,6 +19,7 @@ export const EventsCards = ({
 }) => {
   return (
     <>
+    
       <div
         className="card text-center"
         style={{ width: cardSizeW, height: "auto" }}
@@ -26,7 +27,7 @@ export const EventsCards = ({
       >
         <Row>
           <Col className="sectionL" xs={12} sm={12} md={3}>
-            <img src={logo} style={{ width: imgSize }} alt={alt} />
+            <img src={logo} style={{ width: '200px', height: 'px', margin: 'auto', display:'block' }} alt={alt} />
           </Col>
 
           <Col className="sectionR" xs={12} sm={12} md={9}>
@@ -38,10 +39,10 @@ export const EventsCards = ({
             <p>{location}</p>
           </Col>
         </Row>
-
-        <Button variant="success" href="#" onClick={detePost}>
-          Eliminar
-        </Button>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-outline-success" type="button">Reservar</button>
+  <button class="btn btn-outline-light" type="button">Ignorar evento</button>
+</div>
       </div>
     </>
   );

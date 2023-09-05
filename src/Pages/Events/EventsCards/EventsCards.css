@@ -1,0 +1,16 @@
+/* EventsCards.css */
+
+.card {
+  /* border-radius: 30px; */
+  padding: 29px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: calc(33.33% - 20px); /* 33.33% del ancho del contenedor, con 20px de espacio entre las tarjetas */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho */
+}
+
+.card img {
+  max-width: 150%;
+  height: auto;
+}
+

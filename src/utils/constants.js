@@ -16,7 +16,7 @@ export const intentions = [
     colaborar y crecer en su carrera artística. Aspiramos a ser el punto de encuentro por excelencia para la 
     comunidad artística, brindando las herramientas y recursos necesarios para que los artistas desarrollen su 
     potencial al máximo. Priorizaremos crear una comunidad inclusiva, inspiradora y segura donde los artistas 
-    puedan florecer, alcanzar nuevas audiencias y dejar una huella duradera en la industria del arte y el 
+    puedan florecer, alcanzar nuevas audiencias, dejando una huella duradera en la industria del arte y el 
     entretenimiento.`,
   },
 
@@ -27,47 +27,58 @@ export const intentions = [
   },
 ];
 
+
+
 export const team = [
   {
     id: 1,
     name: "Esteban Castro",
-    rol: `Desarrollador`,
+    rol: `Desarrollador Full Stack`,
+    text:'pequeño párrafo de ustedes',
     img: "https://i.pinimg.com/736x/f0/af/cb/f0afcbce7ed4a7df7b822964501bf995.jpg",
+    linkedin: 'https://www.linkedin.com/in/esteban-castro-bab38a285/',
+    git: 'https://github.com/stivs95',
   },
   {
     id: 2,
     name: "Norma Enriquez",
-    rol: `Desarrollador`,
+    rol: `Desarrollador Full Stack`,
     img: "https://w0.peakpx.com/wallpaper/311/533/HD-wallpaper-one-piece-nico-robin-one-piece-two-years-later.jpg",
   },
   {
     id: 3,
     name: "Luis Ponce",
-    rol: `Desarrollador`,
-    img: "https://th.bing.com/th/id/R.06f07b5e5263dad4c16a542b05b9f810?rik=ITZ91IeCj5iICg&pid=ImgRaw&r=0",
+    rol: `Desarrollador Full Stack`,
+    text:`Me gusta aprender nuevas tecnologías.`,
+    img: "https://avatars.githubusercontent.com/u/87058126?v=4",
+    linkedin: 'https://www.linkedin.com/in/luis-ponce-ortíz/',
+    git: 'https://github.com/Poncejuro',
   },
   {
     id: 4,
     name: "Mauricio Peniche",
-    rol: `Desarrollador`,
+    rol: `Desarrollador Full Stack`,
     img: "https://th.bing.com/th/id/OIP.Hnw6AArNyfT50gqLGVM9zAHaHa?pid=ImgDet&rs=1",
+    linkedin:`https://www.linkedin.com/in/mauricio-peniche-romero-62aa79221/`
   },
   {
     id: 5,
     name: "Yael Quiroz",
-    rol: `Desarrollador`,
-    img: "https://i.pinimg.com/originals/f4/a2/16/f4a2162df9c77dc195bec88cc0f5662b.jpg",
+    rol: `Desarrollador Full Stack`,
+    img: "blob:https://web.whatsapp.com/d4034e47-1170-44ce-9441-6c50c380577f",
+    linkedin: `https://www.linkedin.com/in/jes%C3%BAs-yael-quiroz/`,
+    git:`https://github.com/jyaelqp`  
   },
   {
     id: 6,
     name: "Jessica Rdgz",
-    rol: `Desarrollador`,
+    rol: `Desarrollador Full Stack`,
     img: "https://i.pinimg.com/originals/36/f0/48/36f048323e3f06ddce7eb9ec301aaeb2.jpg",
   },
   {
     id: 7,
     name: "Leonardo Vqz",
-    rol: `Desarrollador`,
+    rol: `Desarrollador Full Stack`,
     img: "https://th.bing.com/th/id/R.3dbc0f35a48af87fd18f9f91a3fe360c?rik=Q97JoAsZrA7SGA&pid=ImgRaw&r=0",
   },
 ];

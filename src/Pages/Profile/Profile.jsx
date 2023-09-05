@@ -7,11 +7,10 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 // import Stack from "react-bootstrap/Stack";
 import React, { useState } from "react";
-import { NavBar } from "../../Components/Navbar";
-import { FeedCards } from "../../Components/FeedCards/FeedCards";
+import { NavBar } from "../Navbar";
+import { FeedCards } from "./FeedCards/FeedCards";
 import img1 from "../../Img/2sd.jpg";
 //from MUI React
-import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Grid from "@mui/material/Unstable_Grid2";
 import Stack from "@mui/material/Stack";
@@ -21,19 +20,49 @@ import "./Profile.css";
 export const Profile = () => {
   const firstData = initialData;
 
+  //setup de los errores
+  const [titleError, setTitleError] = useState("");
+  const [imgFooterError, setImgFooterError] = useState("");
+  const [textError, setTextError] = useState("");
+
   const [form, setForm] = useState({});
   const setField = (field) => {
     setForm({
       ...form,
       [field.target.name]: field.target.value,
     });
+
+    //validaciones de que no este vacio
+
+    if (field.target.name === "Title" && !field.target.value.trim()) {
+      setTitleError("Agregue texto antes de publicar");
+    } else {
+      setTitleError("");
+    }
+
+    if (field.target.name === "imgFooter" && !field.target.value.trim()) {
+      setImgFooterError("Agregue texto antes de publicar");
+    } else {
+      setImgFooterError("");
+    }
+
+    if (field.target.name === "text" && !field.target.value.trim()) {
+      setTextError("Agregue texto antes de publicar");
+    } else {
+      setTextError("");
+    }
   };
 
   const [posts, setPosts] = useState([]);
   const saveFeed = () => {
-    const updatedPosts = [...posts, form, ...firstData];
-    setPosts(updatedPosts);
-    localStorage.setItem("feedData", JSON.stringify(updatedPosts));
+    //if que valida que no haya errores
+    if (!titleError && !imgFooterError && !textError) {
+      const updatedPosts = [...posts, form, ...firstData];
+      setPosts(updatedPosts);
+      localStorage.setItem("feedData", JSON.stringify(updatedPosts));
+      updateData();
+    }
+    
   };
 
   const [feddData, setObjectData] = useState([]);
@@ -66,10 +95,11 @@ export const Profile = () => {
   return (
     <>
       <NavBar />
-
       <div className="body-Profile">
         <Row>
+          {/*======================================== Start left Section ========================================*/}
           <Col xs={12} sm={12} md={3} className="flow-box">
+            {/*///////////////////////////Img Profile/////////////////////////////*/}
             <div className="img-box-profile p-2 text-center">
               <ListGroup.Item>
                 <Image
@@ -79,7 +109,7 @@ export const Profile = () => {
                 />
               </ListGroup.Item>
             </div>
-
+            {/*///////////////////////////Biography Section /////////////////////////////*/}
             <div
               className="bio-box-profile-edit"
               style={{ display: profileButton ? "inline" : "none" }}
@@ -134,161 +164,142 @@ export const Profile = () => {
                 </Stack>
               </ListGroup.Item>
             </div>
-
-            <div
-              className="bio-box-profile-save"
-              style={{ display: !profileButton ? "inline" : "none" }}
-            >
-              <ListGroup.Item className=" Principal-Container text-center text-light border-0">
-                <h4 className=" text-profile text-capitalize text-light">
-                  Juan González
-                </h4>
-                <h5 className=" text-profile text-capitalize text-light">
-                  Bajista
-                </h5>
-                <p className=" text-profile-2">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer. asdasdasdadas This is a longer card with supporting
-                  text below as a natural lead-in to additional content. This
-                  content is a little bit longer. asdasdasdadas
-                </p>
+            <div className="Principal-Container">
+              <div style={{ display: !profileButton ? "inline" : "none" }}>
+                <ListGroup.Item className=" text-center text-light">
+                  <h4 className=" text-profile text-capitalize text-light">
+                    Juan González
+                  </h4>
+                  <h5 className=" text-capitalize text-light">Bajista</h5>
+                  <p className=" text-profile">
+                    This is a longer card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer. asdasdasdadas This is a longer card with
+                    supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer. asdasdasdadas
+                  </p>
+                </ListGroup.Item>
+              </div>
+              <ListGroup.Item className="text-center ">
+                <Button
+                  className="m-2"
+                  variant="success"
+                  onClick={handleProfileButton}
+                  style={{ display: profileButton ? "none" : "inline" }}
+                >
+                  Editar perfil
+                </Button>
+                <Button
+                  className="m-2"
+                  variant="success"
+                  onClick={handleProfileButton} // the function of hide and show it's done in this button
+                  style={{ display: profileButton ? "inline" : "none" }}
+                >
+                  Guardar cambios
+                </Button>
               </ListGroup.Item>
             </div>
-
-            <ListGroup.Item className="text-center ">
-              <Button
-                className="m-2"
-                variant="success"
-                onClick={handleProfileButton}
-                style={{ display: profileButton ? "none" : "inline" }}
-              >
-                Editar perfil
-              </Button>
-              <Button
-                className="m-2"
-                variant="success"
-                onClick={handleProfileButton} // the function of hide and show it's done in this button
-                style={{ display: profileButton ? "inline" : "none" }}
-              >
-                Guardar cambios
-              </Button>
-            </ListGroup.Item>
           </Col>
-
+          {/*======================================== Start right Section ========================================*/}
           <Col xs={12} sm={12} md={9}>
-            <Box
-              sx={{
-                m: 3,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                alignContent: "center",
-              }}
-            >
-              <Grid container spacing={2}>
-                <Grid xs={12}>
-                  <Stack direction="row" spacing={4}>
-                    <Button variant="success" href="#">
-                      Amigos
-                    </Button>
-                    <Button variant="success" href="#">
-                      Mis eventos
-                    </Button>
-                  </Stack>
-                </Grid>
-              </Grid>
-            </Box>
-
+            {/*///////////////////////////Publications Section /////////////////////////////*/}
             <form>
-              <Grid container spacing={2} sx={{ m: 1, p: 1 }}>
-                <Grid xs={12} md={6}>
-                  <Form.Control
-                    as="input"
-                    placeholder="Título de la publicación"
-                    name="Title"
-                    onChange={setField}
-                  />
+              <div className="Principal-Container-2">
+                <Grid container spacing={2} sx={{ m: 1, p: 1 }}>
+                  <Grid xs={12} md={4}>
+                    <Form.Control
+                      as="input"
+                      placeholder="Título de la publicación"
+                      name="Title"
+                      onChange={setField}
+                    />
+                    {titleError && (
+                      <div class="alert alert-danger" role="alert">
+                        {titleError}
+                      </div>
+                    )}
+                  </Grid>
+                  <Grid xs={12} md={4}>
+                    <Form.Control
+                      as="input"
+                      placeholder="Pie de imagen"
+                      name="imgFooter"
+                      onChange={setField}
+                    />
+                    {imgFooterError && (
+                      <div class="alert alert-danger" role="alert">
+                        {imgFooterError}
+                      </div>
+                    )}
+                  </Grid>
+                  <Grid xs={12} md={4}>
+                    <Form.Group controlId="formFile" className="m-1">
+                      <Form.Control type="file" />
+                    </Form.Group>
+                  </Grid>
+                  <Grid xs={12} md={12}>
+                    <Form.Control
+                      as="textarea"
+                      placeholder="Detalles del evento"
+                      name="text"
+                      rows={4}
+                      onChange={setField}
+                    />
+                    {textError && (
+                      <div class="alert alert-danger" role="alert">
+                        {textError}
+                      </div>
+                    )}
+                  </Grid>
                 </Grid>
-                <Grid xs={12} md={6}>
-                  <Form.Control
-                    as="input"
-                    placeholder="Pie de imagen"
-                    name="imgFooter"
-                    onChange={setField}
-                  />
-                </Grid>
-                <Grid xs={12} md={12}>
-                  <Form.Control
-                    as="textarea"
-                    placeholder="Detalles del evento"
-                    name="text"
-                    rows={4}
-                    onChange={setField}
-                  />
-                </Grid>
-              </Grid>
-              <Grid xs={12}>
-                <Row>
-                  <Box
-                    sx={{
-                      m: 1,
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      alignContent: "center",
-                    }}
-                  >
-                    <Grid container spacing={3}>
-                      <Form.Group controlId="formFile" className="m-1">
-                        <Form.Control type="file" />
-                      </Form.Group>
-                      <Button variant="success" href="#" onClick={saveFeed}>
-                        Publicar
-                      </Button>
-                    </Grid>
-                  </Box>
-                </Row>
-              </Grid>
+              </div>
+              <Grid xs={12}></Grid>
             </form>
-
+            {/*///////////////////////////Feed Section /////////////////////////////*/}
             <section className="form-box-2">
               <Row>
-                <Box
-                  sx={{
-                    m: 2,
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    alignContent: "center",
-                  }}
-                >
-                  <Grid container spacing={2}>
-                    <Button
-                      className="me-1"
-                      variant="success"
-                      href="#"
-                      onClick={updateData}
-                    >
-                      Actualizar
+                <Col>
+                  {/*///////////////////////////Button Section /////////////////////////////*/}
+                  <div className="Principal-Container-3">
+                    <Button className="me-1" variant="success" href="#" onClick={saveFeed}>
+                      Publicar
                     </Button>
                     <Button className="me-1" variant="success" href="#">
                       Reciente
                     </Button>
-                    <Button className="me-6" variant="success" href="#">
+                    <Button className="me-1" variant="success" href="#">
                       Antiguo
                     </Button>
-                    <Button
-                      className="me-6"
-                      variant="success"
-                      href="#"
-                      onClick={deleteAllPosts}
-                    >
-                      deleteAllPosts
+                    <Button className="me-1" variant="success" href="#" onClick={deleteAllPosts}>
+                      Borrar todo
                     </Button>
-                  </Grid>
-                </Box>
+                  </div>
+                </Col>
+                <Col>
+                  {/*///////////////////////////Button Section /////////////////////////////*/}
+                  <div className="Principal-Container-3">
+                    <Button className="me-1" variant="success" href="#">
+                      Mis Amigos
+                    </Button>
+                    <Button className="me-1" variant="success" href="#">
+                      Mis eventos
+                    </Button>
+                  </div>
+                </Col>
+                <Col>
+                  {/*///////////////////////////Button Section /////////////////////////////*/}
+                  <div className="Principal-Container-3">
+                    <Button className="me-1" variant="success" href="#">
+                      Mis Amigos
+                    </Button>
+                    <Button className="me-1" variant="success" href="#">
+                      Mis eventos
+                    </Button>
+                  </div>
+                </Col>
               </Row>
+              {/*///////////////////////////publications Section /////////////////////////////*/}
+              <Row>
               <div className="feed-box">
                 {feddData.map((aux, index) => (
                   <FeedCards
@@ -304,6 +315,7 @@ export const Profile = () => {
                   />
                 ))}
               </div>
+              </Row>
             </section>
           </Col>
         </Row>

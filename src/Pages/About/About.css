@@ -2,7 +2,7 @@
     background-image: url("../../Img/lamar.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    height:100vh;
+    height:100%;
     background-size: cover;
 }
 
@@ -16,6 +16,7 @@
 
 .carousel-box{
    padding-top: 5vh;
+   padding-bottom: 9vh;
 }
 
 

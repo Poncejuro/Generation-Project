@@ -42,8 +42,11 @@ export const team = [
   {
     id: 2,
     name: "Norma Enriquez",
-    rol: `Desarrollador Full Stack`,
-    img: "https://w0.peakpx.com/wallpaper/311/533/HD-wallpaper-one-piece-nico-robin-one-piece-two-years-later.jpg",
+    rol: "Desarrollador Full Stack",
+    text: "Aprendiendo día con día",
+    img:"https://avatars.githubusercontent.com/u/140113147?s=400&u=9aef834e3ab731e7d79c96050d525f06beb094ce&v=4",
+    linkedin:"//www.linkedin.com/in/norma-leticia-enriquez-segura-3771b6285",
+    git:"https://github.com/NormaLeEnSe",
   },
   {
     id: 3,
@@ -84,7 +87,7 @@ export const team = [
   },
   {
     id: 7,
-    name: "Leonardo Velazquez",
+    name: "Leonardo Vlqz",
     rol: "Desarrollador Full Stack",
     text: "Siempre buscando aprender nuevas tecnologías",
     img: " https://avatars.githubusercontent.com/u/126206655?v=4", 

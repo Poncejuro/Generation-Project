@@ -6,7 +6,9 @@
   margin: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: calc(33.33% - 20px); /* 33.33% del ancho del contenedor, con 20px de espacio entre las tarjetas */
-  box-sizing: border-box; /* Incluye el padding y el borde en el ancho */
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px); /* Incluye el padding y el borde en el ancho */
 }
 
 .card img {

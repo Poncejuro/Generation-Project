@@ -20,7 +20,7 @@ export const Login = () => {
 
     const sendData = (event) =>{
         event.preventDefault();
-        navigate('/Homepage',{
+        navigate('/Events',{
             replace: 'true',
             state:{
                 logged: true,

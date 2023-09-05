@@ -1,10 +1,11 @@
-import { NavBar } from "../Navbar";
+import { NavBar } from "../Navbar"
 import { EventsCards } from "./EventsCards/EventsCards";
 import React from "react";
 import eventsData from "../../utils/events";
 import "./Events.css";
 //import { Event } from "@mui/icons-material";
 //import{ eventsList} from "../Events"
+
 
 
 export const Events = () => {

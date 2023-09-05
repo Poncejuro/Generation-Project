@@ -1,6 +1,5 @@
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
 import "./EventsCards.css";
 
 export const EventsCards = ({

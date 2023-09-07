@@ -12,24 +12,33 @@ export const Register = () => {
       ...datos,
       [event.target.name]: event.target.value.trim(),
     });
-    if (datos.user_password !== datos.user_confirmPassword) {
-      console.log("Las contraseñas no conciden");
-      setTextError("Las contraseñas no conciden");
+    const password = datos.user_password;
+    const confirmPassword = event.target.value.trim();
+  
+    if (password !== confirmPassword) {
+      document.getElementById('password-error').textContent =
+        'Las contraseñas no coinciden';
     } else {
-      setTextError("");
-      console.log("Si sirve");
+      document.getElementById('password-error').textContent = '';
     }
   };
 
   const sendData = (event) => {
     event.preventDefault();
-    navigate("/Events", {
-      replace: "true",
-      state: {
-        logged: true,
-      },
-    });
-    localStorage.setItem("userData", JSON.stringify(datos));
+    
+    // Verifica si las contraseñas coinciden antes de continuar
+    if (datos.user_password !== datos.user_confirmPassword) {
+      setTextError("Las contraseñas no coinciden");
+    } else {
+      // Las contraseñas coinciden, por lo que se puede continuar con la navegación
+      navigate("/Events", {
+        replace: true,
+        state: {
+          logged: true,
+        },
+      });
+      localStorage.setItem("userData", JSON.stringify(datos));
+    }
   };
 
   return (
@@ -89,7 +98,7 @@ export const Register = () => {
                       required
                       onChange={handleInputChange}
                     />
-                    <h3>{textError}</h3>
+                    <span id="password-error" className="error-message">{textError}</span>
                   </div>
                  
                   <button id="btn" type="submit" className="btn btn-primary">

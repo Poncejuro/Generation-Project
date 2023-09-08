@@ -1,10 +1,11 @@
 import "./login.css";
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export const Register = () => {
   const [datos, setDatos] = useState({});
-  const [textError, setTextError] = useState("");
+  const [passwordInput, setPasswordInput] = useState("");
+  const [passwordConfirmInput, setPasswordConfirmInput] = useState("");
   const navigate = useNavigate();
 
   const handleInputChange = (event) => {
@@ -12,13 +13,15 @@ export const Register = () => {
       ...datos,
       [event.target.name]: event.target.value.trim(),
     });
-    if (datos.user_password !== datos.user_confirmPassword) {
-      console.log("Las contraseñas no conciden");
-      setTextError("Las contraseñas no conciden");
-    } else {
-      setTextError("");
-      console.log("Si sirve");
-    }
+  };
+
+  const equal = passwordInput !== passwordConfirmInput;
+
+  const handlePasswordChange = (event) => {
+    setPasswordInput(event.target.value);
+  };
+  const handlePasswordConfirmChange = (event) => {
+    setPasswordConfirmInput(event.target.value);
   };
 
   const sendData = (event) => {
@@ -73,25 +76,38 @@ export const Register = () => {
                     />
                   </div>
                   <div className="mb-3">
-                    <label className="form-label">Ingresa una nueva contraseña</label>
+                    <label className="form-label">
+                      Ingresa una nueva contraseña
+                    </label>
                     <input
                       type="password"
                       className="form-control control-aux"
                       name="user_password"
                       required
-                      onChange={handleInputChange}
+                      onChange={handlePasswordChange}
                     />
+                  </div>
+                  <div className="mb-3">
                     <label className="form-label">Confirmar Contraseña</label>
                     <input
                       type="password"
                       className="form-control control-aux"
                       name="user_confirmPassword"
                       required
-                      onChange={handleInputChange}
+                      onChange={handlePasswordConfirmChange}
                     />
-                    <h3>{textError}</h3>
+                    {equal ? (
+                      <div
+                        className="alert alert-danger text-center"
+                        role="alert"
+                      >
+                        Contraseñas no coinciden
+                      </div>
+                    ) : (
+                      <div></div>
+                    )}
                   </div>
-                 
+
                   <button id="btn" type="submit" className="btn btn-primary">
                     Inicia sesión
                   </button>

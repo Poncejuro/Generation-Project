@@ -18,15 +18,23 @@ export const Login = () => {
         })
     }
 
+    const [passwordInput, setPasswordInput] = useState("");
+    const handlePasswordChange = (event) => {
+      setPasswordInput(event.target.value);
+    };
+
     const sendData = (event) =>{
         event.preventDefault();
+        if ( passwordInput === localStorage ) { 
         navigate('/Events',{
             replace: 'true',
             state:{
                 logged: true,
             }
         }) 
+      }
     }
+
 
   return (
     <>
@@ -55,7 +63,7 @@ export const Login = () => {
                       className="form-control control-aux"
                       name="user_tel"
                       required
-                      onChange={handleInputChange}
+                      onChange={handlePasswordChange}
                     />
                   </div>
                   

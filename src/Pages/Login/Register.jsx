@@ -32,7 +32,6 @@ export const Register = () => {
         logged: true,
       },
     });
-    localStorage.setItem("userData", JSON.stringify(datos));
   };
 
   return (

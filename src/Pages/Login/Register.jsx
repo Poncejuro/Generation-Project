@@ -25,13 +25,18 @@ export const Register = () => {
   };
 
   const sendData = (event) => {
-    event.preventDefault();
-    navigate("/Events", {
-      replace: "true",
-      state: {
-        logged: true,
-      },
-    });
+    if (equal) {
+      event.preventDefault();
+      console.log("contraseñas diferentes");
+    } else {
+      event.preventDefault();
+      navigate("/Events", {
+        replace: "true",
+        state: {
+          logged: true,
+        },
+      });
+    }
   };
 
   return (

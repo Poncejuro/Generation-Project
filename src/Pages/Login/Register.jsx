@@ -12,6 +12,7 @@ export const Register = () => {
     setDatos({
       ...datos,
       [event.target.name]: event.target.value.trim(),
+      password: passwordInput,
     });
   };
 
@@ -30,6 +31,8 @@ export const Register = () => {
       console.log("contraseñas diferentes");
     } else {
       event.preventDefault();
+      datos.password = passwordInput;
+      localStorage.setItem("userData", JSON.stringify(datos));
       navigate("/Events", {
         replace: "true",
         state: {

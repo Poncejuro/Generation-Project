@@ -33,7 +33,7 @@ export const Register = () => {
       event.preventDefault();
       datos.password = passwordInput;
       localStorage.setItem("userData", JSON.stringify(datos));
-      navigate("/Events", {
+      navigate("/", {
         replace: "true",
         state: {
           logged: true,

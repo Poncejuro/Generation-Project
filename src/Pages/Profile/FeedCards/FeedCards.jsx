@@ -25,15 +25,14 @@ export const FeedCards = ({
           <Col className="sectionL" xs={12} sm={12} md={3}>
             <img src={logo} style={{ width: imgSize }} alt={alt} />
             <p>{imgFooter}</p>
-            <Button variant="success" href="#" onClick={detePost}>
+            <Button style={{ width: imgSize }} variant="success" href="#" onClick={detePost}>
               Eliminar
             </Button>
           </Col>
 
           <Col className="sectionR" xs={12} sm={12} md={9}>
-            {console.log(title)}
-            <h3>{title}</h3>
-            <p>{text}</p>
+            <h3 className="justifyToLeftFC">{title}</h3>
+            <p className="justifyToLeftFC">{text}</p>
           </Col>
         </Row>
 

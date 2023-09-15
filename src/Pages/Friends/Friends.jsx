@@ -42,7 +42,6 @@ export const Friends = () => {
     <>
       <NavBar />
       <section className="friends-container">
-        <h1>Personas que quizás conozcas</h1>
         <div className="friendsCard">{friendList.map((friend) => (
           <FriendCards
             key={1}

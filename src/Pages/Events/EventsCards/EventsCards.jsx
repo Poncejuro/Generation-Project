@@ -56,10 +56,7 @@ export const EventsCards = ({
         </Row>
         <div className="contenedor-botones">
           <Button className="me-1" variant="success" href="#">
-            Mis Amigos
-          </Button>
-          <Button className="me-1" variant="success" href="#">
-            Mis eventos
+            Me interesa
           </Button>
         </div>
       </div>

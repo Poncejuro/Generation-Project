@@ -15,23 +15,6 @@
     text-align: center;
 
 }
-.friends-container h1{
-    font-family: 'Arial', sans-serif;
-    font-size: 26px;
-    color: #fefefe; 
-    text-align: center;
-    padding: 20px; 
-    background-image: url();
-    background-color:#048a57;
-    transition: transform 0.3s linear;
-    border-radius: 10px;
-    margin-bottom: 40px;
-}
-
-.friends-container h1:hover{
-  transform : scale(1.1)
-
-}
 .friends-about{
    
     padding: 40px;

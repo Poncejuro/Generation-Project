@@ -17,20 +17,28 @@
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  padding: 15px 30px;
+  padding: 100px 180px;
   margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+.me-1{
+  margin-bottom: -50px; 
 }
 
+.contenedor-botones:hover{
+  transform: scale(1.1);
+}
 /* Estilos específicos para pantallas pequeñas (por ejemplo, teléfonos) */
 @media (max-width: 767px) {
   .card {
-    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Estilos específicos para pantallas medianas (por ejemplo, tabletas) */
 @media (min-width: 768px) and (max-width: 991px) {
   .card {
+    grid-template-columns: repeat(2, 2fr);
     width: calc(50% - 20px);
   }
 }

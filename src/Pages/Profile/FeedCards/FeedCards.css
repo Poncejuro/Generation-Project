@@ -17,12 +17,27 @@
 
 .justifyToLeftFC{
   text-align: left;
-  margin-left: 50px;
+  overflow-wrap: break-word;
 }
+
+.TextSizeFeedCard{
+  overflow-wrap: break-word;
+}
+
 
 @media (max-width: 1100px) {
   .justifyToLeftFC{
     text-align: left;
-    margin-left: 0px;
+
   }
+  .sectionL{
+    text-align: left;
+  }
+
 }
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+.ImgSizeFeedCard{
+  width: 100px;
+}
+
+
+@media (max-width: 550px) {
+  .ImgSizeFeedCard{
+    width: 150px;
+  
+  }
+}

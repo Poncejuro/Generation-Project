@@ -3,6 +3,8 @@ import Col from "react-bootstrap/Col";
 // import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import DropdownButton from "react-bootstrap/DropdownButton";
+import Dropdown from "react-bootstrap/Dropdown";
 // import Stack from "react-bootstrap/Stack";
 import React from "react";
 import { FeedCards } from "./FeedCards/FeedCards";
@@ -17,7 +19,6 @@ export default function ProfilePosts({
   imgFooterError,
   textError,
   saveFeed,
-  deleteAllPosts,
   feddData,
   deletePost
 }) {
@@ -83,18 +84,18 @@ export default function ProfilePosts({
             <Col>
               {/*///////////////////////////Button Section /////////////////////////////*/}
               <div className="Principal-Container-3">
-                <Button className="me-1" variant="success" href="#" onClick={saveFeed}>
+                <Button className="postButtonProPost" variant="success" href="#" onClick={saveFeed}>
                   Publicar
                 </Button>
-                <Button className="me-1" variant="success" href="#">
-                  Reciente
-                </Button>
-                <Button className="me-1" variant="success" href="#">
-                  Antiguo
-                </Button>
-                <Button className="me-1" variant="success" href="#" onClick={deleteAllPosts}>
-                  Borrar todo
-                </Button>
+                <DropdownButton
+                  variant="success"
+                  id="dropdown-basic"
+                  title="Ordenar"
+                  drop="up"
+                >
+                  <Dropdown.Item href="#/action-1">Más reciente</Dropdown.Item>
+                  <Dropdown.Item href="#/action-2">Más antiguo</Dropdown.Item>
+                </DropdownButton>
               </div>
             </Col>
           </Row>
@@ -109,7 +110,6 @@ export default function ProfilePosts({
                   title={aux.Title}
                   text={aux.text}
                   detePost={() => deletePost(index)}
-                  imgSize={150}
                   cardSizeH={200}
                 />
               ))}

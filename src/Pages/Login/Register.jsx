@@ -1,4 +1,4 @@
-import "./login.css";
+import "./register.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -6,13 +6,18 @@ export const Register = () => {
   const [datos, setDatos] = useState({});
   const [passwordInput, setPasswordInput] = useState("");
   const [passwordConfirmInput, setPasswordConfirmInput] = useState("");
+  const [telephoneInput, setTelephoneInput] = useState("");
+  const [tooMuchNumbers, setTooMuchNumbers] = useState(false);
+  const [userNameInput, setUsernameInput] = useState("");
+  const [onlyAlphabetLetters, setOnlyAlphabetLetters] = useState(false);
+
   const navigate = useNavigate();
 
   const handleInputChange = (event) => {
     setDatos({
       ...datos,
       [event.target.name]: event.target.value.trim(),
-      password: passwordInput,
+      password: passwordInput
     });
   };
 
@@ -21,17 +26,46 @@ export const Register = () => {
   const handlePasswordChange = (event) => {
     setPasswordInput(event.target.value);
   };
+
   const handlePasswordConfirmChange = (event) => {
     setPasswordConfirmInput(event.target.value);
   };
 
+  const handleTelephoneChange = (event) => {
+
+    const inputValue = event.target.value;
+    const hasNonNumericCharacters = /[^\d]/.test(inputValue);
+
+    setTelephoneInput(inputValue);
+    if (hasNonNumericCharacters || inputValue.length !== 10) {
+      setTooMuchNumbers(true);
+    } else {
+      setTooMuchNumbers(false);
+    }
+    setTelephoneInput(event.target.value);
+  };
+
+  const handleInputUserName = (event) => {
+    const inputValueUserName = event.target.value;
+  
+    setUsernameInput(inputValueUserName);
+  
+    // Verificar si inputValueUserName contiene solo letras del alfabeto
+    const onlyAlphabetLettersRegex = /^[A-Za-z\s]+$/;
+    const isOnlyAlphabetLetters = onlyAlphabetLettersRegex.test(inputValueUserName);
+  
+    setOnlyAlphabetLetters(!isOnlyAlphabetLetters);
+  };
+
   const sendData = (event) => {
-    if (equal) {
+    if (equal || tooMuchNumbers || onlyAlphabetLetters) {
       event.preventDefault();
       console.log("contraseñas diferentes");
     } else {
       event.preventDefault();
       datos.password = passwordInput;
+      datos.user_tel = telephoneInput;
+      datos.user_name = userNameInput;
       localStorage.setItem("userData", JSON.stringify(datos));
       navigate("/", {
         replace: "true",
@@ -44,22 +78,30 @@ export const Register = () => {
 
   return (
     <>
-      <div className="principal-losgin">
+      <div className="principal-losgin-register">
         <div className="custom-form-container">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-md-6">
-                <form className="form-contact" onSubmit={sendData}>
-                  <h2 className="title-box">Crea tu cuenta</h2>
+                <form className="form-contact-register" onSubmit={sendData}>
+                  <h2 className="title-box-register">Crea tu cuenta</h2>
                   <div className="mb-3">
                     <label className="form-label">Nombre</label>
                     <input
                       type="text"
-                      className="form-control control-aux"
+                      className="form-control control-aux-register"
                       name="user_name"
+                      placeholder="Nombre(s) Apellido(s): Solo caracteres: A-z"
                       required
-                      onChange={handleInputChange}
+                      onChange={handleInputUserName}
                     />
+                    {onlyAlphabetLetters ? (
+                      <div className="alert alert-danger text-center" role="alert">
+                        Solo se permiten nombres escritos con caracteres alfabéticos 
+                      </div>
+                    ) : (
+                      <div></div>
+                    )}
                   </div>
                   <div className="mb-3">
                     <label className="form-label">Correo electrónico</label>
@@ -67,20 +109,29 @@ export const Register = () => {
                       type="email"
                       className="form-control control-aux"
                       name="user_email"
+                      placeholder="Ej: correo@direccion.com"
                       required
                       onChange={handleInputChange}
                     />
                   </div>
                   <div className="mb-3">
-                    <label className="form-label">Numero telefonico</label>
+                    <label className="form-label">Número telefónico</label>
                     <input
                       type="tel"
                       className="form-control control-aux"
                       name="user_tel"
                       pattern="[0-9]{10}"
+                      placeholder="Ej: 9999990000"
                       required
-                      onChange={handleInputChange}
+                      onChange={handleTelephoneChange}
                     />
+                    {tooMuchNumbers ? (
+                      <div className="alert alert-danger text-center" role="alert">
+                        Solo se permiten 10 caracteres número
+                      </div>
+                    ) : (
+                      <div></div>
+                    )}
                   </div>
                   <div className="mb-3">
                     <label className="form-label">
@@ -116,7 +167,7 @@ export const Register = () => {
                   </div>
 
                   <button id="btn" type="submit" className="btn btn-primary">
-                    Inicia sesión
+                    Registrate
                   </button>
                 </form>
               </div>

@@ -23,7 +23,10 @@ export const FeedCards = ({
       >
         <Row>
           <Col className="sectionL" xs={6} sm={3} md={3} lg={4} xl={5}>
-            <img className="ImgSizeFeedCard" src={logo}  alt={alt} />
+            <a href={logo} target="_blank">
+              <img className="ImgSizeFeedCard" src={logo}  alt={alt} />
+            </a>
+            
             <p className="TextSizeFeedCard" >{imgFooter}</p>
             <Button className="ImgSizeFeedCard" variant="success" href="#" onClick={detePost}>
               Eliminar

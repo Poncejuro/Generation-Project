@@ -3,7 +3,8 @@ import Col from "react-bootstrap/Col";
 // import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from "react-bootstrap/DropdownButton";
+import Dropdown from "react-bootstrap/Dropdown";
 // import Stack from "react-bootstrap/Stack";
 import React from "react";
 import { FeedCards } from "./FeedCards/FeedCards";
@@ -86,17 +87,15 @@ export default function ProfilePosts({
                 <Button className="postButtonProPost" variant="success" href="#" onClick={saveFeed}>
                   Publicar
                 </Button>
-                <Dropdown>
-                  <Dropdown.Toggle variant="success" id="dropdown-basic">
-                    Ordenar
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Más reciente</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Más antiguo</Dropdown.Item>
-
-                  </Dropdown.Menu>
-                </Dropdown>
+                <DropdownButton
+                  variant="success"
+                  id="dropdown-basic"
+                  title="Ordenar"
+                  drop="up"
+                >
+                  <Dropdown.Item href="#/action-1">Más reciente</Dropdown.Item>
+                  <Dropdown.Item href="#/action-2">Más antiguo</Dropdown.Item>
+                </DropdownButton>
               </div>
             </Col>
           </Row>

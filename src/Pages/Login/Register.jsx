@@ -1,4 +1,4 @@
-import "./login.css";
+import "./register.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -78,18 +78,18 @@ export const Register = () => {
 
   return (
     <>
-      <div className="principal-losgin">
+      <div className="principal-losgin-register">
         <div className="custom-form-container">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-md-6">
-                <form className="form-contact" onSubmit={sendData}>
-                  <h2 className="title-box">Crea tu cuenta</h2>
+                <form className="form-contact-register" onSubmit={sendData}>
+                  <h2 className="title-box-register">Crea tu cuenta</h2>
                   <div className="mb-3">
                     <label className="form-label">Nombre</label>
                     <input
                       type="text"
-                      className="form-control control-aux"
+                      className="form-control control-aux-register"
                       name="user_name"
                       placeholder="Nombre(s) Apellido(s): Solo caracteres: A-z"
                       required

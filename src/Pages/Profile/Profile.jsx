@@ -81,11 +81,12 @@ export const Profile = () => {
     setObjectData(objectData);
   };
 
-  const deleteAllPosts = () => {
+  /*const deleteAllPosts = () => {
     localStorage.removeItem("feedData");
     localStorage.setItem("feedData", JSON.stringify([]));
     updateData();
   };
+  */
 
   const deletePost = (index) => {
     const updatedPosts = posts.filter((_, i) => i !== index);
@@ -104,7 +105,7 @@ export const Profile = () => {
     <>
       <NavBar />
       <div className="body-Profile">
-        <Row>
+        <Row style={{width: "100%"}}>
           {/*======================================== Start left Section ========================================*/}
           <ProfileDescription profileButton={profileButton} handleProfileButton={handleProfileButton} />
           {/*======================================== Start right Section ========================================*/}
@@ -114,7 +115,6 @@ export const Profile = () => {
             imgFooterError={imgFooterError}
             textError={textError}
             saveFeed={saveFeed}
-            deleteAllPosts={deleteAllPosts}
             feddData={feddData}
             deletePost={deletePost}
           />

@@ -21,17 +21,28 @@
   margin-bottom: 10px;
   transition: transform 0.3s ease;
 }
-.me-1{
-  margin-bottom: -50px; 
+.me-1 {
+  margin-bottom: 10px; /* Ajusta el espacio entre el botón y la tarjeta */
 }
 
 .contenedor-botones:hover{
   transform: scale(1.1);
 }
+
+
 /* Estilos específicos para pantallas pequeñas (por ejemplo, teléfonos) */
 @media (max-width: 767px) {
-  .card {
-    grid-template-columns: repeat(2, 1fr);
+  .card  {
+    grid-template-columns: repeat(2, 2fr);
+    width: calc(50% - 20px);
+  }
+
+  .contenedor-botones {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 150px; /* Centra verticalmente el contenido */
+    text-align: center; /* Centra horizontalmente el contenido */
   }
 }
 

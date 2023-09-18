@@ -7,13 +7,29 @@
     
 }
 .friends-container{
-  background: linear-gradient(-45deg, #014210, #000301, #356d42, #96d59e);
-  background-size: 400% 400%;
-  animation: gradient 9s ease infinite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    background-image: url("../../Img/fondoFriends.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height:130vh;
+    background-size: cover;
+    text-align: center;
+
+}
+.friends-container h1{
+    font-family: 'Arial', sans-serif;
+    font-size: 26px;
+    color: #fefefe; 
+    text-align: center;
+    padding: 20px; 
+    background-image: url();
+    background-color:#048a57;
+    transition: transform 0.3s linear;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.friends-container h1:hover{
+  transform : scale(1.1)
 
 }
 .friends-about{

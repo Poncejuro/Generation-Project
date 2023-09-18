@@ -1,14 +1,24 @@
 .body-events {
-  background-image: url("../../Img/Captura\ de\ pantalla\ 2023-09-15\ 132421.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+ 
+  background: linear-gradient(-45deg, #82065f, #90244e, #402376, #7c1e61);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-
+ @keyframes gradient{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+ }
 .events-box {
   width: 100%;
   display: flex;
@@ -25,9 +35,3 @@
   padding: 20px;
 }
 
-/* Estilos específicos para Nest Hub */
-@media (max-width: 1024px) and (min-resolution: 120dpi) {
-  .card {
-    /* Ajusta los estilos de las tarjetas para Nest Hub aquí */
-  }
-}

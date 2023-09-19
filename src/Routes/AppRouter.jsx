@@ -21,7 +21,7 @@ export const AppRouter = () => {
         <Route path="Profile" element={<Profile />} />
         <Route path="Friends" element={<Friends />} />
         <Route path="Events" element={<Events />} />
-
+        {/*<Route path="*" element={  <NotFound /> } />*/}
         <Route
           path="HomePage"
           element={

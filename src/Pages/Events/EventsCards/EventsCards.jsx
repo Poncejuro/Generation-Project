@@ -25,7 +25,7 @@ export const EventsCards = ({
         key={keyDiv}
       >
         <Row>
-          <Col className="sectionL" xs={12} sm={6} md={4}>
+          <Col xs={12} sm={6} md={4}>
             <img
               src={logo}
               style={{
@@ -40,7 +40,7 @@ export const EventsCards = ({
             />
           </Col>
 
-          <Col className="sectionR"
+          <Col 
             xs={12}
             sm={6}
             md={8}
@@ -52,13 +52,19 @@ export const EventsCards = ({
             <p style={{ fontSize: "14px", marginBottom: "4px" }}>{date}</p>
             <p style={{ fontSize: "14px", marginBottom: "4px" }}>{time}</p>
             <p style={{ fontSize: "14px", marginBottom: "4px" }}>{location}</p>
+
+            
           </Col>
+          
         </Row>
-        <div className="contenedor-botones">
-          <Button className="me-1" variant="success" href="#">
-            Me interesa
-          </Button>
-        </div>
+        <Row className="contenedor-botones">
+          <div >
+            <Button className="me-1" variant="success" href="#">
+              Me interesa
+            </Button>
+          </div>
+        </Row>
+
       </div>
     </>
   );

@@ -11,12 +11,12 @@ export const About = () => {
 
   const responsive = {
     superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 1 // Cambiamos de 3 a 1 elemento visible para superLargeDesktop
+      breakpoint: { max: 4000, min: 2001 },
+      items: 3 // Cambiamos de 3 a 1 elemento visible para superLargeDesktop
     },
     desktop: {
       breakpoint: { max: 2000, min: 1024 },
-      items: 1 // Cambiamos de 2 a 1 elemento visible para desktop
+      items: 2 // Cambiamos de 2 a 1 elemento visible para desktop
     },
     tablet: {
       breakpoint: { max: 1024, min: 600 },
@@ -43,17 +43,10 @@ export const About = () => {
        
         <div className="carousel-box">
           <Carousel
-            responsive={responsive}
-            showArrows={false}
-            showStatus={false}
-            showThumbs={false}
+            responsive={responsive} 
+            removeArrowOnDeviceType={["mobile","tablet","desktop","superLargeDesktop"]}
+            infinite={true}
             centerMode={true}
-            centerSlidePercentage={100}
-            autoPlay={true}
-            interval={5000}
-            infiniteLoop={true}
-            stopOnHover={true}
-            itemClass="custom-slide" // Agregamos una clase CSS personalizada a cada tarjeta
           >
             {team.map((aux, index) => (
               <OursCards

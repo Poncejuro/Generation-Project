@@ -3,11 +3,11 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
+  height: 100%;
 }
 
 .form-contact {
-  
+
   margin-top: 80px;
   display: flex;
   flex-direction: column;

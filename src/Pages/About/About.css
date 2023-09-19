@@ -3,6 +3,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    height: 100%;
 }
 
 
@@ -13,26 +14,10 @@
     justify-content: center;
 }
 
-/* Estilo para el contenedor del carrusel */
-.carousel-box {
-    max-width: 1000px; /* Establece el ancho máximo del carrusel */
-    margin: 0 auto; /* Centra el carrusel en la página */
-    overflow: hidden; /* Oculta las tarjetas que desborden el carrusel */
-  }
-  
-  /* Estilo para las tarjetas dentro del carrusel */
-  /* Asegúrate de ajustar el selector de clase según tu estructura HTML/CSS actual */
-  .carousel-box .carousel .slide {
-    display: flex; /* Usa flexbox para centrar las tarjetas */
-    justify-content: center; /* Centra horizontalmente las tarjetas */
-    align-items: center; /* Centra verticalmente las tarjetas */
-    width: 550px; /* Establece el ancho deseado para cada tarjeta */
-  }
-  
-  .custom-slide {
-    margin-right: 10px; /* Ajusta el espaciado entre las tarjetas según tus necesidades */
-  }
-
+.carousel-box{
+  padding-top: 5vh;
+  padding-bottom: 9vh;
+}
 
 
 

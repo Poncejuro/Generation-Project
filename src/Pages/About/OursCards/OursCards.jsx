@@ -7,6 +7,8 @@ export const OursCards = ({name, rol,img,text,linkedin,git}) => {
         <>
             <div className="card-Our">
                 <img src={img} alt="Imagen personal" className='Ours-img'/>
+                
+
                 <div className='info-box-ours'>
                     <h2> {name}</h2>
                     <h5> {rol}</h5>

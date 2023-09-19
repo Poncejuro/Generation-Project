@@ -6,6 +6,7 @@
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
+
 }
 
 .card img {
@@ -13,14 +14,17 @@
   height: auto;
 }
 
+
+ 
 .contenedor-botones {
   display: flex;
-  flex-direction: row;
   align-items: flex-end;
-  padding: 100px 180px;
-  margin-bottom: 10px;
   transition: transform 0.3s ease;
+  position: absolute;
+  bottom: 0;
+ 
 }
+
 .me-1 {
   margin-bottom: 10px; /* Ajusta el espacio entre el botón y la tarjeta */
 }
@@ -37,13 +41,7 @@
     width: calc(50% - 20px);
   }
 
-  .contenedor-botones {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 150px; /* Centra verticalmente el contenido */
-    text-align: center; /* Centra horizontalmente el contenido */
-  }
+  
 }
 
 /* Estilos específicos para pantallas medianas (por ejemplo, tabletas) */

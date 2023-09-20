@@ -1,8 +1,5 @@
 .body-events {
- 
-  background: linear-gradient(-45deg, #82065f, #90244e, #402376, #7c1e61);
-  background-size: 400% 400%;
-  animation: gradient 5s ease infinite;
+  background-image: url("../../Img/EventsWallpaper.jpg");
   display: flex;
   justify-content: center;
   align-items: center;

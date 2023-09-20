@@ -90,13 +90,14 @@ export default function ProfileDescription({ profileButton, handleProfileButton 
             </Stack>
           </ListGroup.Item>
         </div>
+
         <div className="Principal-Container">
-          <div style={{ display: !profileButton ? "inline" : "none" }}>
-            <ListGroup.Item className=" text-center text-light">
-              <h4 className=" text-profile text-capitalize text-light">
+          <div style={{ display: !profileButton ? "inline" : "none"}}>
+            <ListGroup.Item className=" text-center">
+              <h4 className=" text-profile text-capitalize" >
                 Juan González
               </h4>
-              <h5 className=" text-capitalize text-light">Bajista</h5>
+              <h5 className=" text-capitalize ">Bajista</h5>
               <p className=" text-profile">
                 This is a longer card with supporting text below as a
                 natural lead-in to additional content. This content is a

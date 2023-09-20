@@ -50,7 +50,7 @@ export default function ProfilePosts({
                   onChange={setField}
                 />
                 {imgFooterError && (
-                  <div class="alert alert-danger" role="alert">
+                  <div className="alert alert-danger" role="alert">
                     {imgFooterError}
                   </div>
                 )}

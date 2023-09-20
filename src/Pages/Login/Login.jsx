@@ -1,8 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 import { useState } from "react";
+import CryptoJS from "crypto-js"
 
 export const Login = () => {
+
+
+
+  const descifrar=(texto)=>{
+    var bytes = CryptoJS.AES.decrypt(texto,'@borjascript');
+    var textodesifrado=bytes.toString(CryptoJS.enc.Utf8);
+    return textodesifrado
+  }
+
   const [datos, setDatos] = useState({});
 
   const navigate = useNavigate();
@@ -14,6 +24,8 @@ export const Login = () => {
     });
   };
 
+
+
   const [errorMessage, setErrorMessage] = useState(false);
 
   const sendData = (event) => {
@@ -22,7 +34,7 @@ export const Login = () => {
     const data = JSON.parse(jsonData);
     if (
       data.user_email === datos.user_email &&
-      data.password === datos.user_password
+      descifrar(data.password) === datos.user_password
     ) {
       navigate("/Events", {
         replace: "true",
@@ -32,11 +44,10 @@ export const Login = () => {
       });
     }
     if (
-      data.password !== datos.user_password ||
+      descifrar(data.password) !== datos.user_password ||
       data.user_email !== datos.user_email
     ) {
       setErrorMessage(true);
-      console.log("Correo o contraseña no validos");
     }
   };
 

@@ -1,6 +1,7 @@
 import "./register.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import CryptoJS from "crypto-js"
 
 export const Register = () => {
   const [datos, setDatos] = useState({});
@@ -11,13 +12,21 @@ export const Register = () => {
   const [userNameInput, setUsernameInput] = useState("");
   const [onlyAlphabetLetters, setOnlyAlphabetLetters] = useState(false);
 
+  const cifrar=(texto)=>{
+    var textocifrado = CryptoJS.AES.encrypt(texto,'@borjascript').toString();
+    return textocifrado
+  }
+
+
+
+
   const navigate = useNavigate();
 
   const handleInputChange = (event) => {
     setDatos({
       ...datos,
       [event.target.name]: event.target.value.trim(),
-      password: passwordInput
+      password: cifrar(passwordInput)
     });
   };
 
@@ -63,7 +72,7 @@ export const Register = () => {
       console.log("contraseñas diferentes");
     } else {
       event.preventDefault();
-      datos.password = passwordInput;
+      datos.password = cifrar(passwordInput);
       datos.user_tel = telephoneInput;
       datos.user_name = userNameInput;
       localStorage.setItem("userData", JSON.stringify(datos));

@@ -57,13 +57,13 @@ export const EventsCards = ({
           </Col>
           
         </Row>
-        <Row className="contenedor-botones">
-          <div >
-            <Button className="me-1" variant="success" href="#">
-              Me interesa
-            </Button>
-          </div>
-        </Row>
+       
+        <div className="contenedor-botones">
+          <Button className="me-1" variant="success" href="#">
+            Me interesa
+          </Button>
+        </div>
+        
 
       </div>
     </>

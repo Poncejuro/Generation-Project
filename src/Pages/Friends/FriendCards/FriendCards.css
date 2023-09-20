@@ -7,14 +7,12 @@
     
 }
 .friends-container{
-  background: linear-gradient(-45deg, #014210, #000301, #356d42, #96d59e);
-  background-size: 400% 400%;
-  animation: gradient 9s ease infinite;
+  background-image: url("../../../Img/FriendsWallpaper.jpg");
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-
+  height: 100%;
 }
 .friends-about{
    
@@ -36,7 +34,7 @@
     grid-template-columns: auto,auto,auto,auto;
     gap: 20px;
     transition: transform 0.3s linear;
-    background-color: rgb(255, 255, 255, 0.4);
+    background-color: rgb(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     border-radius: 10px;
    

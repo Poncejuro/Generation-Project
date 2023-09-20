@@ -1,23 +1,33 @@
 .body-Profile {
-  background-image: url("../../Img/console.jpg");
+  background-image: url("../../Img/ProfileWallpaper.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 100%;
+  
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000; /* Fondo negro para seriedad */
+  z-index: -1; /* Coloca el fondo detrás del contenido */
 }
 
 .Principal-Container {
-  background-color: rgb(255, 255, 255, 0.4);
+  background-color: rgb(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
   border: 0px;
   border-radius: 10px;
   margin-left: 20px;
   margin-right: 20px;
+  margin-bottom: 500px;
 }
 
 .Principal-Container-2 {
-  background-color: rgb(255, 255, 255, 0.4);
+  background-color: rgb(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
   border: 0px;
   border-radius: 10px;
@@ -28,7 +38,7 @@
 }
 
 .Principal-Container-3 {
-  background-color: rgb(255, 255, 255, 0.4);
+  background-color: rgb(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
   height: 50px;
   border: 0px;
@@ -36,6 +46,7 @@
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 2vh;
+ 
   
   display: flex;
   justify-content: center;
@@ -71,4 +82,11 @@
 
 .postButtonProPost{
   margin-right: 5px;
+}
+
+@media (max-width: 990px) {
+  .Principal-Container {
+   
+    margin-bottom: 2px;
+  }
 }

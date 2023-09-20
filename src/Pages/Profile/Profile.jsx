@@ -1,19 +1,11 @@
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 // import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-import Image from "react-bootstrap/Image";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+
 // import Stack from "react-bootstrap/Stack";
 import React, { useState } from "react";
 import { NavBar } from "../Navbar";
-import { FeedCards } from "./FeedCards/FeedCards";
-import img1 from "../../Img/2sd.jpg";
 //from MUI React
-import TextField from "@mui/material/TextField";
-import Grid from "@mui/material/Unstable_Grid2";
-import Stack from "@mui/material/Stack";
+
 import initialData from "../../utils/feedPosts.json";
 import "./Profile.css";
 //nuevos

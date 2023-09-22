@@ -4,7 +4,9 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 100%;
 }
+
  @keyframes gradient{
   0%{
     background-position: 0% 50%;

@@ -1,13 +1,11 @@
 import { FriendCards } from "./FriendCards/FriendCards";
 import { NavBar } from "../Navbar";
 import { friendList } from "../../utils/friends";
-
+import './FriendCards/FriendCards.css'
 import { useState, useEffect } from "react";
 
 
 export const Friends = () => {
-
-
 
   function App() {
     const [data, setData] = useState([]);
@@ -28,8 +26,6 @@ export const Friends = () => {
     }, []);
   }
 
-
-
   //Se agrego una api para generar imagenes aleatorias
   const updatedFriendList = [...friendList];
 
@@ -37,14 +33,13 @@ export const Friends = () => {
     updatedFriendList[i].img = `https://picsum.photos/200?random=${i}`;
   }
 
-
   return (
     <>
       <NavBar />
       <section className="friends-container">
-        <div className="friendsCard">{friendList.map((friend) => (
+        <div className="friendsCard">{friendList.map((friend, index) => (
           <FriendCards
-            key={1}
+            key={index}
             name={friend.name}
             rol={friend.rol}
             bio={friend.bio}

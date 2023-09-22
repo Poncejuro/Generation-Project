@@ -1,74 +1,72 @@
 .friendsCard {
-    margin: 15px; 
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); 
-    gap: 10px;
-    padding:0px 10px 10px 30px; /* Espaciado interno */
-    
+  
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 0px 10px 10px 30px; /* Espaciado interno */
 }
-.friends-container{
+
+.friends-container {
   background-image: url("../../../Img/FriendsWallpaper.jpg");
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100%;
-}
-.friends-about{
-   
-    padding: 40px;
-    background-repeat: no-repeat;
-    background-position: center;
-    height:150vh;
-    background-size: cover;
-   
+
 }
 
 /* Elementos internos de las tajetas*/
-.card-Friends{
-    width: 250px;
-    height: 400px;
-    padding-top: 40px;
-    margin-bottom: 20px;
-    display: grid;
-    grid-template-columns: auto,auto,auto,auto;
-    gap: 20px;
-    transition: transform 0.3s linear;
-    background-color: rgb(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-   
+.card-Friends {
+  margin-top: 30px;
+  width: 250px;
+  height: 400px;
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: auto, auto, auto, auto;
+  gap: 20px;
+  transition: transform 0.3s linear;
+  background-color: rgb(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
 }
 
-
-.card-Friends h2{
-    text-align: center;
-    font-weight: bold;
-}
-.rol{
-    text-align: center;
-    font-weight: bold;
+.card-Friends h2 {
+  text-align: center;
+  font-weight: bold;
 }
 
-.card-Friends:hover{
-    transform : scale(1.1);  
+.rol {
+  text-align: center;
+  font-weight: bold;
 }
 
-@media (max-width: 768px) {
-    .friendsCard {
-      grid-template-columns: repeat(2, 1fr);
-    }
+.card-Friends:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1310px) {
+  .friendsCard {
+    grid-template-columns: repeat(4, 1fr);
   }
-  
-  /* Estilos para pantallas más pequeñas, como teléfonos */
-  @media (max-width: 480px) {
-    .friendsCard {
-      grid-template-columns: repeat(1, 1fr);
-    }
+}
+
+@media (max-width: 1080px) {
+  .friendsCard {
+    grid-template-columns: repeat(3, 1fr);
   }
-  @media (max-width: 768px) {
-    .friends-container {
-      background-image: none; /* Elimina la imagen de fondo */
-      background-color: #000; /* Fondo negro en su lugar */
-    }
+}
+
+@media (max-width: 800px) {
+  .friendsCard {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* Estilos para pantallas más pequeñas, como teléfonos */
+@media (max-width: 550px) {
+  .friendsCard {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+}
+

@@ -16,53 +16,57 @@ export const Profile = () => {
   const firstData = initialData;
 
   //setup de los errores
-  const [titleError, setTitleError] = useState("");
-  const [imgFooterError, setImgFooterError] = useState("");
-  const [textError, setTextError] = useState("");
+  // const [titleError, setTitleError] = useState("");
+  // const [imgFooterError, setImgFooterError] = useState("");
+  // const [textError, setTextError] = useState("");
 
   const [form, setForm] = useState({});
+
   const setField = (field) => {
     setForm({
       ...form,
       [field.target.name]: field.target.value,
     });
 
-    //crea las banderas de que estan vacios y los mensajes que aparecen en el dom
+  //   //crea las banderas de que estan vacios y los mensajes que aparecen en el dom
 
-    if (field.target.name === "Title" && !field.target.value.trim()) {
-      setTitleError("Agregue texto antes de publicar");
-    } else {
-      setTitleError("");
-    }
+  //   if (field.target.name === "Title" && !field.target.value.trim()) {
+  //     setTitleError("Agregue texto antes de publicar");
+  //   } else {
+  //     setTitleError("");
+  //   }
 
-    if (field.target.name === "imgFooter" && !field.target.value.trim()) {
-      setImgFooterError("Agregue texto antes de publicar");
-    } else {
-      setImgFooterError("");
-    }
+  //   if (field.target.name === "imgFooter" && !field.target.value.trim()) {
+  //     setImgFooterError("Agregue texto antes de publicar");
+  //   } else {
+  //     setImgFooterError("");
+  //   }
 
-    if (field.target.name === "text" && !field.target.value.trim()) {
-      setTextError("Agregue texto antes de publicar");
-    } else {
-      setTextError("");
-    }
+  //   if (field.target.name === "text" && !field.target.value.trim()) {
+  //     setTextError("Agregue texto antes de publicar");
+  //   } else {
+  //     setTextError("");
+  //   }
   };
 
   const [posts, setPosts] = useState([]);
+  
   const saveFeed = () => {
     //if que valida que no haya errores o vacios
-    if (form.Title &&
+    if (
+      form.Title &&
       form.imgFooter &&
-      form.text &&
-      !titleError &&
-      !imgFooterError &&
-      !textError) {
+      form.text 
+      // &&
+      // !titleError &&
+      // !imgFooterError &&
+      // !textError
+    ) {
       const updatedPosts = [...posts, form, ...firstData];
       setPosts(updatedPosts);
       localStorage.setItem("feedData", JSON.stringify(updatedPosts));
       updateData();
     }
-
   };
 
   const [feddData, setObjectData] = useState([]);
@@ -97,15 +101,18 @@ export const Profile = () => {
     <>
       <NavBar />
       <div className="body-Profile">
-        <Row style={{width: "100%"}}>
+        <Row style={{ width: "100%" }}>
           {/*======================================== Start left Section ========================================*/}
-          <ProfileDescription profileButton={profileButton} handleProfileButton={handleProfileButton} />
+          <ProfileDescription
+            profileButton={profileButton}
+            handleProfileButton={handleProfileButton}
+          />
           {/*======================================== Start right Section ========================================*/}
           <ProfilePosts
             setField={setField}
-            titleError={titleError}
-            imgFooterError={imgFooterError}
-            textError={textError}
+            // titleError={titleError}
+            // imgFooterError={imgFooterError}
+            // textError={textError}
             saveFeed={saveFeed}
             feddData={feddData}
             deletePost={deletePost}

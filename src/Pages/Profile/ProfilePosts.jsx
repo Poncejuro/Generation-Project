@@ -6,25 +6,57 @@ import Form from "react-bootstrap/Form";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 // import Stack from "react-bootstrap/Stack";
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { useState } from "react";
+
 import { FeedCards } from "./FeedCards/FeedCards";
 import img1 from "../../Img/2sd.jpg";
 //from MUI React
 import Grid from "@mui/material/Unstable_Grid2";
+import Chip from "@mui/material/Chip";
 import "./Profile.css";
 
 export default function ProfilePosts({
   setField,
-  titleError,
-  imgFooterError,
-  textError,
+  // titleError,
+  // imgFooterError,
+  // textError,
   saveFeed,
   feddData,
-  deletePost
+  deletePost,
 }) {
+  const [titleExists, setTitleExists] = useState(true);
+  const [footerExists, setFooterExists] = useState(true);
+  const [detailsExists, setDetailsExists] = useState(true);
+
+  const handleTitleInput = (event) => {
+    setField(event);
+    setTitleExists(event.target.value.length === 0);
+  };
+  const handleFooterInput = (event) => {
+    setField(event);
+    setFooterExists(event.target.value.length === 0);
+  };
+  const handleDetailsInput = (event) => {
+    setField(event);
+    setDetailsExists(event.target.value.length === 0);
+  };
+
   return (
     <>
       <Col xs={12} sm={12} md={12} lg={9}>
+        <Row>
+          <Col>
+            {/*///////////////////////////Button Section /////////////////////////////*/}
+            <div className="Principal-Container-tittle">
+              {/* <Button variant="success" size="large">
+                Publica tu evento
+              </Button> */}
+              {/* <Chip label="success" color="success"/> */}
+              <h3>Publica un evento</h3>
+            </div>
+          </Col>
+        </Row>
         {/*///////////////////////////Publications Section /////////////////////////////*/}
         <form>
           <div className="Principal-Container-2">
@@ -34,12 +66,19 @@ export default function ProfilePosts({
                   as="input"
                   placeholder="Título de la publicación"
                   name="Title"
-                  onChange={setField}
+                  // onChange={setField}
+                  onChange={handleTitleInput}
+                  onClick={handleTitleInput}
                 />
-                {titleError && (
-                  <div class="alert alert-danger" role="alert">
-                    {titleError}
+                {titleExists ? (
+                  <div
+                    className="alert alert-danger my-1 text-center"
+                    role="alert"
+                  >
+                    Inserta título
                   </div>
+                ) : (
+                  <div></div>
                 )}
               </Grid>
               <Grid xs={12} md={4}>
@@ -47,12 +86,18 @@ export default function ProfilePosts({
                   as="input"
                   placeholder="Pie de imagen"
                   name="imgFooter"
-                  onChange={setField}
+                  onChange={handleFooterInput}
+                  onClick={handleFooterInput}
                 />
-                {imgFooterError && (
-                  <div className="alert alert-danger" role="alert">
-                    {imgFooterError}
+                {footerExists ? (
+                  <div
+                    className="alert alert-danger my-1 text-center"
+                    role="alert"
+                  >
+                    Inserta pie de foto
                   </div>
+                ) : (
+                  <div></div>
                 )}
               </Grid>
               <Grid xs={12} md={4}>
@@ -66,12 +111,18 @@ export default function ProfilePosts({
                   placeholder="Detalles del evento"
                   name="text"
                   rows={4}
-                  onChange={setField}
+                  onChange={handleDetailsInput}
+                  onClick={handleDetailsInput}
                 />
-                {textError && (
-                  <div class="alert alert-danger" role="alert">
-                    {textError}
+                {detailsExists ? (
+                  <div
+                    className="alert alert-danger my-1 text-center"
+                    role="alert"
+                  >
+                    Inserta detalles
                   </div>
+                ) : (
+                  <div></div>
                 )}
               </Grid>
             </Grid>
@@ -84,7 +135,12 @@ export default function ProfilePosts({
             <Col>
               {/*///////////////////////////Button Section /////////////////////////////*/}
               <div className="Principal-Container-3">
-                <Button className="postButtonProPost" variant="success" href="#" onClick={saveFeed}>
+                <Button
+                  className="postButtonProPost"
+                  variant="success"
+                  onClick={saveFeed}
+                  disabled={titleExists || footerExists || detailsExists}
+                >
                   Publicar
                 </Button>
                 <DropdownButton
@@ -115,9 +171,8 @@ export default function ProfilePosts({
               ))}
             </div>
           </Row>
-
         </section>
       </Col>
     </>
-  )
+  );
 }

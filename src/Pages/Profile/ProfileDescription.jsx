@@ -107,7 +107,7 @@ export default function ProfileDescription({ profileButton, handleProfileButton 
               </p>
             </ListGroup.Item>
           </div>
-          <ListGroup.Item className="text-center ">
+          <ListGroup.Item className="text-center">
             <Button
               className="m-2"
               variant="success"

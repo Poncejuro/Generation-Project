@@ -1,51 +1,103 @@
-/* Estilos base para todas las pantallas */
+.body-events {
+  background-image: url("../../../Img/EventsWallpaper.jpg");
+}
+
+.EventsCard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 10px;
+}
+
 .eventsCards {
-  padding: 20px;
   margin: 10px;
+  margin-right: 100px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
+  border: 0px;
+  border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
-  
   min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 580px;
+  width: calc(110% - 40px);
+  position: relative;
+  transition: transform 0.5s ease, box-shadow 0.2s ease;
 }
 
-.card img {
-  max-width: 100%;
-  height: auto;
+.eventsCards img {
+  width: 60%; 
+  height: auto; 
+  object-fit: cover; 
+  
 }
 
-
-.contenedor-botones {
-  position:absolute;
-  bottom: 5%; /* Coloca el elemento en el centro vertical */
-  left: 2%; /* Coloca el elemento en el centro horizontal */
+.Event_details {
+  font-size: 15px;
+  margin-top: 20px;
 }
 
+#eventCardsButtons1 {
+  margin-top: -40px;
+  margin-left: 190px;
 
-/*
-@media (max-width: 767px) {
-  .card  {
-    grid-template-columns: repeat(2, 2fr);
-    width: calc(50% - 20px);
+}
+
+#eventCardsButtons {
+  width: 120px;
+  height:40px ;
+  margin-top: 15px;
+  margin-left: -140px;
+  margin-right: 10px; 
+  background-color: rgb(62, 158, 231);
+  color: white;
+}
+
+#eventCardsButtons1 {
+
+    margin-top: -40px;
+    margin-left: 190px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #f44336;
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
+
+/* Animación de pulsación cuando se pasa el cursor sobre los botones */
+#eventCardsButtons:hover,
+#eventCardsButtons1:hover,
+.eventsCards:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-@media (min-width: 768px) and (max-width: 991px) {
-  .card {
-    grid-template-columns: repeat(2, 2fr);
-    width: calc(50% - 20px);
-  }
-}
-@media (min-width: 550px) and (max-width: 766px) {
-  #eventCardsButtons, #eventCardsButtons1 {
-    margin-bottom: -500px ;
-    grid-template-columns: repeat(2, 2fr);
-    width: calc(50% - 20px);
-  }
-}
+
+/* Pantallas grandes */
 @media (min-width: 992px) {
-  .card {
-    width: calc(33.33% - 20px);
+  .EventsCard {
+    width: calc(33.33% - 20px); 
   }
 }
-*/
+
+/* Pantallas medianas */
+@media (min-width: 768px) and (max-width: 991px) {
+  .EventsCard {
+    grid-template-columns: repeat(2, 1fr); 
+    width: calc(50% - 20px);
+  }
+}
+
+/* Pantallas chicas y extra chicas */
+@media (max-width: 767px) {
+  .EventsCard {
+    grid-template-columns: repeat(1, 1fr); 
+    width: calc(100% - 20px);
+  }
+}

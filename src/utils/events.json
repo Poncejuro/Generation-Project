@@ -1,62 +1,52 @@
 [
   {
-    "title": "Sinfonia Ramón",
-    "footer": "Mérida Centro.",
-    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
+    "title": "Concierto de Jazz en el Parque",
+    "footer": "Parque Central, Ciudad de México",
+    "event_details": "Sábado 15 de Octubre del 2024. Disfruta de una tarde de jazz en el hermoso Parque Central de la Ciudad de México. El evento comienza a las 5:00 PM."
   },
-
   {
-    "title": "Sinfonia Ramón",
-    "footer": "Mérida Centro.",
-    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
+    "title": "Festival de Rock en Vivo",
+    "footer": "Estadio Municipal, Guadalajara",
+    "event_details": "Viernes 2 de Noviembre del 2024. Únete a la emoción del festival de rock más grande de la región en el Estadio Municipal de Guadalajara. Puertas abiertas a las 4:00 PM."
   },
-
   {
-    "title": "Sinfonia Ramón",
-    "footer": "Mérida Centro.",
-    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
+    "title": "Noche de Ópera en el Teatro",
+    "footer": "Teatro Principal, Monterrey",
+    "event_details": "Sábado 20 de Diciembre del 2024. Déjate llevar por la majestuosidad de la ópera en una noche especial en el Teatro Principal de Monterrey. Comienza a las 7:30 PM."
   },
-
   {
-    "title": "Sinfonia Ramón",
-    "footer": "Mérida Centro.",
-    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
+    "title": "Festival de Música Latina",
+    "footer": "Plaza de la Ciudad, Puebla",
+    "event_details": "Miércoles 15 de Enero del 2025. Baila al ritmo de la música latina en el Festival de Música Latina en la Plaza de la Ciudad de Puebla. Desde las 6:00 PM hasta la medianoche."
   },
-
-  { 
-    "title": "Sinfonia Ramón",
-    "footer": "Mérida Centro.",
-    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
-  },
-
   {
-    "title": "Sinfonia Ramón",
-    "footer": "Mérida Centro.",
-    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
+    "title": "Concierto de Piano Clásico",
+    "footer": "Auditorio de la Universidad, Ciudad de México",
+    "event_details": "Viernes 28 de Febrero del 2025. Disfruta de la virtuosidad de un pianista clásico en el Auditorio de la Universidad de la Ciudad de México. El concierto comienza a las 8:00 PM."
   },
-
   {
-    "title": "Sinfonia Ramón",
-    "footer": "Mérida Centro.",
-    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
+    "title": "Festival de Blues al Aire Libre",
+    "footer": "Parque de la Colina, Guadalajara",
+    "event_details": "Sábado 15 de Marzo del 2025. Sumérgete en el blues en un festival al aire libre en el Parque de la Colina de Guadalajara. Música en vivo a partir de las 6:00 PM."
   },
-
   {
-    "title": "Sinfonia Ramón",
-    "footer": "Mérida Centro.",
-    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
+    "title": "Concierto de Jazz en el Parque",
+    "footer": "Parque Central, Ciudad de México",
+    "event_details": "Sábado 10 de Abril del 2025. Otra oportunidad para disfrutar de jazz en el hermoso Parque Central de la Ciudad de México. Comienza a las 4:30 PM."
   },
-
   {
-    "title": "Sinfonia Ramón",
-    "footer": "Mérida Centro.",
-    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
+    "title": "Festival de Música Indie",
+    "footer": "Centro de Convenciones, Monterrey",
+    "event_details": "Viernes 25 de Mayo del 2025. Descubre nuevas bandas en el Festival de Música Indie en el Centro de Convenciones de Monterrey. Desde las 7:00 PM hasta la medianoche."
   },
-
   {
-    "title": "Sinfonia Ramón",
-    "footer": "Mérida Centro.",
-    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
+    "title": "Concierto de Rock Clásico",
+    "footer": "Estadio de la Ciudad, Guadalajara",
+    "event_details": "Sábado 12 de Junio del 2025. Revive los éxitos del rock clásico en un épico concierto en el Estadio de la Ciudad de Guadalajara. Comienza a las 8:30 PM."
+  },
+  {
+    "title": "Festival de Hip-Hop Urbano",
+    "footer": "Plaza del Barrio, Ciudad de México",
+    "event_details": "Viernes 3 de Julio del 2025. Experimenta la cultura del hip-hop en el Festival de Hip-Hop Urbano en la Plaza del Barrio de la Ciudad de México. Desde las 5:00 PM hasta la medianoche."
   }
-
 ]

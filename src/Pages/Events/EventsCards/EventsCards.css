@@ -1,12 +1,12 @@
 /* Estilos base para todas las pantallas */
-.card {
+.eventsCards {
   padding: 20px;
   margin: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
-
+  
   min-height: 280px;
 }
 
@@ -22,43 +22,30 @@
   left: 2%; /* Coloca el elemento en el centro horizontal */
 }
 
-@media (max-width: 580px) {
-  .contenedor-botones {
-    position:absolute;
-    top: 4%; /* Coloca el elemento en el centro vertical */
-    left: 7%; /* Coloca el elemento en el centro horizontal */
-  }
 
-  
-}
-
-
-
-
-
-
-/* Estilos específicos para pantallas pequeñas (por ejemplo, teléfonos) */
+/*
 @media (max-width: 767px) {
   .card  {
     grid-template-columns: repeat(2, 2fr);
     width: calc(50% - 20px);
   }
-
-  
 }
-
-/* Estilos específicos para pantallas medianas (por ejemplo, tabletas) */
 @media (min-width: 768px) and (max-width: 991px) {
   .card {
     grid-template-columns: repeat(2, 2fr);
     width: calc(50% - 20px);
   }
 }
-
-/* Estilos específicos para pantallas grandes (por ejemplo, escritorios) */
+@media (min-width: 550px) and (max-width: 766px) {
+  #eventCardsButtons, #eventCardsButtons1 {
+    margin-bottom: -500px ;
+    grid-template-columns: repeat(2, 2fr);
+    width: calc(50% - 20px);
+  }
+}
 @media (min-width: 992px) {
   .card {
     width: calc(33.33% - 20px);
   }
 }
-
+*/

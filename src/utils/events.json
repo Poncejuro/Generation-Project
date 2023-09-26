@@ -1,87 +1,62 @@
- [
+[
   {
-    "EventTitle": "Sinfonia Ramón",
-  
-    "date": "Miercoles 28 de Marzo del 2024",
-    "text": "Disfruta de la sinfonia en el centro de Mérida.",
-    "time": "Inica 4:00pm",
-    "location": "Mérida Centro."
+    "title": "Sinfonia Ramón",
+    "footer": "Mérida Centro.",
+    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
   },
 
   {
-    "EventTitle": "Pepe Pepe",
-    "img": "https://ined21.com/wp-content/uploads/2020/11/Eventos-musicales.jpg",
-    "date": "Domingo 10 de Octubre del 2023" ,
-    "text": "Los invito al bar: La bikina, donde escucharan los ultimos temas de Pepe Pepe",
-    "time": "Comienza a las 7:00pm",
-    "location": "Ciudad de México, Tepito"
+    "title": "Sinfonia Ramón",
+    "footer": "Mérida Centro.",
+    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
   },
 
   {
-    "EventTitle": "Las chicas de morado",
-    "date": "13 de Septiembre del 2023",
-    "text": "El grupo reconocido (Chicas de Morado) Festejaran su primer aniversario en la plaza de las Torres.",
-    "time": "2:00pm",
-    "location": "Guadalajara"
+    "title": "Sinfonia Ramón",
+    "footer": "Mérida Centro.",
+    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
   },
 
   {
-    "EventTitle": " Rock And Roll",
-    "date": "12 Marzo del  2024",
-    "text": "Te invitamos a la inauguración de la banda de Roll Local, estaremos dando a conocer a la nueva banda local con mucho potencial.",
-    "time": "10:00pm",
-    "location": "Estado de México, Chimalhuacán"
+    "title": "Sinfonia Ramón",
+    "footer": "Mérida Centro.",
+    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
+  },
+
+  { 
+    "title": "Sinfonia Ramón",
+    "footer": "Mérida Centro.",
+    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
   },
 
   {
-    "EventTitle": "Mariachis locos",
-    "date": "26 de Septiembre del 2023",
-    "text": "Mariacis locos te invita a su presentación en las afueras de Garibaldi",
-    "time": "9:00pm",
-    "location": "Ciudad de México, GAM1"
+    "title": "Sinfonia Ramón",
+    "footer": "Mérida Centro.",
+    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
   },
 
   {
-    "EventTitle": "Jaguares del Sur",
-    "date": "18 de Diciembre del 2023",
-    "text": "Banda de canciones norteñas",
-    "time": "5:00pm",
-    "location": "Tamaulipas"
+    "title": "Sinfonia Ramón",
+    "footer": "Mérida Centro.",
+    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
   },
 
   {
-    "EventTitle": "Banda Baston",
-    "img": "https://ined21.com/wp-content/uploads/2020/11/Eventos-musicales.jpg",
-    "date": "30/11/2023",
-    "text": "Evento local para disfrutar de la música.",
-    "time": "15:00:00",
-    "location": "Mérida Centro, enfrente de la carniceria la Honey"
+    "title": "Sinfonia Ramón",
+    "footer": "Mérida Centro.",
+    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
   },
 
   {
-    "EventTitle": "SpiterBanda",
-    "img": "https://ined21.com/wp-content/uploads/2020/11/Eventos-musicales.jpg",
-    "date": "14 de Octubre del 2023",
-    "text": "Ven y conoce a SpiterBanda con canciones para la chaviza",
-    "time": "6:00pm",
-    "location": "Queretaro"
+    "title": "Sinfonia Ramón",
+    "footer": "Mérida Centro.",
+    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
   },
 
   {
-    "EventTitle": "Belicos de Veracruz",
-    "img": "https://ined21.com/wp-content/uploads/2020/11/Eventos-musicales.jpg",
-    "date": "11 de Noviembre del 2023",
-    "text": "Si eres belico y eres de Veracruz, este es tú momento de brillar",
-    "time": "15:00:00",
-    "location": "Veracruz"
-  },
-
-  {
-    "EventTitle": "Opera Cepillin",
-    "img": "https://ined21.com/wp-content/uploads/2020/11/Eventos-musicales.jpg",
-    "date": "19 de Septiembre del 2023",
-    "text": " Conce a Cepillin, gran cantante de opera.",
-    "time": "15:00:00",
-    "location": "Guanajuato"
+    "title": "Sinfonia Ramón",
+    "footer": "Mérida Centro.",
+    "event_details": "Miercoles 28 de Marzo del 2024. Disfruta de la sinfonia en el centro de Mérida. Inica 4:00pm"
   }
+
 ]

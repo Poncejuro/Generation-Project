@@ -1,69 +1,26 @@
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import "./EventsCards.css";
-import Button from "react-bootstrap/Button";
+import { Button } from "react-bootstrap";
 
 export const EventsCards = ({
-  title,
-  text,
-  cardSizeW,
-  logo,
-  alt,
-  imgSize,
-  keyDiv,
-  detePost,
-  ETitle,
-  date,
-  time,
-  location,
+  index, img, alt, title, footer, event_details
 }) => {
   return (
     <>
-      <div
-        className="card text-center"
-        style={{ width: cardSizeW, height: "auto" }}
-        key={keyDiv}
-      >
-        <Row>
-          <Col xs={12} sm={6} md={4}>
-            <img
-              src={logo}
-              style={{
-                width: "100%",
-                height: "auto",
-                margin: "auto",
-                display: "block",
-                marginBottom: "20px",
-                borderRadius: "3%",
-              }}
-              alt={alt}
-            />
-          </Col>
+      <div className="eventsCards" key={index}>
+        <img src={img} alt={alt}  /*style={{ width: '150px', height: '150px', margin: 'auto', display:'block' }}*/
+        />
+        <h2>{title}</h2>
+        <h2>{footer}</h2>
+        <h2>{event_details}</h2>
+        <Button id="eventCardsButtons" variant="success" href="#">
+          Me interesa
+        </Button>
+        <Button id="eventCardsButtons1" variant="success" href="#">
+          No me interesa
+        </Button>
 
-          <Col 
-            xs={12}
-            sm={6}
-            md={8}
 
-            style={{ textAlign: "left" }}
-          >
-            <h3 style={{ fontSize: "18px", marginBottom: "8px" }}>{ETitle}</h3>
-            <p style={{ fontSize: "16px", marginBottom: "8px" }}>{text}</p>
-            <p style={{ fontSize: "14px", marginBottom: "4px" }}>{date}</p>
-            <p style={{ fontSize: "14px", marginBottom: "4px" }}>{time}</p>
-            <p style={{ fontSize: "14px", marginBottom: "4px" }}>{location}</p>
 
-            
-          </Col>
-          
-        </Row>
-       
-        <div className="contenedor-botones">
-          <Button className="me-1" variant="success" href="#">
-            Me interesa
-          </Button>
-        </div>
-        
 
       </div>
     </>

@@ -1,9 +1,26 @@
+<<<<<<< HEAD
+=======
+.friendsCard {
+  
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 0px 10px 10px 30px; 
+  
+}
+>>>>>>> 8900923f68dea56f4196e27541cf020a42adf071
 
 .friends-container {
   background-image: url("../../../Img/FriendsWallpaper.jpg");
   justify-content: center;
   align-items: center;
   text-align: center;
+<<<<<<< HEAD
+=======
+  grid-template-columns: repeat(3, 4fr);
+  gap: 10px;
+
+>>>>>>> 8900923f68dea56f4196e27541cf020a42adf071
 }
 
 .friendsCard {
@@ -24,6 +41,7 @@
   background-color: rgb(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
   border-radius: 10px;
+  
 }
 
 .card-Friends h2 {
@@ -52,24 +70,33 @@
   transform: scale(1.1);
 }
 
-@media (max-width: 1310px) {
-  .friendsCard {
-    grid-template-columns: repeat(4, 1fr);
+/* Estilos para pantallas más pequeñas, como teléfonos */
+@media (max-width: 550px) {
+  .EventsCard {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
-@media (max-width: 1080px) {
-  .friendsCard {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 800px) {
-  .friendsCard {
+/* Estilos para pantallas de 551px a 800px */
+@media (min-width: 551px) and (max-width: 800px) {
+  .EventsCard {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Estilos para pantallas de 801px a 1080px */
+@media (min-width: 801px) and (max-width: 1080px) {
+  .EventsCard {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Estilos para pantallas de 1081px a 1310px */
+@media (min-width: 1081px) and (max-width: 1310px) {
+  .EventsCard {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 /* Estilos para pantallas más pequeñas, como teléfonos */
 @media (max-width: 550px) {
   .friendsCard {

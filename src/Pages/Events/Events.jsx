@@ -2,7 +2,7 @@ import { NavBar } from "../Navbar"
 import { EventsCards } from "./EventsCards/EventsCards";
 import React from "react";
 import eventsData from "../../utils/events";
-import "./Events.css";
+
 
 
 
@@ -19,8 +19,8 @@ export const Events = () => {
   return (
     <>
       <NavBar />
-      <div className="body-events align-content-center">
-        <div className="events-box">
+      <div  id= "events-container " className="body-events align-content-center">
+        <div className="EventsCard">
           {events.map((event, index) => (
             <EventsCards
               key={index}

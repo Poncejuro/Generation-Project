@@ -30,7 +30,7 @@ export const Friends = () => {
   const updatedFriendList = [...friendList];
 
   for (let i = 0; i < updatedFriendList.length; i++) {
-    updatedFriendList[i].img = `https://picsum.photos/200?random=${i}`;
+    updatedFriendList[i].photo = `https://picsum.photos/200?random=${i}`;
   }
 
   return (
@@ -43,9 +43,9 @@ export const Friends = () => {
             name={friend.name}
             rol={friend.rol}
             bio={friend.bio}
-            img={friend.img}
+            photo={friend.photo}
             alt={"aqui debe haber una foto"}
-            imgSize={("250px")} />
+          />
         ))}</div>
       </section>
     </>

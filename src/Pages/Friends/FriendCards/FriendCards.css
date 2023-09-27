@@ -1,28 +1,24 @@
-.friendsCard {
-  
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  padding: 0px 10px 10px 30px; /* Espaciado interno */
-}
 
 .friends-container {
   background-image: url("../../../Img/FriendsWallpaper.jpg");
-  display: block;
   justify-content: center;
   align-items: center;
   text-align: center;
-
 }
 
-/* Elementos internos de las tajetas*/
+.friendsCard {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 0px 10px 10px 30px; 
+}
+
 .card-Friends {
   margin-top: 30px;
   width: 250px;
-  height: 400px;
+  height: auto;
   padding-top: 40px;
   display: grid;
-  grid-template-columns: auto, auto, auto, auto;
   gap: 20px;
   transition: transform 0.3s linear;
   background-color: rgb(255, 255, 255, 0.8);
@@ -38,6 +34,18 @@
 .rol {
   text-align: center;
   font-weight: bold;
+}
+
+.peopleBio{
+  height: 150px;
+  margin: 10px;
+
+}
+
+#peopleFollowButton{
+  padding: 10px;
+  margin: 20px;
+  height: 45px;
 }
 
 .card-Friends:hover {

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 .friendsCard {
   
   display: grid;
@@ -8,19 +6,15 @@
   padding: 0px 10px 10px 30px; 
   
 }
->>>>>>> 8900923f68dea56f4196e27541cf020a42adf071
 
 .friends-container {
   background-image: url("../../../Img/FriendsWallpaper.jpg");
   justify-content: center;
   align-items: center;
   text-align: center;
-<<<<<<< HEAD
-=======
   grid-template-columns: repeat(3, 4fr);
   gap: 10px;
 
->>>>>>> 8900923f68dea56f4196e27541cf020a42adf071
 }
 
 .friendsCard {

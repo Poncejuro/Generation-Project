@@ -18,16 +18,13 @@ import "./Profile.css";
 
 export default function ProfilePosts({
   setField,
-  // titleError,
-  // imgFooterError,
-  // textError,
   saveFeed,
   feddData,
   deletePost,
 }) {
-  const [titleExists, setTitleExists] = useState(true);
-  const [footerExists, setFooterExists] = useState(true);
-  const [detailsExists, setDetailsExists] = useState(true);
+  const [titleExists, setTitleExists] = useState(false);
+  const [footerExists, setFooterExists] = useState(false);
+  const [detailsExists, setDetailsExists] = useState(false);
 
   const handleTitleInput = (event) => {
     setField(event);
@@ -49,10 +46,6 @@ export default function ProfilePosts({
           <Col>
             {/*///////////////////////////Button Section /////////////////////////////*/}
             <div className="Principal-Container-tittle">
-              {/* <Button variant="success" size="large">
-                Publica tu evento
-              </Button> */}
-              {/* <Chip label="success" color="success"/> */}
               <h3>Publica un evento</h3>
             </div>
           </Col>
@@ -66,7 +59,6 @@ export default function ProfilePosts({
                   as="input"
                   placeholder="Título de la publicación"
                   name="Title"
-                  // onChange={setField}
                   onChange={handleTitleInput}
                   onClick={handleTitleInput}
                 />

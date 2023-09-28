@@ -2,6 +2,7 @@ import "./register.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import CryptoJS from "crypto-js"
+import axios from "axios";
 
 export const Register = () => {
   const [datos, setDatos] = useState({});
@@ -12,8 +13,8 @@ export const Register = () => {
   const [userNameInput, setUsernameInput] = useState("");
   const [onlyAlphabetLetters, setOnlyAlphabetLetters] = useState(false);
 
-  const cifrar=(texto)=>{
-    var textocifrado = CryptoJS.AES.encrypt(texto,'@borjascript').toString();
+  const cifrar = (texto) => {
+    var textocifrado = CryptoJS.AES.encrypt(texto, '@borjascript').toString();
     return textocifrado
   }
 
@@ -56,13 +57,13 @@ export const Register = () => {
 
   const handleInputUserName = (event) => {
     const inputValueUserName = event.target.value;
-  
+
     setUsernameInput(inputValueUserName);
-  
+
     // Verificar si inputValueUserName contiene solo letras del alfabeto
     const onlyAlphabetLettersRegex = /^[A-Za-z\s]+$/;
     const isOnlyAlphabetLetters = onlyAlphabetLettersRegex.test(inputValueUserName);
-  
+
     setOnlyAlphabetLetters(!isOnlyAlphabetLetters);
   };
 
@@ -82,8 +83,41 @@ export const Register = () => {
           logged: true,
         },
       });
+      postRegisterData();
     }
+
   };
+
+  //API API API//
+  const [responseData, setResponseData] = useState(null);
+  const [error, setError] = useState(null);
+
+  const postRegisterData = () => {
+    const postData = {
+      fullName: "Ejemplo esteban2_front",
+      email: "stivsrules@email.com",
+      cellphone: "1234567899",
+      password: "ejemplocuatro",
+      active: true,
+      profile: null
+    };
+
+    axios
+      .post('http://localhost:5000/api/v1/users', postData) //form
+      .then((response) => {
+        setResponseData(response.data);
+        setError(null);
+      })
+      .catch((error) => {
+        setResponseData(null);
+        setError(error.message);
+      });
+
+  }
+
+
+
+  //API API API//
 
   return (
     <>
@@ -106,7 +140,7 @@ export const Register = () => {
                     />
                     {onlyAlphabetLetters ? (
                       <div className="alert alert-danger text-center" role="alert">
-                        Solo se permiten nombres escritos con caracteres alfabéticos 
+                        Solo se permiten nombres escritos con caracteres alfabéticos
                       </div>
                     ) : (
                       <div></div>

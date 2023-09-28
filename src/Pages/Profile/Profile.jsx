@@ -88,8 +88,7 @@ export const Profile = () => {
         profileId: 10
       }
     };
-    console.log(form);
-    console.log(typeof({form}));
+  
     axios
       .post('http://localhost:5000/api/v1/publications', postData) //form
       .then((response) => {

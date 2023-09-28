@@ -2,14 +2,45 @@ import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 import { useState } from "react";
 import CryptoJS from "crypto-js"
+import axios from "axios";
 
 export const Login = () => {
 
+  //API API API//
+
+  // Realiza una solicitud GET a la API
+  const [loginBack, setLoginBack] = useState([]);
+  const [loadingLogin, setLoadingLogin] = useState(true);
+
+  const getLoginEmail = () => {
+    const emailInputBox = datos.user_email;
+    const emailModified = emailInputBox.replace(/@/g,'%40');
+
+    axios.get('http://localhost:5000/api/v1/users/'+emailModified)
+      .then(response => {
+        setLoginBack(response.data);
+        setLoadingLogin(false);
+        console.log(response.data);
+        //setDataLoginBack(response);
+        //console.log(response);
+        //console.log('hook back');
+        console.log(loginBack);
+      })
+      .catch(error => {
+        console.error('Error al obtener datos:', error);
+        setLoadingLogin(false);
+      });
+
+  }
 
 
-  const descifrar=(texto)=>{
-    var bytes = CryptoJS.AES.decrypt(texto,'@borjascript');
-    var textodesifrado=bytes.toString(CryptoJS.enc.Utf8);
+  //API API API//
+
+
+
+  const descifrar = (texto) => {
+    var bytes = CryptoJS.AES.decrypt(texto, '@borjascript');
+    var textodesifrado = bytes.toString(CryptoJS.enc.Utf8);
     return textodesifrado
   }
 
@@ -24,17 +55,22 @@ export const Login = () => {
     });
   };
 
-
-
   const [errorMessage, setErrorMessage] = useState(false);
 
   const sendData = (event) => {
     event.preventDefault();
-    const jsonData = localStorage.getItem("userData");
-    const data = JSON.parse(jsonData);
+    //const jsonData = localStorage.getItem("userData");
+    //const data = JSON.parse(jsonData);
+    getLoginEmail();
+    //console.log(dataLoginBack);
+    console.log(loginBack.email+" "+datos.user_email);
+    console.log(loginBack.password+" "+datos.user_password);
+ 
+
     if (
-      data.user_email === datos.user_email &&
-      descifrar(data.password) === datos.user_password
+      loginBack.email === datos.user_email &&
+      loginBack.password === datos.user_password
+      //descifrar(data.password) === datos.user_password
     ) {
       navigate("/Events", {
         replace: "true",
@@ -44,8 +80,10 @@ export const Login = () => {
       });
     }
     if (
-      descifrar(data.password) !== datos.user_password ||
-      data.user_email !== datos.user_email
+      //descifrar(data.password) !== datos.user_password ||
+      //data.user_email !== datos.user_email
+      loginBack.email !== datos.user_email ||
+      loginBack.password !== datos.user_password
     ) {
       setErrorMessage(true);
     }

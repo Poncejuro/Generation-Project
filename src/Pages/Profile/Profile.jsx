@@ -12,6 +12,8 @@ import "./Profile.css";
 import ProfileDescription from "./ProfileDescription";
 import ProfilePosts from "./ProfilePosts";
 
+import axios from "axios";
+
 export const Profile = () => {
   const firstData = initialData;
 
@@ -27,6 +29,7 @@ export const Profile = () => {
       ...form,
       [field.target.name]: field.target.value,
     });
+    
 
   //   //crea las banderas de que estan vacios y los mensajes que aparecen en el dom
 
@@ -50,7 +53,7 @@ export const Profile = () => {
   };
 
   const [posts, setPosts] = useState([]);
-  
+
   const saveFeed = () => {
     //if que valida que no haya errores o vacios
     if (
@@ -67,13 +70,47 @@ export const Profile = () => {
       localStorage.setItem("feedData", JSON.stringify(updatedPosts));
       updateData();
     }
+    postProfilePublication();
   };
+
+  
+  //API SECTION//////////////////////////////////////////////////
+  const [responseData, setResponseData] = useState(null);
+  const [error, setError] = useState(null);
+
+  const postProfilePublication = () => {
+    const postData = {
+      title: form.Title,
+      footer: form.imgFooter,
+      eventDetails: form.text,
+      img: "concert.jpg",
+      profile: {
+        profileId: 10
+      }
+    };
+    console.log(form);
+    console.log(typeof({form}));
+    axios
+      .post('http://localhost:5000/api/v1/publications', postData) //form
+      .then((response) => {
+        setResponseData(response.data);
+        setError(null);
+      })
+      .catch((error) => {
+        setResponseData(null);
+        setError(error.message);
+      });
+
+  }
+
+  //API SECTION//////////////////////////////////////////////////
+  
 
   const [feddData, setObjectData] = useState([]);
   const updateData = () => {
     const jsonData = localStorage.getItem("feedData");
     const objectData = JSON.parse(jsonData);
-    console.log(objectData);
+    //console.log(objectData);
     setObjectData(objectData);
   };
 
@@ -113,6 +150,7 @@ export const Profile = () => {
             // titleError={titleError}
             // imgFooterError={imgFooterError}
             // textError={textError}
+
             saveFeed={saveFeed}
             feddData={feddData}
             deletePost={deletePost}

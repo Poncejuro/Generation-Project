@@ -16,12 +16,19 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Chip from "@mui/material/Chip";
 import "./Profile.css";
 
+
+
 export default function ProfilePosts({
   setField,
   saveFeed,
   feddData,
   deletePost,
 }) {
+
+
+
+  
+
   const [titleExists, setTitleExists] = useState(false);
   const [footerExists, setFooterExists] = useState(false);
   const [detailsExists, setDetailsExists] = useState(false);

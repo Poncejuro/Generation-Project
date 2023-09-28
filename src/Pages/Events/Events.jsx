@@ -8,8 +8,9 @@ import React, { useEffect,useState } from "react";
 
 
 export const Events = () => {
-
+  
   ///////////////////////////////API EXAMPLE//////////////////////
+  
   const [dataBack, setDataBack] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -29,7 +30,9 @@ export const Events = () => {
         setLoading(false);
       });
   }, []);
+  
   ///////////////////////////////////////////////////////////////
+  
 
   const events = dataBack;
 

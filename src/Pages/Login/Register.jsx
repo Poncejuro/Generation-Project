@@ -13,14 +13,12 @@ export const Register = () => {
   const [userNameInput, setUsernameInput] = useState("");
   const [onlyAlphabetLetters, setOnlyAlphabetLetters] = useState(false);
 
+  
   const cifrar = (texto) => {
     var textocifrado = CryptoJS.AES.encrypt(texto, '@borjascript').toString();
     return textocifrado
   }
-
-
-
-
+  
   const navigate = useNavigate();
 
   const handleInputChange = (event) => {
@@ -76,7 +74,7 @@ export const Register = () => {
       datos.password = cifrar(passwordInput);
       datos.user_tel = telephoneInput;
       datos.user_name = userNameInput;
-      localStorage.setItem("userData", JSON.stringify(datos));
+      
       navigate("/", {
         replace: "true",
         state: {
@@ -93,11 +91,12 @@ export const Register = () => {
   const [error, setError] = useState(null);
 
   const postRegisterData = () => {
+
     const postData = {
-      fullName: "Ejemplo esteban2_front",
-      email: "stivsrules@email.com",
-      cellphone: "1234567899",
-      password: "ejemplocuatro",
+      fullName: datos.user_name,
+      email: datos.user_email,
+      cellphone: datos.user_tel,
+      password: datos.password,
       active: true,
       profile: null
     };

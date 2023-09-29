@@ -18,10 +18,10 @@ export const Friends = () => {
       .then(response => {
         setDataBack(response.data);
         setLoading(false);
-        console.log('response data');
-        console.log(response.data);
-        console.log('hook back');
-        console.log(dataBack);
+        // console.log('response data');
+        // console.log(response.data);
+        // console.log('hook back');
+        // console.log(dataBack);
       })
       .catch(error => {
         console.error('Error al obtener datos:', error);

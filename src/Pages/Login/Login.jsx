@@ -81,29 +81,33 @@ export const Login = () => {
     event.preventDefault();
 
     const loginBack = await getLoginEmail();
+    // const responseProf = await postProfileDataFunc();
     await postProfileDataFunc();
-    if (
-      loginBack?.email === datos.user_email &&
-      descifrar(loginBack?.password) === datos.user_password
-    ) {
-      localStorage.setItem(
-        "userDataLogin",
-        JSON.stringify([loginBack.userId, loginBack.fullName])
-      );
+    // if (responseProf) {
+      if (
+        loginBack?.email === datos.user_email &&
+        descifrar(loginBack?.password) === datos.user_password
+      ) {
+        localStorage.setItem(
+          "userDataLogin",
+          JSON.stringify([loginBack.userId, loginBack.fullName])
+        );
 
-      navigate("/Profile", {
-        replace: "true",
-        state: {
-          logged: true,
-        },
-      });
-    }
-    if (
-      loginBack?.email !== datos.user_email ||
-      descifrar(loginBack?.password) !== datos.user_password
-    ) {
-      setErrorMessage(true);
-    }
+        navigate("/Profile", {
+          replace: "true",
+          state: {
+            logged: true,
+          },
+        });
+      }
+      if (
+        loginBack?.email !== datos.user_email ||
+        descifrar(loginBack?.password) !== datos.user_password
+      )
+       {
+        setErrorMessage(true);
+      }
+    // }
   };
 
   return (

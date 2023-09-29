@@ -21,10 +21,6 @@ export const Events = () => {
       .then(response => {
         setDataBack(response.data);
         setLoading(false);
-        //console.log('response data');
-        //console.log(response.data);
-        //console.log('hook back');
-        //console.log(dataBack);
       })
       .catch(error => {
         console.error('Error al obtener datos:', error);
@@ -48,20 +44,6 @@ export const Events = () => {
   return (
     <>
       <NavBar />
-      {/* <div id="events-container " className="body-events align-content-center">
-        <div className="EventsCard">
-          {events.map((event, index) => (
-            <EventsCards
-              key={index}
-              img={event.img}
-              title={event.title}
-              footer={event.footer}
-              event_details={event.eventDetails}
-
-            />
-          ))}
-        </div>
-      </div> */}
   <div  className="body-events align-content-center">
         <div className="events-box">
           {events.map((event, index) => (

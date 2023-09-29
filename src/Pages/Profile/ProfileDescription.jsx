@@ -89,7 +89,7 @@ export default function ProfileDescription({
       ...form,
       [field.target.name]: field.target.value,
     });
-    console.log(form);
+    // console.log(form);
   };
 
   return (
@@ -116,20 +116,6 @@ export default function ProfileDescription({
         >
           <ListGroup.Item className="Principal-Container">
             <Stack>
-              {/* <TextField
-                id="nombreUsuario"
-                label="Escribe tu nombre"
-                variant="filled"
-                defaultValue=""
-                sx={{
-                  p: 1.5,
-                  m: 1.5,
-                  input: { color: "black" },
-                  background: "#FFF",
-                  label: { color: "black" },
-                }}
-              /> */}
-
               <TextField
                 name="nombreUsuario"
                 label="Escribe tu rol"

@@ -1,29 +1,4 @@
-// import "./EventsCards.css";
-// import { Button } from "react-bootstrap";
 
-// export const EventsCards = ({
-//   index, img, alt, title, footer, event_details
-// }) => {
-//   return (
-//     <>
-//       <div className="eventsCards" key={index}>
-//         <h2 className="titleH2">{title}</h2>
-//         <img src={img} alt={alt} />
-//         <h3 className="footerh2">{footer}</h3>
-//         <h3 className="Event_details">{event_details}</h3>
-
-
-//         <Button id="eventCardsButtons" className="me-1" variant="success" href="#">
-//           Me interesa
-//         </Button>
-//         <Button id="eventCardsButtons1" className="me-1" variant="success" href="#">
-//           No me interesa
-//         </Button>
-//       </div>
-
-//     </>
-//   );
-// };
 import "./EventsCards.css";
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";

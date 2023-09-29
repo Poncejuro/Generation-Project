@@ -2,28 +2,19 @@ export const intentions = [
   {
     id: 1,
     title: "Misión",
-    text: `Conectar gente dentro de la industria de la música, crear comunidad y potenciar oportunidades de trabajo. 
-    Buscamos ayudar a la población músical a crecer en el medio y llegar al profesionalismo, 
-    ya sea local o externamente. Ayudando a la diversidad de artistas, músicos con pocas herramientas de producción, 
-    público que busca colaborar artísticamente, así como ingenieros de audio, video, foto y staff que apoyen a los 
-    buenos talentos/proyectos.`,
+    text: `Conectar y empoderar a la comunidad musical para impulsar carreras y fomentar colaboraciones. Facilitamos el crecimiento de talentos locales y nacionales, brindando apoyo a músicos, artistas, productores y profesionales de la industria, sin importar sus recursos.`,
   },
 
   {
     id: 2,
     title: "Visión",
-    text: `Nuestra visión es proporcionar un espacio en línea donde los talentos creativos puedan conectarse, 
-    colaborar y crecer en su carrera artística. Aspiramos a ser el punto de encuentro por excelencia para la 
-    comunidad artística, brindando las herramientas y recursos necesarios para que los artistas desarrollen su 
-    potencial al máximo. Priorizaremos crear una comunidad inclusiva, inspiradora y segura donde los artistas 
-    puedan florecer, alcanzar nuevas audiencias, dejando una huella duradera en la industria del arte y el 
-    entretenimiento.`,
+    text: `Ser el epicentro en línea donde los creadores conectan, colaboran y prosperan en sus carreras artísticas. Queremos ser la comunidad de referencia para artistas, proporcionando las herramientas y un espacio seguro para que desarrollen su máximo potencial.`,
   },
 
   {
     id: 3,
     title: "Valores",
-    text: `Los valores que compartimos en Facetify son la confianza, respeto, altruismo, igualdad y solidaridad ya que creemos que estas conexiones entre una y más personas deben generar un espacio equitativo e inclusivo de trabajo que potencie el contenido y valor de los involucrados.`,
+    text: `En Facetify, abrazamos la confianza, el respeto, el altruismo, la igualdad y la solidaridad. Estos valores fundamentales guían nuestras interacciones y crean un espacio de trabajo equitativo e inclusivo que potencia el valor de todos los involucrados.`,
   },
 ];
 

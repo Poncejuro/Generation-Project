@@ -48,8 +48,7 @@ export default function ProfilePosts({
   // const filteredData = feddData.filter(
   //   (feedDataComponent) => feedDataComponent.profile.profileId === 10
   // );
-  console.log(filteredData);
-  // const toComponent=fee
+
   return (
     <>
       <Col xs={12} sm={12} md={12} lg={9}>

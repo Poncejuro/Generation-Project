@@ -5,6 +5,7 @@ import eventsData from "../../utils/events";
 import axios from "axios";
 import React, { useEffect,useState } from "react";
 
+import "./EventsCards/EventsCards.css";
 
 
 export const Events = () => {
@@ -47,7 +48,7 @@ export const Events = () => {
   return (
     <>
       <NavBar />
-      <div id="events-container " className="body-events align-content-center">
+      {/* <div id="events-container " className="body-events align-content-center">
         <div className="EventsCard">
           {events.map((event, index) => (
             <EventsCards
@@ -60,7 +61,33 @@ export const Events = () => {
             />
           ))}
         </div>
+      </div> */}
+  <div  className="body-events align-content-center">
+        <div className="events-box">
+          {events.map((event, index) => (
+            <EventsCards
+              key={index}
+              logo={event.img}
+              ETitle={event.EventTitle}
+              text={event.text}
+              date={event.date}
+              time={event.time}
+              location={event.location}
+              imgSize={("250")}
+              cardSizeH={("200")}
+
+              img={event.img}
+              
+              title={event.title}
+              footer={event.footer}
+              event_details={event.eventDetails}
+
+            />
+          ))}
+        </div>
+        
       </div>
+
     </>
   );
 };

@@ -1,4 +1,4 @@
-.body-events {
+/* .body-events {
   background-image: url("../../../Img/EventsWallpaper.jpg");
 }
 
@@ -72,6 +72,133 @@
   }
 
 /* Animación de pulsación cuando se pasa el cursor sobre los botones */
+/* #eventCardsButtons:hover,
+#eventCardsButtons1:hover,
+.eventsCards:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+} */
+
+/* Pantallas grandes */
+/* @media (min-width: 992px) {
+  .EventsCard {
+    width: calc(33.33% - 20px); 
+  }
+} */
+
+/* Pantallas medianas */
+/* @media (min-width: 768px) and (max-width: 991px) {
+  .EventsCard {
+    grid-template-columns: repeat(2, 1fr); 
+    width: calc(50% - 20px);
+  }
+} */
+
+/* Pantallas chicas y extra chicas */
+/* @media (max-width: 767px) {
+  .EventsCard {
+    grid-template-columns: repeat(1, 1fr); 
+    width: calc(100% - 20px);
+  }
+}  */
+
+
+
+.body-events {
+  background-image: url("../../../Img/EventsWallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+}
+
+/* Contenedor de las tarjetas de eventos */
+.events-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Tarjetas de eventos */
+.eventsCards {
+   margin-left: 60px;
+   margin: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.757);
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+  overflow: hidden;
+  border: 2px solid #e3e3e3;
+}
+
+/* Imagen dentro de las tarjetas */
+.eventsCards img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto de escala al pasar el cursor sobre la imagen */
+.eventsCards:hover img {
+  transform: scale(1.05);
+}
+
+/* Detalles del evento */
+.Event_details {
+  font-size: 16px;
+  margin-top: 15px;
+  color: #555;
+}
+
+/* Título */
+.titleH2 {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Descripción del evento */
+.footerh2 {
+  margin-top: 15px;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 18px;
+  color: #777;
+}
+
+/* Efecto de brillo en los botones */
+.btn-brillo {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 18px;
+  margin-top: 20px;
+  outline: none;
+}
+
+.btn-brillo:hover {
+  background-color: #45a049; 
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(76, 175, 80, 0.4);
+}
+
 #eventCardsButtons:hover,
 #eventCardsButtons1:hover,
 .eventsCards:hover {
@@ -79,25 +206,33 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Pantallas grandes */
-@media (min-width: 992px) {
-  .EventsCard {
-    width: calc(33.33% - 20px); 
-  }
+
+
+.events-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  padding: 20px;
+  gap: 20px; /* Agrega un espacio entre las tarjetas */
 }
 
 /* Pantallas medianas */
 @media (min-width: 768px) and (max-width: 991px) {
-  .EventsCard {
-    grid-template-columns: repeat(2, 1fr); 
-    width: calc(50% - 20px);
+  .events-box {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* Pantallas chicas y extra chicas */
 @media (max-width: 767px) {
-  .EventsCard {
-    grid-template-columns: repeat(1, 1fr); 
-    width: calc(100% - 20px);
+  .events-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:500px)   {
+  .events-box {
+    grid-template-columns: repeat(1, 1fr);
+
   }
 }

@@ -2,11 +2,11 @@ import Row from "react-bootstrap/Row";
 // import Card from "react-bootstrap/Card";
 
 // import Stack from "react-bootstrap/Stack";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { NavBar } from "../Navbar";
 //from MUI React
 
-import initialData from "../../utils/feedPosts.json";
+// import initialData from "../../utils/feedPosts.json";
 import "./Profile.css";
 //nuevos
 import ProfileDescription from "./ProfileDescription";
@@ -14,13 +14,9 @@ import ProfilePosts from "./ProfilePosts";
 
 import axios from "axios";
 
-export const Profile = () => {
-  const firstData = initialData;
 
-  //setup de los errores
-  // const [titleError, setTitleError] = useState("");
-  // const [imgFooterError, setImgFooterError] = useState("");
-  // const [textError, setTextError] = useState("");
+export const Profile = () => {
+  // const firstData = initialData;
 
   const [form, setForm] = useState({});
 
@@ -29,27 +25,7 @@ export const Profile = () => {
       ...form,
       [field.target.name]: field.target.value,
     });
-    
 
-  //   //crea las banderas de que estan vacios y los mensajes que aparecen en el dom
-
-  //   if (field.target.name === "Title" && !field.target.value.trim()) {
-  //     setTitleError("Agregue texto antes de publicar");
-  //   } else {
-  //     setTitleError("");
-  //   }
-
-  //   if (field.target.name === "imgFooter" && !field.target.value.trim()) {
-  //     setImgFooterError("Agregue texto antes de publicar");
-  //   } else {
-  //     setImgFooterError("");
-  //   }
-
-  //   if (field.target.name === "text" && !field.target.value.trim()) {
-  //     setTextError("Agregue texto antes de publicar");
-  //   } else {
-  //     setTextError("");
-  //   }
   };
 
   const [posts, setPosts] = useState([]);
@@ -60,12 +36,9 @@ export const Profile = () => {
       form.Title &&
       form.imgFooter &&
       form.text 
-      // &&
-      // !titleError &&
-      // !imgFooterError &&
-      // !textError
     ) {
-      const updatedPosts = [...posts, form, ...firstData];
+      // const updatedPosts = [...posts, form, ...firstData];
+      const updatedPosts = [...posts, form];
       setPosts(updatedPosts);
       localStorage.setItem("feedData", JSON.stringify(updatedPosts));
       updateData();
@@ -77,7 +50,9 @@ export const Profile = () => {
   //API SECTION//////////////////////////////////////////////////
   const [responseData, setResponseData] = useState(null);
   const [error, setError] = useState(null);
-
+  const userPublicationLocalStorage = JSON.parse(
+    localStorage.getItem("userDataLogin")
+  );
   const postProfilePublication = () => {
     const postData = {
       title: form.Title,
@@ -85,7 +60,7 @@ export const Profile = () => {
       eventDetails: form.text,
       img: "concert.jpg",
       profile: {
-        profileId: 10
+        profileId: userPublicationLocalStorage[0]
       }
     };
   
@@ -104,13 +79,40 @@ export const Profile = () => {
 
   //API SECTION//////////////////////////////////////////////////
   
+  ///////////////////////////////API EXAMPLE//////////////////////
+  
+
+  const [myProfilesPublications, setMyProfilesPublications] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Realiza una solicitud GET a la API
+    axios.get('http://localhost:5000/api/v1/publications')
+      .then(response => {
+        setMyProfilesPublications(response.data);
+        setLoading(false);
+        //console.log('response data');
+        console.log(response.data);
+        //console.log('hook back');
+        //console.log(dataBack);
+      })
+      .catch(error => {
+        console.error('Error al obtener datos:', error);
+        setLoading(false);
+      });
+  }, []);
+  
+  ///////////////////////////////////////////////////////////////
+
+
+
 
   const [feddData, setObjectData] = useState([]);
   const updateData = () => {
-    const jsonData = localStorage.getItem("feedData");
-    const objectData = JSON.parse(jsonData);
+    // const jsonData = localStorage.getItem("feedData");
+    // const objectData = JSON.parse(jsonData);
     //console.log(objectData);
-    setObjectData(objectData);
+    setObjectData(myProfilesPublications);
   };
 
   /*const deleteAllPosts = () => {

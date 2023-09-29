@@ -1,7 +1,7 @@
 import "./register.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import CryptoJS from "crypto-js"
+import CryptoJS from "crypto-js";
 import axios from "axios";
 
 export const Register = () => {
@@ -13,19 +13,18 @@ export const Register = () => {
   const [userNameInput, setUsernameInput] = useState("");
   const [onlyAlphabetLetters, setOnlyAlphabetLetters] = useState(false);
 
-  
   const cifrar = (texto) => {
-    var textocifrado = CryptoJS.AES.encrypt(texto, '@borjascript').toString();
-    return textocifrado
-  }
-  
+    var textocifrado = CryptoJS.AES.encrypt(texto, "@borjascript").toString();
+    return textocifrado;
+  };
+
   const navigate = useNavigate();
 
   const handleInputChange = (event) => {
     setDatos({
       ...datos,
       [event.target.name]: event.target.value.trim(),
-      password: cifrar(passwordInput)
+      password: cifrar(passwordInput),
     });
   };
 
@@ -40,7 +39,6 @@ export const Register = () => {
   };
 
   const handleTelephoneChange = (event) => {
-
     const inputValue = event.target.value;
     const hasNonNumericCharacters = /[^\d]/.test(inputValue);
 
@@ -60,7 +58,8 @@ export const Register = () => {
 
     // Verificar si inputValueUserName contiene solo letras del alfabeto
     const onlyAlphabetLettersRegex = /^[A-Za-z\s]+$/;
-    const isOnlyAlphabetLetters = onlyAlphabetLettersRegex.test(inputValueUserName);
+    const isOnlyAlphabetLetters =
+      onlyAlphabetLettersRegex.test(inputValueUserName);
 
     setOnlyAlphabetLetters(!isOnlyAlphabetLetters);
   };
@@ -74,7 +73,7 @@ export const Register = () => {
       datos.password = cifrar(passwordInput);
       datos.user_tel = telephoneInput;
       datos.user_name = userNameInput;
-      
+
       navigate("/", {
         replace: "true",
         state: {
@@ -83,15 +82,14 @@ export const Register = () => {
       });
       postRegisterData();
     }
-
   };
 
   //API API API//
   const [responseData, setResponseData] = useState(null);
+  const [profileData, setProfileData] = useState(null);
   const [error, setError] = useState(null);
 
   const postRegisterData = () => {
-
     const postData = {
       fullName: datos.user_name,
       email: datos.user_email,
@@ -99,10 +97,15 @@ export const Register = () => {
       password: datos.password,
       active: true,
       profile: null
+      //  {
+      //   role: "Edita tu rol",
+      //   biography: "Cuentanos acerca de it.",
+      //   photo: "Tuguapo.jpg",
+      // },
     };
-
+    
     axios
-      .post('http://localhost:5000/api/v1/users', postData) //form
+      .post("http://localhost:5000/api/v1/users", postData) //form
       .then((response) => {
         setResponseData(response.data);
         setError(null);
@@ -112,9 +115,8 @@ export const Register = () => {
         setError(error.message);
       });
 
-  }
 
-
+  };
 
   //API API API//
 
@@ -138,8 +140,12 @@ export const Register = () => {
                       onChange={handleInputUserName}
                     />
                     {onlyAlphabetLetters ? (
-                      <div className="alert alert-danger text-center" role="alert">
-                        Solo se permiten nombres escritos con caracteres alfabéticos
+                      <div
+                        className="alert alert-danger text-center"
+                        role="alert"
+                      >
+                        Solo se permiten nombres escritos con caracteres
+                        alfabéticos
                       </div>
                     ) : (
                       <div></div>
@@ -168,7 +174,10 @@ export const Register = () => {
                       onChange={handleTelephoneChange}
                     />
                     {tooMuchNumbers ? (
-                      <div className="alert alert-danger text-center" role="alert">
+                      <div
+                        className="alert alert-danger text-center"
+                        role="alert"
+                      >
                         Solo se permiten 10 caracteres número
                       </div>
                     ) : (

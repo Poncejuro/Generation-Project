@@ -6,8 +6,8 @@ import Form from "react-bootstrap/Form";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 // import Stack from "react-bootstrap/Stack";
-import React, { useEffect, useRef } from "react";
-import { useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState, useRef } from "react";
 
 import { FeedCards } from "./FeedCards/FeedCards";
 import img1 from "../../Img/2sd.jpg";
@@ -16,19 +16,12 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Chip from "@mui/material/Chip";
 import "./Profile.css";
 
-
-
 export default function ProfilePosts({
   setField,
   saveFeed,
   feddData,
   deletePost,
 }) {
-
-
-
-  
-
   const [titleExists, setTitleExists] = useState(false);
   const [footerExists, setFooterExists] = useState(false);
   const [detailsExists, setDetailsExists] = useState(false);
@@ -45,7 +38,18 @@ export default function ProfilePosts({
     setField(event);
     setDetailsExists(event.target.value.length === 0);
   };
-
+  const userPublicationLocalStorage = JSON.parse(
+    localStorage.getItem("userDataLogin")
+  );
+  const filteredData = feddData.filter(
+    (feedDataComponent) =>
+      feedDataComponent.profile.profileId === userPublicationLocalStorage[0]
+  );
+  // const filteredData = feddData.filter(
+  //   (feedDataComponent) => feedDataComponent.profile.profileId === 10
+  // );
+  console.log(filteredData);
+  // const toComponent=fee
   return (
     <>
       <Col xs={12} sm={12} md={12} lg={9}>
@@ -156,14 +160,15 @@ export default function ProfilePosts({
           </Row>
           <Row>
             <div className="feed-box">
-              {feddData.map((aux, index) => (
+              {feddData.map((pub, index) => (
+              // {filteredData.map((pub, index) => (
                 <FeedCards
                   keyDiv={index}
                   key={index}
                   logo={img1}
-                  imgFooter={aux.imgFooter}
-                  title={aux.Title}
-                  text={aux.text}
+                  imgFooter={pub.footer}
+                  title={pub.title}
+                  text={pub.eventDetails}
                   detePost={() => deletePost(index)}
                   cardSizeH={200}
                 />

@@ -3,14 +3,17 @@
   flex-direction:row;
 
   max-width: 500px;
+  
   width: auto;
   height: auto;
 
   padding: 2rem;
   border-radius: 10px;
 
-  background-color: rgb(255, 255, 255, 0.4);
+  background-color: rgb(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
+
+ 
 }
 
 .Ours-img{
@@ -25,4 +28,39 @@
 
 .info-box-ours{
   margin-left: 20px;
+  
 }
+/*//////////////////////////////////////////*/
+.div-img-about{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.react-multi-carousel-item {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+@media (max-width: 720px) {
+  .info-box-ours{
+    display: none;
+  }
+
+  .Ours-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  
+}
+
+@media (max-width: 1450px) {
+  .card-Our {
+    min-height: 280px;
+  }
+}
+
+

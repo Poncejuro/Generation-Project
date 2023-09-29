@@ -1,85 +1,101 @@
 .friendsCard {
-    margin: 15px; 
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); 
-    gap: 10px;
-    padding:0px 10px 10px 30px; /* Espaciado interno */
-    
-}
-.friends-container{
-    background-image: url("../../../Img/fondoFriends.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    height:130vh;
-    background-size: cover;
-    text-align: center;
-
-}
-.friends-container h1{
-    font-family: 'Arial', sans-serif;
-    font-size: 36px;
-    color: #fff; 
-    text-align: center;
-    padding: 20px; 
-    background-color: #333; 
-    border-radius: 10px;
-    margin-bottom: 40px;
-}
-.friends-about{
-   
-    padding: 40px;
-    background-repeat: no-repeat;
-    background-position: center;
-    height:150vh;
-    background-size: cover;
-   
-}
-
-/* Elementos internos de las tajetas*/
-.card-Friends{
-    width: 250px;
-    height: 400px;
-    padding-top: 40px;
-    margin-bottom: 20px;
-    display: grid;
-    grid-template-columns: auto,auto,auto,auto;
-    gap: 20px;
-    transition: transform 0.3s linear;
-    background-color: rgb(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-   
-}
-
-
-.card-Friends h2{
-    text-align: center;
-    font-weight: bold;
-}
-.rol{
-    text-align: center;
-    font-weight: bold;
-}
-
-.card-Friends:hover{
-    transform : scale(1.1);  
-}
-
-@media (max-width: 768px) {
-    .friendsCard {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
   
-  /* Estilos para pantallas más pequeñas, como teléfonos */
-  @media (max-width: 480px) {
-    .friendsCard {
-      grid-template-columns: repeat(1, 1fr);
-    }
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 0px 10px 10px 30px; 
+  
+}
+
+.friends-container {
+  background-image: url("../../../Img/FriendsWallpaper.jpg");
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-template-columns: repeat(3, 4fr);
+  gap: 10px;
+
+}
+
+.friendsCard {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 0px 10px 10px 30px; 
+}
+
+.card-Friends {
+  margin-top: 30px;
+  width: 250px;
+  height: auto;
+  padding-top: 40px;
+  display: grid;
+  gap: 20px;
+  transition: transform 0.3s linear;
+  background-color: rgb(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  
+}
+
+.card-Friends h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.rol {
+  text-align: center;
+  font-weight: bold;
+}
+
+.peopleBio{
+  height: 150px;
+  margin: 10px;
+
+}
+
+#peopleFollowButton{
+  padding: 10px;
+  margin: 20px;
+  height: 45px;
+}
+
+.card-Friends:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos para pantallas más pequeñas, como teléfonos */
+@media (max-width: 550px) {
+  .EventsCard {
+    grid-template-columns: repeat(1, 1fr);
   }
-  @media (max-width: 768px) {
-    .friends-container {
-      background-image: none; /* Elimina la imagen de fondo */
-      background-color: #000; /* Fondo negro en su lugar */
-    }
+}
+
+/* Estilos para pantallas de 551px a 800px */
+@media (min-width: 551px) and (max-width: 800px) {
+  .EventsCard {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* Estilos para pantallas de 801px a 1080px */
+@media (min-width: 801px) and (max-width: 1080px) {
+  .EventsCard {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Estilos para pantallas de 1081px a 1310px */
+@media (min-width: 1081px) and (max-width: 1310px) {
+  .EventsCard {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/* Estilos para pantallas más pequeñas, como teléfonos */
+@media (max-width: 550px) {
+  .friendsCard {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+}
+

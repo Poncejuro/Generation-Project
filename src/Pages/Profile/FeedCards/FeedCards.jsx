@@ -2,6 +2,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import "./FeedCards.css";
+import "./FeedCardImage.css";
 
 export const FeedCards = ({
   title,
@@ -9,7 +10,6 @@ export const FeedCards = ({
   cardSizeW,
   logo,
   alt,
-  imgSize,
   imgFooter,
   keyDiv,
   detePost,
@@ -22,18 +22,20 @@ export const FeedCards = ({
         key={keyDiv}
       >
         <Row>
-          <Col className="sectionL" xs={12} sm={12} md={3}>
-            <img src={logo} style={{ width: imgSize }} alt={alt} />
-            <p>{imgFooter}</p>
-            <Button variant="success" href="#" onClick={detePost}>
+          <Col className="sectionL" xs={6} sm={3} md={3} lg={4} xl={5}>
+            <a href={logo} target="_blank">
+              <img className="ImgSizeFeedCard" src={logo}  alt={alt} />
+            </a>
+            
+            <p className="TextSizeFeedCard" >{imgFooter}</p>
+            <Button className="ImgSizeFeedCard" variant="success" href="#" onClick={detePost}>
               Eliminar
             </Button>
           </Col>
 
-          <Col className="sectionR" xs={12} sm={12} md={9}>
-            {console.log(title)}
-            <h3>{title}</h3>
-            <p>{text}</p>
+          <Col className="sectionR" xs={6} sm={9} md={9} lg={8} xl={7}>
+            <h3 className="justifyToLeftFC">{title}</h3>
+            <p className="justifyToLeftFC">{text}</p>
           </Col>
         </Row>
 

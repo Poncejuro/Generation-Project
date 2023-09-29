@@ -8,11 +8,15 @@ import { Link } from "react-router-dom";
 
 
 export const NavBar = () => {
+  const handleLogout=()=>{
+    localStorage.clear();
+  }
+
   return (
     <Navbar expand="lg" bg="dark" variant={"dark"} >
       <Container fluid>
         <Link
-          to="/HomePage"
+          to="/Events"
           className="link-box"
           style={{
             color: "white",
@@ -48,6 +52,7 @@ export const NavBar = () => {
             <Nav.Link href="/Profile">Perfil</Nav.Link>
             <Nav.Link href="/AboutUs">Nosotros</Nav.Link>
             <Nav.Link href="/Contact">Contacto</Nav.Link>
+            <Nav.Link href="/"onClick={handleLogout}>Salir</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

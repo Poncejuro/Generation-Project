@@ -8,6 +8,7 @@ import { Login } from "../Pages/Login/Login";
 import { Register } from "../Pages/Login/Register";
 import { Friends } from "../Pages/Friends/Friends";
 import { Events } from "../Pages/Events/Events";
+import { NotFound } from "../Pages/404/NotFound";
 
 export const AppRouter = () => {
   return (
@@ -21,7 +22,7 @@ export const AppRouter = () => {
         <Route path="Profile" element={<Profile />} />
         <Route path="Friends" element={<Friends />} />
         <Route path="Events" element={<Events />} />
-
+        <Route path="*" element={  <NotFound /> } />
         <Route
           path="HomePage"
           element={

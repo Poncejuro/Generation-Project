@@ -1,9 +1,9 @@
 .body-About{
-    background-image: url("../../Img/lamar.jpg");
+    background-image: url("../../Img/AboutWallpaper.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    height:100vh;
     background-size: cover;
+    /* height: 100%; */
 }
 
 
@@ -15,10 +15,9 @@
 }
 
 .carousel-box{
-   padding-top: 5vh;
+  padding-top: 5vh;
+  padding-bottom: 9vh;
 }
-
-
 
 
 

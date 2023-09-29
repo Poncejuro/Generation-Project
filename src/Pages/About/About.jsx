@@ -7,18 +7,16 @@ import "./About.css";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-
 export const About = () => {
 
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 3
+      breakpoint: { max: 4000, min: 2001 },
+      items: 3 // Cambiamos de 3 a 1 elemento visible para superLargeDesktop
     },
     desktop: {
       breakpoint: { max: 2000, min: 1024 },
-      items: 2
+      items: 2 // Cambiamos de 2 a 1 elemento visible para desktop
     },
     tablet: {
       breakpoint: { max: 1024, min: 600 },
@@ -29,7 +27,7 @@ export const About = () => {
       items: 1
     }
   };
-  
+
   return (
     <>
       <NavBar />
@@ -43,24 +41,24 @@ export const About = () => {
           ))}
         </div>
        
-        {/*//https://www.npmjs.com/package/react-multi-carousel*/}
         <div className="carousel-box">
-          <Carousel responsive={responsive} 
-          removeArrowOnDeviceType={["desktop"]}
-          infinite={true}
-          centerMode={true}
+          <Carousel
+            responsive={responsive} 
+            removeArrowOnDeviceType={["mobile","tablet","desktop","superLargeDesktop"]}
+            infinite={true}
+            centerMode={true}
           >
-            {team.map((aux,index) => (
-                <OursCards
-                  key={index}
-                  name={aux.name}
-                  rol={aux.rol}
-                  img={aux.img}
-                  text={aux.text}
-                  linkedin={aux.linkedin}
-                  git={aux.git}
-                />
-              ))}
+            {team.map((aux, index) => (
+              <OursCards
+                key={index}
+                name={aux.name}
+                rol={aux.rol}
+                img={aux.img}
+                text={aux.text}
+                linkedin={aux.linkedin}
+                git={aux.git}
+              />
+            ))}
           </Carousel>
         </div>
       </section>

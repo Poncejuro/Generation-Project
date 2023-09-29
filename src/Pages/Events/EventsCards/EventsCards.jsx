@@ -1,48 +1,70 @@
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
+
 import "./EventsCards.css";
+import React, { useState } from "react";
+import { Button } from "react-bootstrap";
+import Swal from "sweetalert2";
 
 export const EventsCards = ({
-  title,
-  text,
-  cardSizeW,
-  logo,
-  alt,
-  imgSize,
-  keyDiv,
-  detePost,
-  ETitle,
-  date,
-  time,
-  location,
+  index, img, alt, title, footer, event_details
 }) => {
+  const [hidden, setHidden] = useState(false);// rastrear si un elemento debe estar oculto o visible en el componente
+  const [liked, setLiked] = useState(false); // Estado para realizar un seguimiento de "Me interesa"
+
+  const handleLike = () => {
+    // Mostrar la alerta para "Me interesa"
+    Swal.fire({
+      title: "Genial",
+      text: "Nos alegra saber que te gusta este evento.",
+      icon: "success",
+      confirmButtonText: "Aceptar",
+    });
+    setLiked(true); // Marcar como "Me interesa" cuando se hace clic en el botón
+  };
+
+  const handleDislike = () => { 
+    // Mostrar la alerta para "No me interesa"
+    Swal.fire({
+     title: "Este evento no te interesa",
+      text: "Se eliminará de tu lista",
+      icon: "warning",
+      confirmButtonText: "Confirmar",
+    
+
+    });
+
+    // Ocultar la tarjeta de evento al hacer clic en "No me interesa"
+    setHidden(true);
+  };
+
   return (
     <>
-      <div
-        className="card text-center"
-        style={{ width: cardSizeW, height: "auto" }}
-        key={keyDiv}
-      >
-        <Row>
-          <Col className="sectionL" xs={12} sm={12} md={3}>
-            <img src={logo} style={{ width: imgSize }} alt={alt} />
-          </Col>
+       {!hidden && (
+        <div className="eventsCards" key={index}>
+          <h2 className="titleH2">{title}</h2>
+          <img src={img} alt={alt} />
+          <h3 className="footerh2">{footer}</h3>
+          <h3 className="Event_details">{event_details}</h3>
+          <Button
+            id="eventCardsButtons1"
+            className="me-1 btn btn-success btn-brillo"
+            onClick={handleLike}
+            disabled={liked} // Desactiva el botón si ya se ha marcado como "Me interesa"
 
-          <Col className="sectionR" xs={12} sm={12} md={9}>
-            {console.log(title)}
-            <h3>{ETitle}</h3>
-            <p>{text}</p>
-            <p>{date}</p>
-            <p>{time}</p>
-            <p>{location}</p>
-          </Col>
-        </Row>
-
-        <Button variant="success" href="#" onClick={detePost}>
-          Eliminar
-        </Button>
-      </div>
+            //Boton me interesa
+          > 
+        
+            Me interesa
+          </Button>
+          <Button
+            id="eventCardsButtons"
+            className="me-1 btn btn-success btn-brillo"
+            onClick={handleDislike}
+            //Boton no me interesa
+          >
+            No me interesa
+          </Button>
+        </div>
+      )}
     </>
   );
 };

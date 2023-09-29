@@ -38,7 +38,6 @@ export const ContactForm = () => {
       confirmButtonText: "Aceptar",
     });
   };
-
   return (
     <>
       <NavBar />

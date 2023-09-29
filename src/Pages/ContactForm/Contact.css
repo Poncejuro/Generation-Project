@@ -1,23 +1,28 @@
 .principal {
-  background-image: url("../../Img/france-musique-chitarra-musica.jpg");
+  background-image: url("../../Img/ContactoWallpaper.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100%;
+
 }
 
 .form-contact {
+
   margin-top: 80px;
   display: flex;
   flex-direction: column;
   width: 500px;
+  min-width: 550px; /* Establecer el ancho mínimo */
   height: 700px;
+  min-height: 600px; /* Establecer la altura mínima */
   gap: 1rem;
   padding: 3rem;
   border: 0px;
-  border-radius: 10px;
-  background-color: rgb(255, 255, 255, 0.4);
+  border-radius: 1090px;
+  background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
+  
 }
 
 .control-aux {
